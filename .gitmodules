@@ -1,0 +1,18 @@
+[submodule "3rdparty/allo"]
+	path = 3rdparty/allo
+	url = https://github.com/cornell-zhang/allo.git
+[submodule "3rdparty/scalehls"]
+	path = 3rdparty/scalehls
+	url = https://github.com/hanchenye/scalehls.git
+[submodule "3rdparty/pylog"]
+	path = 3rdparty/pylog
+	url = https://github.com/hst10/pylog.git
+[submodule "3rdparty/dahlia"]
+	path = 3rdparty/dahlia
+	url = https://github.com/cucapra/dahlia.git
+[submodule "heterocl"]
+	path = heterocl
+	url = https://github.com/cornell-zhang/heterocl.git
+[submodule "3rdparty/heterocl"]
+	path = 3rdparty/heterocl
+	url = https://github.com/cornell-zhang/heterocl.git
