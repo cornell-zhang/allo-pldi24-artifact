@@ -1,0 +1,53 @@
+let data: float{2}[260][240];
+let mean: float{2}[240];
+let stddev: float{2}[240];
+let cov: float[240][240];
+let corr: float{2}[240][240];
+
+for (let j = 0..240) {
+  mean[j] := 0.0;
+  ---
+  for (let i = 0..260) {
+    let total = data[i][j];
+  } combine {
+    mean[j] += total / 260.0;
+  }
+}
+---
+for (let j = 0..240) {
+  stddev[j] := 0.0;
+  ---
+  for (let i = 0..260) {
+    let variance = (data[i][j] - mean[j]) * (data[i][j] - mean[j]);
+  } combine {
+    // stddev[j] += sqrt(variance / 260.0);
+    stddev[j] += variance / 260.0;
+  }
+}
+---
+for (let i = 0..260) {
+  for (let j = 0..240) {
+    data[i][j] := data[i][j] - mean[j];
+    ---
+    // data[i][j] := data[i][j] / (sqrt(260.0) * stddev[j]);
+    data[i][j] := data[i][j] / stddev[j];
+  }
+}
+---
+for (let i = 0..239) {
+  corr[i][i] := 1.0;
+  ---
+  for (let j = 0..240) {
+    if (j >= i + 1) {
+      corr[i][j] := 0.0;
+      ---
+      for (let k = 0..260) {
+        corr[i][j] := corr[i][j] + data[k][i] * data[k][j];
+      }
+      ---
+      corr[j][i] := corr[i][j];
+    }
+  }
+}
+---
+corr[239][239] := 1.0;

@@ -1,0 +1,17 @@
+let A: bit<32>{2}[400][400];
+let y1: bit<32>[400];
+let y2: bit<32>[400];
+let x1: bit<32>{2}[400];
+let x2: bit<32>{2}[400];
+
+for (let i = 0..400) {
+  for (let j = 0..400) {
+    x1[i] := x1[i] + A[i][j] * y1[j];
+  }
+}
+---
+for (let i = 0..400) {
+  for (let j = 0..400) {
+    x2[i] := x2[i] + A[j][i] * y2[j];
+  }
+}

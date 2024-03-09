@@ -1,0 +1,17 @@
+let A: float[410][390];
+let p: float[390];
+let r: float[410];
+let q: float{2}[410];
+let s: float{2}[390];
+
+for (let i = 0..410) {
+  for (let j = 0..390) {
+    let mul1 = A[i][j] * r[i];
+    ---
+    s[j] := s[j] + mul1;
+    ---
+    let mul2 = A[i][j] * p[j];
+    ---
+    q[i] := q[i] + mul2;
+  }
+}

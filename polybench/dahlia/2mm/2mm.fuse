@@ -1,0 +1,37 @@
+decl out_ABC: float[180][220];
+decl output: float[180][220];
+let A: float[180][210];
+let B: float[210][190 bank 19];
+let C: float[190 bank 19][220];
+let D: float[180][220];
+let out_AB: float[180][190 bank 19];
+let alpha: float = 0.5;
+let beta: float = 0.5;
+
+for (let i = 0..180) {
+  for (let j = 0..190) unroll 19 {
+    for (let k = 0..210) {
+      let mul = A[i][k] * B[k][j];
+    } combine {
+      out_AB[i][j] += mul;
+    }
+  }
+}
+---
+for (let i = 0..180) {
+  for (let j = 0..220) {
+    for (let k = 0..190) unroll 19 {
+      let mul = out_AB[i][k] * C[k][j];
+    } combine {
+      out_ABC[i][j] += mul;
+    }
+  }
+}
+---
+for (let i = 0..180) {
+  for (let j = 0..220) {
+    let mul = out_ABC[i][j] * beta;
+    let add = D[i][j] * alpha;
+    output[i][j] := add;
+  }
+}

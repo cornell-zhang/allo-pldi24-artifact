@@ -1,0 +1,22 @@
+let alpha: float;
+let beta: float;
+let A: float[250][250];
+let B: float{2}[250][250];
+let C: float{2}[250][250];
+for (let i = 0..200) {
+  for (let j = 0..240) {
+    let sum_: float = 0.0;
+    for (let k = 0..200) {
+      if (k < i) {
+        let ab = alpha * B[i][j] * A[i][k];
+        C[k][j] := C[k][j] + ab;
+        sum_ := sum_ + B[k][j] * A[i][k];
+      }
+    }
+    ---
+    let c = beta * C[i][j];
+    let ab = alpha * B[i][j] * A[i][i];
+    let sum = alpha * sum_;
+    C[i][j] := c + ab + sum;
+  }
+}

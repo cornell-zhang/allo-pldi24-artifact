@@ -1,0 +1,16 @@
+let alpha: float;
+let A: float[200][240];
+let B: float{2}[200][240];
+for (let i = 0..200) {
+    for (let j = 0..240) {
+        for (let k = 0..200) {
+            if (k >= i+1){
+                let sum = A[k][i] * B[k][j];
+                ---
+                B[i][j] := B[i][j] + sum;
+            }
+        }
+        ---
+        B[i][j] := B[i][j] * alpha;
+    }
+}

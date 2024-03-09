@@ -1,0 +1,21 @@
+let alpha: float;
+let beta: float;
+let A: float[250][250];
+let B: float[250][250];
+let tmp: float{2}[250];
+let x: float[250];
+let y: float{2}[250];
+
+for (let i = 0..250) {
+  for (let j = 0..250) {
+    let tmp_val = A[i][j] * x[j];
+    let mul = B[i][j] * x[j];
+  } combine {
+    tmp[i] += tmp_val;
+    y[i] += mul;
+  }
+  let a = alpha * tmp[i];
+  let b = beta * y[i];
+  ---
+  y[i] := a + b;
+}

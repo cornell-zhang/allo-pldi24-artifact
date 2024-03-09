@@ -1,0 +1,19 @@
+let alpha: float;
+let beta: float;
+let A: float{2}[240][240];
+let C: float{2}[240][240];
+for (let i = 0..240) {
+  for (let j = 0..240) {
+    if (j < i + 1) {
+      C[i][j] := C[i][j] * beta;
+    }
+  }
+  ---
+  for (let k = 0..200) {
+    for (let j = 0..240) {
+      if (j < i + 1) {
+        C[i][j] := C[i][j] + alpha * A[i][k] * A[j][k];
+      }
+    }
+  }
+}
