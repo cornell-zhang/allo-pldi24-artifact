@@ -2,7 +2,6 @@ decl float_n: float;
 decl data: float[260][240];
 decl mean: float[240];
 decl stddev: float[240];
-decl cov: float[240][240];
 decl corr: float[240][240];
 
 for (let j = 0..240) {
