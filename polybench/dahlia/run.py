@@ -1,5 +1,5 @@
 import os
-import json
+import xml.dom.minidom as minidom
 from tabulate import tabulate
 
 assert os.system("which vitis_hls >> /dev/null") == 0, "Vitis HLS not found in PATH"
@@ -22,14 +22,23 @@ results = []
 for i, benchmark in enumerate(benchmarks):
     print(f"[{i+1}/{len(benchmarks)}] Start running {benchmark}...")
     os.system(f"cd {benchmark} && vitis_hls -f run.tcl")
-    report = json.load(
-        open(f"{benchmark}/output.prj/solution1/solution1_data.json", "r")
+    report = minidom.parse(
+        open(f"{benchmark}/output.prj/solution1/syn/report/kernel_csynth.xml", "r")
     )
-    latency = (
-        float(report["ClockInfo"]["ClockPeriod"])
-        * int(report["ClockInfo"]["Latency"])
-        * 1e-6
+    clock = (
+        report.getElementsByTagName("UserAssignments")[0]
+        .getElementsByTagName("TargetClockPeriod")[0]
+        .childNodes[0]
+        .data
     )
+    avg_lat = (
+        report.getElementsByTagName("PerformanceEstimates")[0]
+        .getElementsByTagName("SummaryOfOverallLatency")[0]
+        .getElementsByTagName("Average-caseLatency")[0]
+        .childNodes[0]
+        .data
+    )
+    latency = float(clock) * int(avg_lat) * 1e-6
     results.append((benchmark, latency))
     print(f"{benchmark}: {latency:.4f}ms\n")
 
