@@ -1,10 +1,10 @@
-let alpha: float;
-let beta: float;
-let A: float[250][250];
-let B: float[250][250];
-let tmp: float{2}[250];
-let x: float[250];
-let y: float{2}[250];
+decl alpha: float;
+decl beta: float;
+decl A: float[250][250];
+decl B: float[250][250];
+decl tmp: float[250];
+decl x: float[250];
+decl y: float[250];
 
 for (let i = 0..250) {
   for (let j = 0..250) {
@@ -14,6 +14,7 @@ for (let i = 0..250) {
     tmp[i] += tmp_val;
     y[i] += mul;
   }
+  ---
   let a = alpha * tmp[i];
   let b = beta * y[i];
   ---

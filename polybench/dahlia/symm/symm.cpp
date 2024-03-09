@@ -1,16 +1,15 @@
 #include <ap_int.h>
 extern "C" {
-  void kernel() {
-    
+  void kernel(float alpha, float beta, float A[250][250], float B[250][250], float C[250][250]) {
+    #pragma HLS INTERFACE s_axilite port=alpha bundle=control
+    #pragma HLS INTERFACE s_axilite port=beta bundle=control
+    #pragma HLS INTERFACE m_axi port=A offset=slave bundle=gmem
+    #pragma HLS INTERFACE s_axilite port=A bundle=control
+    #pragma HLS INTERFACE m_axi port=B offset=slave bundle=gmem
+    #pragma HLS INTERFACE s_axilite port=B bundle=control
+    #pragma HLS INTERFACE m_axi port=C offset=slave bundle=gmem
+    #pragma HLS INTERFACE s_axilite port=C bundle=control
     #pragma HLS INTERFACE s_axilite port=return bundle=control
-    float alpha;
-    float beta;
-    float A[250][250];
-    #pragma HLS resource variable=A core=RAM_1P_BRAM
-    float B[250][250];
-    #pragma HLS resource variable=B core=RAM_T2P_BRAM
-    float C[250][250];
-    #pragma HLS resource variable=C core=RAM_T2P_BRAM
     for(int i = 0; i < 200; i++) {
       #pragma HLS LOOP_FLATTEN off
       for(int j = 0; j < 240; j++) {
@@ -20,7 +19,11 @@ extern "C" {
           #pragma HLS LOOP_FLATTEN off
           if ((k < i)) {
             float ab = ((alpha * B[i][j]) * A[i][k]);
-            C[k][j] = (C[k][j] + ab);
+            //---
+            float sc = (C[k][j] + ab);
+            //---
+            C[k][j] = sc;
+            //---
             sum_ = (sum_ + (B[k][j] * A[i][k]));
           }
         }
@@ -28,6 +31,7 @@ extern "C" {
         float c = (beta * C[i][j]);
         float ab = ((alpha * B[i][j]) * A[i][i]);
         float sum = (alpha * sum_);
+        //---
         C[i][j] = ((c + ab) + sum);
       }
     }

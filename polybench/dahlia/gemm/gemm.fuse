@@ -1,23 +1,21 @@
-let A: float[200][240 bank 24];
-let B: float[240 bank 24][220];
-let C: float{2}[200][220];
-let beta: float;
-let alph: float;
-let out_AB: float[200][220];
+decl alpha: float;
+decl beta: float;
+decl A: float[200][240];
+decl B: float[240][220];
+decl C: float[200][220];
 
-// Perform matrix multiplication A * B and store in out_AB
-for (let i0 = 0..200) {
-  for (let j0 = 0..220) {
-    for (let k0 = 0..240) unroll 24 {
-      let product = alph * A[i0][k0] * B[k0][j0];
-    } combine {
-        out_AB[i0][j0] += product;
-    }
+for (let i = 0..200) {
+  for (let j = 0..220) {
+    let b = beta;
+  } combine {
+    C[i][j] *= b;
   }
-}
----
-for (let i1 = 0..200) {
-  for (let j1 = 0..220) {
-    C[i1][j1] := beta * C[i1][j1] + out_AB[i1][j1];
+  ---
+  for (let k = 0..240) {
+    for (let j = 0..220) {
+      let acc = alpha * A[i][k] * B[k][j];
+    } combine {
+      C[i][j] += acc;
+    }
   }
 }
