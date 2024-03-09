@@ -1,33 +1,36 @@
 #include <ap_int.h>
 extern "C" {
-  void kernel() {
-    
+  void kernel(float A[390][410], float x[410], float y[410], float tmp[390]) {
+    #pragma HLS INTERFACE m_axi port=A offset=slave bundle=gmem
+    #pragma HLS INTERFACE s_axilite port=A bundle=control
+    #pragma HLS INTERFACE m_axi port=x offset=slave bundle=gmem
+    #pragma HLS INTERFACE s_axilite port=x bundle=control
+    #pragma HLS INTERFACE m_axi port=y offset=slave bundle=gmem
+    #pragma HLS INTERFACE s_axilite port=y bundle=control
+    #pragma HLS INTERFACE m_axi port=tmp offset=slave bundle=gmem
+    #pragma HLS INTERFACE s_axilite port=tmp bundle=control
     #pragma HLS INTERFACE s_axilite port=return bundle=control
-    float A[390][410];
-    #pragma HLS resource variable=A core=RAM_1P_BRAM
-    float x[410];
-    #pragma HLS resource variable=x core=RAM_1P_BRAM
-    float y[410];
-    #pragma HLS resource variable=y core=RAM_1P_BRAM
-    float out_Ax[390];
-    #pragma HLS resource variable=out_Ax core=RAM_1P_BRAM
-    for(int m = 0; m < 390; m++) {
+    for(int i = 0; i < 410; i++) {
       #pragma HLS LOOP_FLATTEN off
-      for(int r = 0; r < 410; r++) {
-        #pragma HLS LOOP_FLATTEN off
-        float mul = (A[m][r] * x[r]);
-        // combiner:
-        out_Ax[m] += mul;
-      }
+      y[i] = 0.0;
     }
     //---
-    for(int n = 0; n < 410; n++) {
+    for(int i = 0; i < 390; i++) {
       #pragma HLS LOOP_FLATTEN off
-      for(int k = 0; k < 390; k++) {
+      tmp[i] = 0.0;
+      //---
+      for(int j = 0; j < 410; j++) {
         #pragma HLS LOOP_FLATTEN off
-        float mul = (A[k][n] * out_Ax[k]);
+        float mul = (A[i][j] * x[j]);
         // combiner:
-        y[n] += mul;
+        tmp[i] += mul;
+      }
+      //---
+      for(int j = 0; j < 410; j++) {
+        #pragma HLS LOOP_FLATTEN off
+        float mul = (A[i][j] * tmp[i]);
+        // combiner:
+        y[j] += mul;
       }
     }
   }

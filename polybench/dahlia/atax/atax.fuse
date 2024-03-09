@@ -1,20 +1,24 @@
-let A: float[390][410];
-let x: float[410];
-let y: float[410];
-let out_Ax: float[390];
+decl A: float[390][410];
+decl x: float[410];
+decl y: float[410];
+decl tmp: float[390];
 
-for (let m = 0..390) {
-  for (let r = 0..410){
-    let mul = A[m][r] * x[r];
-  } combine {
-    out_Ax[m] += mul;
-  }
+for (let i = 0..410) {
+  y[i] := 0.0;
 }
 ---
-for (let n = 0..410) {
-  for (let k = 0..390) {
-    let mul = A[k][n] * out_Ax[k];
+for (let i = 0..390) {
+  tmp[i] := 0.0;
+  ---
+  for (let j = 0..410) {
+    let mul = A[i][j] * x[j];
   } combine {
-    y[n] += mul;
+    tmp[i] += mul;
+  }
+  ---
+  for (let j = 0..410) {
+    let mul = A[i][j] * tmp[i];
+  } combine {
+    y[j] += mul;
   }
 }

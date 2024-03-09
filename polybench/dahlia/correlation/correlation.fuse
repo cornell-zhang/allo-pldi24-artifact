@@ -1,16 +1,17 @@
-let data: float{2}[260][240];
-let mean: float{2}[240];
-let stddev: float{2}[240];
-let cov: float[240][240];
-let corr: float{2}[240][240];
+decl float_n: float;
+decl data: float[260][240];
+decl mean: float[240];
+decl stddev: float[240];
+decl cov: float[240][240];
+decl corr: float[240][240];
 
 for (let j = 0..240) {
   mean[j] := 0.0;
   ---
   for (let i = 0..260) {
-    let total = data[i][j];
+    let sum = data[i][j];
   } combine {
-    mean[j] += total / 260.0;
+    mean[j] += sum / float_n;
   }
 }
 ---
@@ -20,17 +21,25 @@ for (let j = 0..240) {
   for (let i = 0..260) {
     let variance = (data[i][j] - mean[j]) * (data[i][j] - mean[j]);
   } combine {
-    // stddev[j] += sqrt(variance / 260.0);
-    stddev[j] += variance / 260.0;
+    stddev[j] += variance / float_n;
   }
+  ---
+  // let s = sqrt(stddev[j]);
+  let s = stddev[j];
+  ---
+  stddev[j] := s;
 }
 ---
 for (let i = 0..260) {
   for (let j = 0..240) {
-    data[i][j] := data[i][j] - mean[j];
+    let sub = data[i][j] - mean[j];
     ---
-    // data[i][j] := data[i][j] / (sqrt(260.0) * stddev[j]);
-    data[i][j] := data[i][j] / stddev[j];
+    data[i][j] := sub;
+    ---
+    // let div = data[i][j] / sqrt(float_n) * stddev[j];
+    let div = data[i][j] / float_n * stddev[j];
+    ---
+    data[i][j] := div;
   }
 }
 ---
@@ -42,10 +51,18 @@ for (let i = 0..239) {
       corr[i][j] := 0.0;
       ---
       for (let k = 0..260) {
-        corr[i][j] := corr[i][j] + data[k][i] * data[k][j];
+        let ki = data[k][i];
+        ---
+        let kj = data[k][j];
+        ---
+        let add = corr[i][j] + ki * kj;
+        ---
+        corr[i][j] := add;
       }
       ---
-      corr[j][i] := corr[i][j];
+      let ij = corr[i][j];
+      ---
+      corr[j][i] := ij;
     }
   }
 }
