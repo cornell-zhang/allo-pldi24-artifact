@@ -185,3 +185,9 @@ docs/source/gallery
 *.dot
 
 *.nsys*
+
+# ScaleHLS related settings
+polybench/scalehls/*/*.mlir
+polybench/scalehls/*/*.prj
+polybench/scalehls/*/*.csv
+polybench/scalehls/*/*_dse.cpp
