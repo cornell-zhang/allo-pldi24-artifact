@@ -1,7 +1,24 @@
+*
+!/**/
+!*.*
+!Makefile
+
+# Unused HLS output
+hls.app
+impl/
+*.aps
+*.directive
+solution1_data.json
+**/syn/verilog/
+**/syn/vhdl/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+*.autopilot
+*.debug
 
 # C extensions
 *.so
@@ -185,6 +202,32 @@ docs/source/gallery
 *.dot
 
 *.nsys*
+
+.vscode
+*.prj
+*.pdf
+*.dot
+
+_*
+
+.ipcache
+*.log
+*.xclbin
+*.xclbin.info
+*.link_summary
+*.package_summary
+*.run_summary
+*.csv
+*.html
+*.xtxt
+*.txt
+*.ltx
+*.sdb
+*.protoinst
+*.o
+.run
+*.rpt
+*.xml
 
 # ScaleHLS related settings
 polybench/scalehls/*/*.mlir
