@@ -18,7 +18,7 @@ cd allo-pldi24-artifact
 
 ## Setup Environment (Est. Time: 30 mins)
 
-We have already built a docker image that contains necessary packages, including the Allo library and the baseline systems. Since our experiments involve invoking the AMD Vitis toolchain for FPGA synthesis, we 
+We have already built a docker image that contains necessary packages, including the Allo library and the baseline systems. Since our experiments involve invoking the AMD Vitis toolchain for FPGA synthesis, we provide a separate Vitis image for artifact evaluation. Below are the instructions for setting up the environment.
 
 ### Allo and Baseline Systems
 
@@ -86,24 +86,20 @@ Congratulations! You have successfully set up the environment and passed the bas
 
 ## Reproduce Experiments (Est. Time: X hours)
 
-Below is the script to reproduce experiments in Allo paper. Each script will emit logging files and figures in pdf format.
+Below are the scripts to reproduce experiments in Allo paper. Each script will emit logging files that are used to generate the final results.
 
-We only provide scripts for reproducing the results of **Figure 7**, **Table 4**, and **Figure 9**, which construct the main conclusion of our paper. For other experiments, since they may require multiple machines or take excessively long time to run, we do not provide end-to-end evaluation scripts, but users can still find the instructions in our repository.
+We provide scripts for reproducing the results of **Figure 10**, **Table 3**, and **Table 4**, which construct the main conclusion of our paper. For Figure 12, it requires a U280 FPGA to run the experiment. Due to campus security settings, we are unable to grant reviewers access to the machine, and thus, Figure 12 is not part of the artifact evaluation. However, we provide the code and instructions for users with access to FPGA machines. Additionally, the synthesis report is included for reference.
+
+First, we can run the following command to enter the docker image. We highly recommend **lanuching a `tmux` terminal before executing the docker image**, as the experiments may take a long time to finish. 
 
 ```bash
-docker run -it -v /your/path/to/vitis-docker-volume/:/tools/xilinx --name allo-container allo-pldi-ae:latest /bin/bash
+docker run -v /your/path/to/vitis-docker-volume/:/tools/xilinx -it allo-container:latest /bin/bash
 ```
-docker run -v /scratch/users/nz264/vitis-docker-volume/:/tools/xilinx -it allo-pldi-ae:mar1 /bin/bash -c 'which vitis_hls'
 
-### Figure 10 - PolyBench (Est. Time: X hours)
-more than 200G memory to install all the baseline packages, which is even too large for a docker image.
+### Figure 10 - PolyBench (Est. Time: 4 hours)
+As it requires more than 200G disk space to install all the baseline packages, we do not contain all the packages in the docker image, and thus will not perform end-to-end code generation, which also costs lots of time. Instead, we generate the optimized HLS C++ code from each baseline offline, and reviewers only need to run the Vitis HLS to obtain the final report. Specifically, the HLS C++ code from [ScaleHLS](https://github.com/hanchenye/scalehls), [HeteroCL](https://github.com/cornell-zhang/heterocl), [Pylog](https://github.com/hst10/pylog), and [Dahlia](https://github.com/cucapra/dahlia) are generated offline.
 
-* Allo
-* ScaleHLS
-* HeteroCL
-* Pylog, `export PYTHONPATH=$PYTHONPATH:$(pwd)/3rdparty`
-* To run Dahlia, please [webpage](https://capra.cs.cornell.edu/dahlia/)
-* Vitis
+For end-to-end testing, we also include the scripts to generate the optimized HLS C++ code from each baseline. Please refer to this [link](3rdparty/README.md) to install the required packages and generate the optimized HLS C++ code.
 
 | Benchmark | Script |
 | --- | --- |
@@ -121,8 +117,10 @@ more than 200G memory to install all the baseline packages, which is even too la
 | [syrk](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/syrk/syrk.c#L67-L93) |
 | [trmm](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/trmm/trmm.c#L69-L94) |
 
+### Table 3 (Est. Time: 4 hours)
 
-### Table 4 - CNN
+
+### Table 4 - CNN (Est. Time: 3 hours)
 
 
 ### Figure 12 - LLM (Not for AE)
