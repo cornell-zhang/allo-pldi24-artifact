@@ -1,11 +1,11 @@
 #   define N 400
 
 void kernel(
-	int x1[N],
-	int x2[N],
-	int y1[N],
-	int y2[N],
-	int A[N][N])
+	float x1[N],
+	float x2[N],
+	float y1[N],
+	float y2[N],
+	float A[N][N])
 {
     #pragma HLS INTERFACE m_axi port=A offset=slave bundle=gmem
     #pragma HLS INTERFACE s_axilite port=A bundle=control

@@ -1,8 +1,8 @@
-decl A: bit<32>[400][400];
-decl y1: bit<32>[400];
-decl y2: bit<32>[400];
-decl x1: bit<32>[400];
-decl x2: bit<32>[400];
+decl A: float[400][400];
+decl y1: float[400];
+decl y2: float[400];
+decl x1: float[400];
+decl x2: float[400];
 
 for (let i = 0..400) {
   for (let j = 0..400) {
