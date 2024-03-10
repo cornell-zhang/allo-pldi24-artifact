@@ -6,7 +6,7 @@
 # @brief: A Tcl script for synthesizing the design.
 
 # Project name
-set hls_prj syrk.prj
+set hls_prj correlation.prj
 
 # Open/reset the project
 open_project ${hls_prj} -reset
@@ -14,7 +14,7 @@ open_project ${hls_prj} -reset
 open_solution -reset solution1 -flow_target vivado
 
 # Top function of the design is "top"
-set_top test_cor
+set_top test_correlation
 
 # Add design and testbench files
 add_files test_cor_paper.cpp

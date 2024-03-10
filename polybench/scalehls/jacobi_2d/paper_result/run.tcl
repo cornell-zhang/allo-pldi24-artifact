@@ -6,7 +6,7 @@
 # @brief: A Tcl script for synthesizing the design.
 
 # Project name
-set hls_prj jacobi.prj
+set hls_prj jacobi_2d.prj
 
 # Open/reset the project
 open_project ${hls_prj} -reset
@@ -14,7 +14,7 @@ open_project ${hls_prj} -reset
 open_solution -reset solution1 -flow_target vivado
 
 # Top function of the design is "top"
-set_top test_jacobi
+set_top test_jacobi_2d
 
 # Add design and testbench files
 add_files test_jacobi_paper.cpp

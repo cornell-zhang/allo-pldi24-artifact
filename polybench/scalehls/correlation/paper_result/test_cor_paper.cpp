@@ -20,7 +20,7 @@ using namespace std;
 /// This is top function.
 /// Latency=78715233, interval=78715233
 /// DSP=8, BRAM=128
-void test_cor(
+void test_correlation(
   float v0[260][240],
   float v1[240],
   float v2[240],

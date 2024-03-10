@@ -20,7 +20,7 @@ using namespace std;
 /// This is top function.
 /// Latency=10767604, interval=10767604
 /// DSP=16, BRAM=0
-void test_jacobi(
+void test_jacobi_2d(
   float v0[250][250],
   float v1[250][250]
 ) {	// L4, [0,10767604)
