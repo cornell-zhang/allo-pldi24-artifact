@@ -10,8 +10,9 @@ def pl_trmm(A, B):
 
     for i in range(M):
         for j in range(N):
-            for k in range(i + 1, M).unroll():
-                B[i, j] += A[k, i] * B[k, j]
+            for k in range(M).pipeline():
+                if k > i:
+                    B[i, j] += A[k, i] * B[k, j]
             B[i, j] *= alpha
 
 

@@ -10,7 +10,7 @@ def pl_bicg(A, s, q, p, r):
         s[i] = 0
     for i in range(N):
         q[i] = 0.0
-        for j in range(M).unroll():
+        for j in range(M).pipeline():
             s[j] = s[j] + r[i] * A[i][j]
             q[i] = q[i] + A[i][j] * p[j]
 

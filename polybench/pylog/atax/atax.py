@@ -10,9 +10,9 @@ def pl_atax(A, x, y, tmp):
         y[i] = 0
     for i in range(M):
         tmp[i] = 0.0
-        for j in range(N).unroll():
+        for j in range(N).pipeline():
             tmp[i] += A[i][j] * x[j]
-        for j in range(N).unroll():
+        for j in range(N).pipeline():
             y[j] += A[i][j] * tmp[i]
 
 

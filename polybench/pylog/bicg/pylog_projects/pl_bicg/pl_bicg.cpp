@@ -27,7 +27,7 @@ void pl_bicg(float A[410][390], float s[390], float q[410], float p[390], float 
     q[i] = 0.0;
     for (int j = 0; j < M; j += 1)
     {
-      #pragma HLS unroll
+      #pragma HLS pipeline
       s[j] = s[j] + (r[i] * A[i][j]);
       q[i] = q[i] + (A[i][j] * p[j]);
     }

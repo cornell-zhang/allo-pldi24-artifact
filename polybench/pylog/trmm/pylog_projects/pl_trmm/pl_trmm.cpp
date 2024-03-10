@@ -16,10 +16,14 @@ void pl_trmm(float A[200][200], float B[200][240])
   {
     for (int j = 0; j < N; j += 1)
     {
-      for (int k = i + 1; k < M; k += 1)
+      for (int k = 0; k < M; k += 1)
       {
-        #pragma HLS unroll
-        B[i][j] += A[k][i] * B[k][j];
+        #pragma HLS pipeline
+        if (k > i)
+        {
+          B[i][j] += A[k][i] * B[k][j];
+        }
+
       }
 
       B[i][j] *= alpha;
