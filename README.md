@@ -9,54 +9,102 @@ This repository contains scripts for setting up environments and reproducing res
 
 ## Clone the Repository
 
-Please clone the repository with the `--recursive` flag to include the submodules.
+Please clone the repository following the instruction below. You can include the `--recursive` flag to download all the baseline systems under the `3rdparty` directory. Notice this may take a while to download all the baseline systems since most of the baselines require a separate LLVM build. **For AE, you can directly leverage the provided [docker image](https://hub.docker.com/repository/docker/alloprj/allo-container/general), which has already set up the required environment.**
 
 ```bash
-git clone https://github.com/cornell-zhang/allo-pldi24-artifact.git --recursive
+git clone https://github.com/cornell-zhang/allo-pldi24-artifact.git
 cd allo-pldi24-artifact
 ```
 
-## Setup Docker Image
+## Setup Environment (Est. Time: 30 mins)
 
-We have already built the docker on our server, so the AE reviewers do *not* need to pull or build the docker image again.
+We have already built a docker image that contains necessary packages, including the Allo library and the baseline systems. Since our experiments involve invoking the AMD Vitis toolchain for FPGA synthesis, we 
 
-### Pull from Docker Hub
+### Allo and Baseline Systems
 
-We provide a pre-built docker image available on Docker Hub which is compatible with NVIDIA V100 GPUs with CUDA 11.7 installed, user can pull it with:
+#### Pull Docker Image from Docker Hub
+
+We provide a pre-built docker image available on Docker Hub. User can pull it with:
 ```bash
-docker image pull allo-org/allo-ae:latest
-docker tag allo-org/allo-ae:latest allo
+docker image pull alloprj/allo-container:latest
+docker tag alloprj/allo-container:latest allo
 ```
 
-### Build from source
+#### Build from source
 
-Otherwise, users can run the following command to build the docker container. It will take about **2 hours** to build the docker image. The docker image contains the necessary environment, libraries, source code, and datasets for reproducing the results.
+If you do not want to use the pre-built docker, we also provide detailed instructions on how to build the baseline systems from scratch. Please refer to this [link](3rdparty/README.md) for more information.
+
+### Vitis Toolchain
+
+#### Image Copy (For AE Only)
+
+We provide an image that contains the necessary Vitis toolchain and can be downloaded from this [Drive](). Notice this is only for artifact evaluation and should *not* be used for other purpose. This link will be invalid after the artifact evaluation period.
+
+The image is about 50GB and can be unzip using the following command:
 ```bash
-cd 3rdparty/allo/docker
-docker build -t allo -f docker/Dockerfile .
+tar -xzvf vitis-docker-volume.tar.gz
 ```
+
+If you need full access to the Vitis toolchain, please download it from the official website following the instruction below.
+
+#### Download from Official Website
+
+To fully utilize the Vitis toolchain, please download from the [official website](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/2022-1.html). We recommend using the Vitis 2022.1 version, which is the version we used for our experiments. Notice that you need to register an AMD account to download the toolchain.
+
+Please visit the "[Vitis Core Development Kit - 2022.1 Full Product Installation](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/2022-1.html)" webpage and download the "[Xilinx Unified Installer 2022.1: Linux Self Extracting Web Installer (BIN - 266.73 MB)](https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_Unified_2022.1_0420_0327_Lin64.bin)". You can follow the [official instruction](https://docs.xilinx.com/r/2022.1-English/ug1400-vitis-embedded/Installing-the-Vitis-Software-Platform) install the Vitis toolchain.
+
 
 ## Kick-the-Tires (Est. Time: 10 mins)
 
-We will run some basic tests on the artifact to make sure the environment is set up correctly. User can use the following command to run the unit tests:
+To make sure the environment runs smoothly, we first examine if the docker and the required packages are installed correctly. You can launch the docker image with the following command. Notice that you need to replace `/your/path/to/vitis-docker-volume/` with the path to the Vitis toolchain that you downloaded from the official website or the path to the unzipped image.
 ```bash
-docker run -it allo /bin/bash -c '...'
+docker run -v /your/path/to/vitis-docker-volume/:/tools/xilinx -it allo-container:latest /bin/bash
 ```
 
-You are expected to see the following output.
+### Check Vitis Toolchain
 
+Inside the docker image, you can check if the Vitis toolchain is installed correctly by running the following command. The output should be the path to the `vitis_hls` binary.
 ```
-...
+(py312) root@00ad1aec9529:~/allo# which vitis_hls
+/tools/xilinx/Vitis_HLS/2022.1/bin/vitis_hls
 ```
 
-## Run Experiments (Est. Time: X hours)
+### Run Unit Tests
+
+We will run some basic tests on the artifact to make sure the environment is set up correctly. Inside the docker image, you can use the following command to run the unit tests:
+```bash
+cd /root/allo && python3 -m pytest tests
+```
+
+You are expected to see the following outputs:
+```
+================================== 197 passed, 1 skipped, 62 warnings in 86.76s (0:01:26) ===================================
+```
+
+Congratulations! You have successfully set up the environment and passed the basic tests :) You can now proceed to the next step to reproduce the experiments in the paper.
+
+
+## Reproduce Experiments (Est. Time: X hours)
 
 Below is the script to reproduce experiments in Allo paper. Each script will emit logging files and figures in pdf format.
 
 We only provide scripts for reproducing the results of **Figure 7**, **Table 4**, and **Figure 9**, which construct the main conclusion of our paper. For other experiments, since they may require multiple machines or take excessively long time to run, we do not provide end-to-end evaluation scripts, but users can still find the instructions in our repository.
 
+```bash
+docker run -it -v /your/path/to/vitis-docker-volume/:/tools/xilinx --name allo-container allo-pldi-ae:latest /bin/bash
+```
+docker run -v /scratch/users/nz264/vitis-docker-volume/:/tools/xilinx -it allo-pldi-ae:mar1 /bin/bash -c 'which vitis_hls'
 
 ### Figure 10 - PolyBench (Est. Time: X hours)
+more than 200G memory to install all the baseline packages, which is even too large for a docker image.
+
+* Allo
+* ScaleHLS
+* HeteroCL
+* Pylog, `export PYTHONPATH=$PYTHONPATH:$(pwd)/3rdparty`
+* To run Dahlia, please [webpage](https://capra.cs.cornell.edu/dahlia/)
+* Vitis
+
 | Benchmark | Script |
 | --- | --- |
 | [2mm](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/kernels/2mm/2mm.c#L75-L105) |
@@ -72,6 +120,13 @@ We only provide scripts for reproducing the results of **Figure 7**, **Table 4**
 | [syr2k](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/syr2k/syr2k.c#L72-L99) |
 | [syrk](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/syrk/syrk.c#L67-L93) |
 | [trmm](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/trmm/trmm.c#L69-L94) |
+
+
+### Table 4 - CNN
+
+
+### Figure 12 - LLM (Not for AE)
+
 
 ## Further Customization
 
