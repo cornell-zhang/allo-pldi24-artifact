@@ -142,17 +142,36 @@ cd ../dahlia && python3 run.py
 cd ../vitis && python3 run.py
 ```
 
+If you want to speed up the above experiments, you can invoke multiple terminals/processes to run the experiments in parallel. Since Vitis HLS only leverages one CPU core to run the synthesis, experiments of different frameworks can be run in parallel without impacting the final results.
+
 The results will be dumped to each folder. Lastly, we can call the following command to collect the results and generate the final figure.
 
 ```bash
 cd plot && python3 plot.py
 ```
 
-### Table 3 (Est. Time: 10 hours)
-
+### Table 3 (Est. Time: 1 min)
+Please conduct the experiments in Figure 10 first.
 
 ### Table 4 - CNN (Est. Time: 3 hours)
+Next, we run the experiments for multiple kernels. We leverage the three CNN models, including MobileNet, ResNet18, and VGG16, to evaluate the performance of Allo. The scripts to run the experiments are provided below.
 
+Please run the following commands in the docker and make sure you have launched the `tmux` terminal in case the experiments take a long time to finish.
+```bash
+cd /root/allo-pldi24-artifact/cnn
+# MobileNet
+cd mobilenet
+vitis_hls -f mobilenet_allo.tcl
+vitis_hls -f mobilenet_scalehls.tcl
+# ResNet18
+cd ../resnet18
+vitis_hls -f resnet18_allo.tcl
+vitis_hls -f resnet18_scalehls.tcl
+# VGG16
+cd ../vgg16
+vitis_hls -f vgg16_allo.tcl
+vitis_hls -f vgg16_scalehls.tcl
+```
 
 ### Figure 12 - LLM (Not for AE)
 
