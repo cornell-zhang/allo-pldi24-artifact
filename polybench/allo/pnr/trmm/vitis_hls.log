@@ -1999,22 +1999,6 @@ Solution:            solution1
 Device target:       xcu280-fsvh2892-2L-e
 Report date:         Wed Nov 15 22:35:16 EST 2023
 
-#=== Post-Implementation Resource usage ===
-SLICE:            0
-LUT:            108
-FF:             124
-DSP:              1
-BRAM:             0
-URAM:             0
-LATCH:            0
-SRL:             10
-CLB:             26
-
-#=== Final timing ===
-CP required:                     2.500
-CP achieved post-synthesis:      1.634
-CP achieved post-implementation: 1.503
-Timing met
 
 TIMESTAMP: HLS-REPORT: implementation end: 2023-11-15 22:35:16 EST
 INFO: HLS-REPORT: impl run complete: worst setup slack (WNS)=0.996839, worst hold slack (WHS)=0.040941, total pulse width slack(TPWS)=0.000000, number of unrouted nets=0
