@@ -1,106 +1,106 @@
 {
     "2mm": {
-        "Allo": 0.646,
+        "Allo": 0.64603998,
         "ScaleHLS": 0.81750501,
-        "HeteroCL": 1.608,
-        "Dahlia": 347,
-        "PyLog": 24.552,
-        "VitisHLS": 3466
+        "HeteroCL": 1.6076906999999998,
+        "Dahlia": 350.99905626,
+        "PyLog": 50.01245082,
+        "VitisHLS": 371.98773657
     },
     "3mm": {
-        "Allo": 0.743,
+        "Allo": 0.7425467099999999,
         "ScaleHLS": 0.88599312,
-        "HeteroCL": 1.556,
-        "Dahlia": 440,
-        "PyLog": 26.573,
-        "VitisHLS": 537
+        "HeteroCL": 1.55569275,
+        "Dahlia": 540.78734799,
+        "PyLog": 78.57692775,
+        "VitisHLS": 607.3922663999999
     },
     "atax": {
-        "Allo": 0.01635,
+        "Allo": 0.01073592,
         "ScaleHLS": 0.06455205,
-        "HeteroCL": 0.101,
-        "Dahlia": 7.488,
-        "PyLog": 0.551,
-        "VitisHLS": 7.488
+        "HeteroCL": 0.10117206,
+        "Dahlia": 4.86113733,
+        "PyLog": 3.75482475,
+        "VitisHLS": 4.8624360300000005
     },
     "bicg": {
-        "Allo": 0.005498,
+        "Allo": 0.0054978299999999996,
         "ScaleHLS": 0.05896430999999999,
-        "HeteroCL": 0.009607,
-        "Dahlia": 3.745,
-        "PyLog": 0.551,
-        "VitisHLS": 3.745
+        "HeteroCL": 0.00960705,
+        "Dahlia": 3.78185103,
+        "PyLog": 3.77366256,
+        "VitisHLS": 4.26122784
     },
     "correlation": {
-        "Allo": 1.661,
+        "Allo": 1.6606376999999999,
         "ScaleHLS": 482.42514528,
-        "HeteroCL": 28.09,
-        "Dahlia": 399,
-        "PyLog": 175,
-        "VitisHLS": 399
+        "HeteroCL": 28.09037484,
+        "Dahlia": 356.43381605999997,
+        "PyLog": 353.65552713,
+        "VitisHLS": 355.12292493
     },
     "gemm": {
-        "Allo": 0.649,
+        "Allo": 0.79595325,
         "ScaleHLS": 1.17536013,
-        "HeteroCL": 0.786,
-        "Dahlia": 248,
-        "PyLog": 36.34,
-        "VitisHLS": 248
+        "HeteroCL": 0.78599988,
+        "Dahlia": 76.88437533,
+        "PyLog": 35.330663969999996,
+        "VitisHLS": 105.67488933
     },
     "gesummv": {
-        "Allo": 0.005065,
+        "Allo": 0.0050649300000000005,
         "ScaleHLS": 0.02093238,
-        "HeteroCL": 0.005971,
-        "Dahlia": 2.954,
-        "PyLog": 0.22,
-        "VitisHLS": 2.954
+        "HeteroCL": 0.00597069,
+        "Dahlia": 1.49517333,
+        "PyLog": 0.21405239999999998,
+        "VitisHLS": 1.66511655
     },
     "jacobi-2d": {
-        "Allo": 0.196,
+        "Allo": 0.19580733,
         "ScaleHLS": 35.861439329999996,
-        "HeteroCL": 4.193,
-        "Dahlia": 123,
-        "PyLog": 65.243,
-        "VitisHLS": 123
+        "HeteroCL": 4.19313933,
+        "Dahlia": 214.55423433,
+        "PyLog": 129.16338066,
+        "VitisHLS": 215.21490633
     },
     "mvt": {
-        "Allo": 0.010679,
+        "Allo": 0.01067931,
         "ScaleHLS": 0.01671993,
-        "HeteroCL": 0.016057,
-        "Dahlia": 7.491,
-        "PyLog": 0.551,
-        "VitisHLS": 7.491
+        "HeteroCL": 0.01605726,
+        "Dahlia": 15.00898266,
+        "PyLog": 7.49657925,
+        "VitisHLS": 7.54711866
     },
     "symm": {
-        "Allo": 1.351,
+        "Allo": 1.69165665,
         "ScaleHLS": 607.39203663,
-        "HeteroCL": 32.255,
-        "Dahlia": 230,
-        "PyLog": 118,
-        "VitisHLS": 230
+        "HeteroCL": 48.16379799,
+        "Dahlia": 238.48794333,
+        "PyLog": 836.60257998,
+        "VitisHLS": 238.00177664999998
     },
     "syr2k": {
-        "Allo": 1.042,
+        "Allo": 0.9862893899999999,
         "ScaleHLS": 1444.98957066,
-        "HeteroCL": 3.856,
-        "Dahlia": 308,
-        "PyLog": 16.562,
-        "VitisHLS": 308
+        "HeteroCL": 3.85633647,
+        "Dahlia": 122.80747293,
+        "PyLog": 812.62976346,
+        "VitisHLS": 809.17881453
     },
     "syrk": {
-        "Allo": 1.054,
+        "Allo": 0.97749819,
         "ScaleHLS": 1444.98957066,
-        "HeteroCL": 3.856,
-        "Dahlia": 308,
-        "PyLog": 16.562,
-        "VitisHLS": 308
+        "HeteroCL": 3.8563064999999996,
+        "Dahlia": 83.32699293,
+        "PyLog": 812.6209722599999,
+        "VitisHLS": 809.17002333
     },
     "trmm": {
-        "Allo": 1.64,
+        "Allo": 1.61841663,
         "ScaleHLS": 127.87207991999999,
-        "HeteroCL": 3.214,
-        "Dahlia": 460,
-        "PyLog": 273,
-        "VitisHLS": 460
+        "HeteroCL": 3.2135698799999997,
+        "Dahlia": 802.87765533,
+        "PyLog": 1374.62401998,
+        "VitisHLS": 1374.62401998
     }
 }
