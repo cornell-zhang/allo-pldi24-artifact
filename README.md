@@ -9,7 +9,7 @@ This repository contains scripts for setting up environments and reproducing res
 
 ## Clone the Repository
 
-Please clone the repository following the instruction below. You can include the `--recursive` flag to download all the baseline systems under the `3rdparty` directory. Notice this may take a while to download all the baseline systems since most of the baselines require a separate LLVM build. **For AE, there's no need to perform this step. You can directly leverage the provided [docker image](https://hub.docker.com/repository/docker/alloprj/allo-container/general), which has already set up the required environment.**
+Please clone the repository following the instruction below. You can optionally include the `--recursive` flag to download all baseline systems under the `3rdparty` directory. Notice this may take a while to download all the baseline systems since most of the baselines require a separate LLVM build. **For AE, clone this repo *without* downloading the baseline systems. Instead, you can use the provided [docker image](https://hub.docker.com/repository/docker/alloprj/allo-container/general), which has already set up the required environment.**
 
 ```bash
 git clone https://github.com/cornell-zhang/allo-pldi24-artifact.git
@@ -18,16 +18,16 @@ cd allo-pldi24-artifact
 
 ## Setup Environment (Est. Time: 30 mins)
 
-We have already built a docker image that contains necessary packages, including the Allo library and the baseline systems. Since our experiments involve invoking the AMD Vitis toolchain for FPGA synthesis, we provide a separate Vitis image for artifact evaluation. Below are the instructions for setting up the environment.
+We have already built a docker image that contains necessary packages, including the Allo library and the baseline systems. Since our experiments involve using the AMD Vitis toolchain for FPGA synthesis, we also **require the reviewers to install the [Vitis 2022.1](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/2022-1.html) toolchain**. Below are the instructions for setting up the environment.
 
 ### Allo and Baseline Systems
 
 #### Pull Docker Image from Docker Hub
 
-We provide a pre-built docker image available on Docker Hub. User can pull it with:
+We provide a pre-built docker image available on Docker Hub. Users can pull it with:
 ```bash
 docker image pull alloprj/allo-container:latest
-docker tag alloprj/allo-container:latest allo
+docker tag alloprj/allo-container:latest allo-container
 ```
 
 #### Build from source
@@ -35,6 +35,8 @@ docker tag alloprj/allo-container:latest allo
 If you do not want to use the pre-built docker, we also provide detailed instructions on how to build the baseline systems from scratch. Please refer to this [link](3rdparty/README.md) for more information. **For AE, there's no need to build from source. All tools are provided in the docker container.**
 
 ### Vitis Toolchain
+
+The experiments require the [Vitis 2022.1](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/2022-1.html) toolchain for FPGA synthesis. We provide two options for users to obtain the Vitis toolchain. The first option is to use the pre-configured Vitis toolchain volume that we provide, which can be downloaded from our Drive, but it may take about 5 hours to download the whole package. The second option is to download the Vitis toolchain from the official website. The downloading speed is probably faster, but you need to register an AMD account and install it manually on your machine, which may also take about 5 hours to complete. Reviewers can choose either option based on their preference.
 
 #### Vitis Toolchain Volume (For AE Only)
 
@@ -51,13 +53,15 @@ The image is about 66GB and can be unzipped using the following command:
 unzip vitis-docker-volume.zip
 ```
 
-If you need full access to the Vitis toolchain, please download it from the official website following the instruction below.
+If you need full access to the Vitis toolchain (not necessary for AE), please download it from the official website following the instruction below.
 
 #### Download from Official Website
 
 To fully utilize the Vitis toolchain, please download from the [official website](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/2022-1.html). We recommend using the Vitis 2022.1 version, which is the version we used for our experiments. Notice that you need to register an AMD account to download the toolchain.
 
 Please visit the "[Vitis Core Development Kit - 2022.1 Full Product Installation](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/2022-1.html)" webpage and download the "[Xilinx Unified Installer 2022.1: Linux Self Extracting Web Installer (BIN - 266.73 MB)](https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_Unified_2022.1_0420_0327_Lin64.bin)". You can follow the [official instruction](https://docs.xilinx.com/r/2022.1-English/ug1400-vitis-embedded/Installing-the-Vitis-Software-Platform) install the Vitis toolchain.
+
+After installing, you need to remember the path to the Vitis toolchain, which will be used to mount the volume to the docker image. For example, if you install the Vitis toolchain to `/opt/xilinx/2022.1/`, then the path to the Vitis toolchain is `/opt/xilinx/2022.1/`, and you can see `Vitis_HLS` and `Vivado` folders under this directory.
 
 
 ## Kick-the-Tires (Est. Time: 10 mins)
@@ -90,7 +94,7 @@ You are expected to see the following outputs:
 Congratulations! You have successfully set up the environment and passed the basic tests :) You can now proceed to the next step to reproduce the experiments in the paper.
 
 
-## Reproduce Experiments (Est. Time: 17 hours)
+## Reproduce Experiments (Est. Time: 20 hours)
 
 Below are the scripts to reproduce experiments in Allo paper. Each script will emit logging files that are used to generate the final results.
 
@@ -102,10 +106,10 @@ First, we can run the following command to enter the docker image. It will mount
 docker run -v /your/path/to/vitis-docker-volume/:/tools/xilinx -v $(pwd):/root/allo-pldi24-artifact -it allo-container:latest /bin/bash
 ```
 
-### Figure 10 - PolyBench (Est. Time: 24 hours)
-As it requires more than 200G disk space to install all the baseline packages, we do not contain all the packages in the docker image, and thus will not perform end-to-end code generation, which also costs lots of time. Instead, we generate the optimized HLS C++ code from each baseline offline, and reviewers only need to run the Vitis HLS to obtain the final report. Specifically, the HLS C++ code from [ScaleHLS](https://github.com/hanchenye/scalehls), [HeteroCL](https://github.com/cornell-zhang/heterocl), [Pylog](https://github.com/hst10/pylog), and [Dahlia](https://github.com/cucapra/dahlia) are generated offline.
+### Figure 10 - PolyBench (Est. Time: 16 hours)
+As it requires more than 200G disk space to install all the baseline packages, we do not contain all the packages in the docker image, and thus will not perform end-to-end code generation, which also costs lots of time. Instead, we **generate the optimized HLS C++ code from each baseline offline**, and reviewers only need to run the Vitis HLS to obtain the final report. Specifically, the HLS C++ code from [ScaleHLS](https://github.com/hanchenye/scalehls), [HeteroCL](https://github.com/cornell-zhang/heterocl), [Pylog](https://github.com/hst10/pylog), and [Dahlia](https://github.com/cucapra/dahlia) are generated offline.
 
-For end-to-end testing (not for AE), we also include the scripts to generate the optimized HLS C++ code from each baseline. Please refer to this [link](3rdparty/README.md) to install the required packages and generate the optimized HLS C++ code.
+For end-to-end testing (not for AE), we also include the scripts and instructions to generate the optimized HLS C++ code from each baseline. Please refer to this [link](3rdparty/README.md) to install the required packages and generate the optimized HLS C++ code.
 
 #### Experimental Settings
 
@@ -124,7 +128,7 @@ We evaluate the following benchmarks from [PolyBench](https://web.cs.ucla.edu/~p
 * [syrk](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/syrk/syrk.c#L67-L93)
 * [trmm](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/trmm/trmm.c#L69-L94)
 
-Each folder contains the original baseline implementation files and the generated HLS C++ files. You can go to each folder to check the details. For example, `polybench/allo/2mm` is the Allo implementation for the 2mm benchmark, and there are three files under this folder:
+Each folder contains the original baseline implementation files and the generated HLS C++ files. You can go to each folder to check the details. For example, `polybench/allo/2mm` is the Allo implementation for the `2mm`` benchmark, and there are three files under this folder:
 * `two_mm.py`: The Allo implementation
 * `two_mm.cpp`: The generated HLS C++ file
 * `run.tcl`: The Vitis HLS script to run the synthesis
@@ -159,7 +163,8 @@ python build_dataset.py
 # then, we are ready to generate the latency plot
 python latency_plot.py
 ```
-The result figure will be generated to: `/root/allo-pldi24-artifact/polybench/plot/polybench.png`.
+
+The result figure will be generated to: `/root/allo-pldi24-artifact/polybench/plot/polybench.pdf`.
 
 ### Table 3 (Est. Time: 1 min)
 We provide the placement and routing (PnR) projects and running logs as part of the AE. To reproduce the PnR results in Table 3, please run the following commands inside the docker container:
@@ -167,6 +172,7 @@ We provide the placement and routing (PnR) projects and running logs as part of 
 cd /root/allo-pldi24-artifact/polybench/allo/pnr
 python report.py
 ```
+
 This script reports the max clock frequency after PnR for each case presented in Table 3.
 
 ### Table 4 - CNN (Est. Time: 3 hours)
@@ -196,9 +202,17 @@ python3 plot.py
 ```
 
 ### Figure 12 - LLM (Not for AE)
-As this experiment requires a U280 FPGA for evaluation, and needs ~24 hours to push the design from high-level synthesis to backend synthesis and generate bitstream, this experiment is **NOT for AE** purpose. However, we provide a [reference HLS C++ code](llm/), which is generated from Allo and later made some modifications to fit on the chiplet-based FPGA. 
+As this experiment requires a U280 FPGA for evaluation and takes approximately 24 hours to push the design from high-level synthesis to backend synthesis and generate a bitstream, this experiment is **NOT for AE** purpose. However, we provide a [reference HLS C++ code](llm/), which is generated from Allo, with modifications to fit on the chiplet-based FPGA. Also, we provide the post and route report under the `report` directory. Reviewers can find the following results from [this report](https://github.com/cornell-zhang/allo-pldi24-artifact/blob/main/llm/reports/link/imp/impl_1_full_util_routed.rpt) that matches the right-hand side table of Figure 12.
 
-To generate the hardware accelerator, please make sure you have set up the entire Vitis/Vivado toolchain and have device `xpfm` board file that is set as the `XDEVICE` environment variable. You may also need to prepare the exported parameters from a pretrained model, which is required to be put under a `const` folder. After setting up the environment, you can run the following command to invoke high-level synthesis and backend synthesis:
+| Resources | Utilization | Report |
+| --- | --- | --- |
+| BRAM | 384 | https://github.com/cornell-zhang/allo-pldi24-artifact/blob/main/llm/reports/link/imp/impl_1_full_util_routed.rpt#L113 |
+| DSP | 1780 | https://github.com/cornell-zhang/allo-pldi24-artifact/blob/main/llm/reports/link/imp/impl_1_full_util_routed.rpt#L129 |
+| FF | 652K | https://github.com/cornell-zhang/allo-pldi24-artifact/blob/main/llm/reports/link/imp/impl_1_full_util_routed.rpt#L45 |
+| LUT | 508K | https://github.com/cornell-zhang/allo-pldi24-artifact/blob/main/llm/reports/link/imp/impl_1_full_util_routed.rpt#L84 |
+
+
+To generate the hardware accelerator, please make sure you have set up the entire Vitis/Vivado toolchain and have device `xpfm` board file set as the `XDEVICE` environment variable. You may also need to prepare the exported parameters from a pretrained model, which should be put under a `const` folder. After setting up the environment, use the following command to invoke high-level synthesis and backend synthesis:
 
 ```bash
 make all TARGET=hw PLATFORM=$XDEVICE
