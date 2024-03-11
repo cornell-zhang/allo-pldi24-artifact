@@ -1,4 +1,5 @@
 import os
+import json
 import xml.dom.minidom as minidom
 from tabulate import tabulate
 
@@ -45,3 +46,9 @@ for i, benchmark in enumerate(benchmarks):
 headers = ["Benchmark (Dahlia)", "Latency (ms)"]
 table = tabulate(results, headers=headers)
 print(table)
+
+# convert results to dict
+results = dict(results)
+# save results to file
+with open('results.json', 'w') as f:
+    json.dump(results, f, indent=4)

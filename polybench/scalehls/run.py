@@ -1,4 +1,5 @@
 import os
+import json
 import xml.dom.minidom as minidom
 from tabulate import tabulate
 
@@ -21,7 +22,7 @@ benchmarks = [
 results = []
 for i, benchmark in enumerate(benchmarks):
     print(f"[{i+1}/{len(benchmarks)}] Start running {benchmark}...")
-    os.system(f"cd {benchmark}/paper_result && vitis_hls -f run.tcl")
+    # os.system(f"cd {benchmark}/paper_result && vitis_hls -f run.tcl")
     report = minidom.parse(
         open(f"{benchmark}/paper_result/{benchmark}.prj/solution1/syn/report/test_{benchmark}_csynth.xml", "r")
     )
@@ -45,3 +46,11 @@ for i, benchmark in enumerate(benchmarks):
 headers = ["Benchmark (ScaleHLS)", "Latency (ms)"]
 table = tabulate(results, headers=headers)
 print(table)
+
+# convert results to dict
+results = dict(results)
+# replace key "jacobi_2d" with "jacobi-2d"
+results["jacobi-2d"] = results.pop("jacobi_2d")
+# save results to file
+with open('results.json', 'w') as f:
+    json.dump(results, f, indent=4)
