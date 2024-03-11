@@ -1,0 +1,106 @@
+{
+    "2mm": {
+        "Allo": 0.646,
+        "ScaleHLS": 0.818,
+        "HeteroCL": 1.608,
+        "Dahlia": 347,
+        "PyLog": 24.552,
+        "VitisHLS": 3466
+    },
+    "3mm": {
+        "Allo": 0.743,
+        "ScaleHLS": 0.886,
+        "HeteroCL": 1.556,
+        "Dahlia": 440,
+        "PyLog": 26.573,
+        "VitisHLS": 537
+    },
+    "atax": {
+        "Allo": 0.01635,
+        "ScaleHLS": 0.064552,
+        "HeteroCL": 0.101,
+        "Dahlia": 7.488,
+        "PyLog": 0.551,
+        "VitisHLS": 7.488
+    },
+    "bicg": {
+        "Allo": 0.005498,
+        "ScaleHLS": 0.064725,
+        "HeteroCL": 0.009607,
+        "Dahlia": 3.745,
+        "PyLog": 0.551,
+        "VitisHLS": 3.745
+    },
+    "correlation": {
+        "Allo": 1.661,
+        "ScaleHLS": 482,
+        "HeteroCL": 28.09,
+        "Dahlia": 399,
+        "PyLog": 175,
+        "VitisHLS": 399
+    },
+    "gemm": {
+        "Allo": 0.649,
+        "ScaleHLS": 1.175,
+        "HeteroCL": 0.786,
+        "Dahlia": 248,
+        "PyLog": 36.34,
+        "VitisHLS": 248
+    },
+    "gesummv": {
+        "Allo": 0.005065,
+        "ScaleHLS": 0.020932,
+        "HeteroCL": 0.005971,
+        "Dahlia": 2.954,
+        "PyLog": 0.22,
+        "VitisHLS": 2.954
+    },
+    "jacobi-2d": {
+        "Allo": 0.196,
+        "ScaleHLS": 35.861,
+        "HeteroCL": 4.193,
+        "Dahlia": 123,
+        "PyLog": 65.243,
+        "VitisHLS": 123
+    },
+    "mvt": {
+        "Allo": 0.010679,
+        "ScaleHLS": 0.01672,
+        "HeteroCL": 0.016057,
+        "Dahlia": 7.491,
+        "PyLog": 0.551,
+        "VitisHLS": 7.491
+    },
+    "symm": {
+        "Allo": 1.351,
+        "ScaleHLS": 803,
+        "HeteroCL": 32.255,
+        "Dahlia": 230,
+        "PyLog": 118,
+        "VitisHLS": 230
+    },
+    "syr2k": {
+        "Allo": 1.042,
+        "ScaleHLS": 1445.1785,
+        "HeteroCL": 3.856,
+        "Dahlia": 308,
+        "PyLog": 16.562,
+        "VitisHLS": 308
+    },
+    "syrk": {
+        "Allo": 1.054,
+        "ScaleHLS": 1445.1785,
+        "HeteroCL": 3.856,
+        "Dahlia": 308,
+        "PyLog": 16.562,
+        "VitisHLS": 308
+    },
+    "trmm": {
+        "Allo": 1.64,
+        "ScaleHLS": 128,
+        "HeteroCL": 3.214,
+        "Dahlia": 460,
+        "PyLog": 273,
+        "VitisHLS": 460
+    }
+}
