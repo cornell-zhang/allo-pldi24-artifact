@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "kernel_atax",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/work\/shared\/users\/phd\/nz264\/pldi\/polybench\/allo\/atax\/atax_ii_1\/run.tcl",
+          "sourceLine": "38",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "kernel_atax"
+              }]
+          }
+        }]
+    }]}

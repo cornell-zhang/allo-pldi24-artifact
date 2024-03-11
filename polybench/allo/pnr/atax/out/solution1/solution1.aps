@@ -1,0 +1,25 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <config>
+        <config_interface m_axi_latency="0"/>
+    </config>
+    <name>
+        <value string="solution1"/>
+    </name>
+    <project>
+        <value string="out.prj"/>
+    </project>
+    <flowTarget value="vivado"/>
+    <targetInfo>
+        <TargetInfo value="xcu280:-fsvh2892:-2L-e"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/virtexuplus/virtexuplus" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock name="ap_clk" period="2.5" default="false"/>
+    </clockList>
+    <ExportDesign askAgain="true" evaluate="true" rtl="vlog" formatName="ip_catalog">
+        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="kernel_atax" version="1.0" display_name="" taxonomy=""/>
+    </ExportDesign>
+</AutoPilot:solution>
+

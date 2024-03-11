@@ -1,0 +1,577 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2022.1.2 (lin64) Build 3605665 Fri Aug  5 22:52:02 MDT 2022
+| Date              : Wed Nov 15 16:46:14 2023
+| Host              : zhang-24.ece.cornell.edu running 64-bit unknown
+| Command           : report_timing -max_paths 10 -file ./report/kernel_atax_timing_paths_routed.rpt
+| Design            : bd_0_wrapper
+| Device            : xcu280-fsvh2892
+| Speed File        : -2L  PRODUCTION 1.30 05-01-2022
+| Temperature Grade : E
+-----------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.068ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[30]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.413ns  (logic 0.374ns (15.501%)  route 2.039ns (84.498%))
+  Logic Levels:           3  (CARRY8=2 LUT2=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 2.521 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.030     0.030    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/ap_clk
+    SLICE_X157Y201       FDRE                                         r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[30]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X157Y201       FDRE (Prop_FFF_SLICEM_C_Q)
+                                                      0.076     0.106 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[30]/Q
+                         net (fo=287, routed)         1.973     2.079    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/s_axis_b_tdata[7]
+    SLICE_X139Y178       LUT2 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.125     2.204 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[7].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=1, routed)           0.015     2.219    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/EXP_ADD.a_xor_b_ip[7]
+    SLICE_X139Y178       CARRY8 (Prop_CARRY8_SLICEM_S[7]_CO[7])
+                                                      0.117     2.336 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8/CO[7]
+                         net (fo=1, routed)           0.026     2.362    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/carry_8
+    SLICE_X139Y179       CARRY8 (Prop_CARRY8_SLICEM_CI_O[0])
+                                                      0.056     2.418 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_EXIT_CARRY4_CARRY8/O[0]
+                         net (fo=1, routed)           0.025     2.443    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.carry_int
+    SLICE_X139Y179       FDRE                                         r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.021     2.521    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/aclk
+    SLICE_X139Y179       FDRE                                         r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/C
+                         clock pessimism              0.000     2.521    
+                         clock uncertainty           -0.035     2.486    
+    SLICE_X139Y179       FDRE (Setup_AFF_SLICEM_C_D)
+                                                      0.025     2.511    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD
+  -------------------------------------------------------------------
+                         required time                          2.511    
+                         arrival time                          -2.443    
+  -------------------------------------------------------------------
+                         slack                                  0.068    
+
+Slack (MET) :             0.079ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.402ns  (logic 0.302ns (12.571%)  route 2.100ns (87.429%))
+  Logic Levels:           3  (CARRY8=2 LUT2=1)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.520 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.028     0.028    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/ap_clk
+    SLICE_X134Y111       FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X134Y111       FDRE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.080     0.108 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]/Q
+                         net (fo=273, routed)         2.039     2.147    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/s_axis_b_tdata[7]
+    SLICE_X177Y157       LUT2 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.051     2.198 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[7].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=1, routed)           0.010     2.208    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/EXP_ADD.a_xor_b_ip[7]
+    SLICE_X177Y157       CARRY8 (Prop_CARRY8_SLICEL_S[7]_CO[7])
+                                                      0.115     2.323 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8/CO[7]
+                         net (fo=1, routed)           0.026     2.349    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/carry_8
+    SLICE_X177Y158       CARRY8 (Prop_CARRY8_SLICEL_CI_O[0])
+                                                      0.056     2.405 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_EXIT_CARRY4_CARRY8/O[0]
+                         net (fo=1, routed)           0.025     2.430    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.carry_int
+    SLICE_X177Y158       FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.020     2.520    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/aclk
+    SLICE_X177Y158       FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/C
+                         clock pessimism              0.000     2.520    
+                         clock uncertainty           -0.035     2.485    
+    SLICE_X177Y158       FDRE (Setup_AFF_SLICEL_C_D)
+                                                      0.025     2.510    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD
+  -------------------------------------------------------------------
+                         required time                          2.510    
+                         arrival time                          -2.430    
+  -------------------------------------------------------------------
+                         slack                                  0.079    
+
+Slack (MET) :             0.084ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[28]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.398ns  (logic 0.438ns (18.265%)  route 1.960ns (81.735%))
+  Logic Levels:           3  (CARRY8=2 LUT2=1)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.520 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.028     0.028    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/ap_clk
+    SLICE_X148Y172       FDRE                                         r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[28]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X148Y172       FDRE (Prop_CFF_SLICEL_C_Q)
+                                                      0.079     0.107 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[28]/Q
+                         net (fo=287, routed)         1.898     2.005    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/s_axis_b_tdata[5]
+    SLICE_X140Y230       LUT2 (Prop_F6LUT_SLICEL_I0_O)
+                                                      0.148     2.153 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[5].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=1, routed)           0.011     2.164    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/EXP_ADD.a_xor_b_ip[5]
+    SLICE_X140Y230       CARRY8 (Prop_CARRY8_SLICEL_S[5]_CO[7])
+                                                      0.155     2.319 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8/CO[7]
+                         net (fo=1, routed)           0.026     2.345    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/carry_8
+    SLICE_X140Y231       CARRY8 (Prop_CARRY8_SLICEL_CI_O[0])
+                                                      0.056     2.401 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_EXIT_CARRY4_CARRY8/O[0]
+                         net (fo=1, routed)           0.025     2.426    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.carry_int
+    SLICE_X140Y231       FDRE                                         r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.020     2.520    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/aclk
+    SLICE_X140Y231       FDRE                                         r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/C
+                         clock pessimism              0.000     2.520    
+                         clock uncertainty           -0.035     2.485    
+    SLICE_X140Y231       FDRE (Setup_AFF_SLICEL_C_D)
+                                                      0.025     2.510    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD
+  -------------------------------------------------------------------
+                         required time                          2.510    
+                         arrival time                          -2.426    
+  -------------------------------------------------------------------
+                         slack                                  0.084    
+
+Slack (MET) :             0.086ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.396ns  (logic 0.255ns (10.645%)  route 2.141ns (89.355%))
+  Logic Levels:           3  (LUT6=3)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.520 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.028     0.028    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/ap_clk
+    SLICE_X134Y111       FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X134Y111       FDRE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.080     0.108 f  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]/Q
+                         net (fo=273, routed)         1.873     1.981    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/s_axis_b_tdata[7]
+    SLICE_X160Y172       LUT6 (Prop_B6LUT_SLICEL_I1_O)
+                                                      0.036     2.017 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q[0]_i_6/O
+                         net (fo=1, routed)           0.135     2.152    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q[0]_i_6_n_0
+    SLICE_X160Y172       LUT6 (Prop_C6LUT_SLICEL_I5_O)
+                                                      0.050     2.202 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q[0]_i_2__1/O
+                         net (fo=1, routed)           0.084     2.286    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/COND_DET_A/MANT_CARRY.MANT_ALL_ZERO_DET/CARRY_ZERO_DET/opt_has_pipe.first_q_reg[0]_1
+    SLICE_X159Y172       LUT6 (Prop_D6LUT_SLICEL_I1_O)
+                                                      0.089     2.375 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/COND_DET_A/MANT_CARRY.MANT_ALL_ZERO_DET/CARRY_ZERO_DET/opt_has_pipe.first_q[0]_i_1__1/O
+                         net (fo=1, routed)           0.049     2.424    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/inf_x_zero_int
+    SLICE_X159Y172       FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.020     2.520    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/aclk
+    SLICE_X159Y172       FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]/C
+                         clock pessimism              0.000     2.520    
+                         clock uncertainty           -0.035     2.485    
+    SLICE_X159Y172       FDRE (Setup_DFF_SLICEL_C_D)
+                                                      0.025     2.510    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]
+  -------------------------------------------------------------------
+                         required time                          2.510    
+                         arrival time                          -2.424    
+  -------------------------------------------------------------------
+                         slack                                  0.086    
+
+Slack (MET) :             0.089ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[29]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.392ns  (logic 0.300ns (12.544%)  route 2.092ns (87.456%))
+  Logic Levels:           3  (CARRY8=2 LUT2=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.520 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.029ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.029     0.029    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/ap_clk
+    SLICE_X148Y171       FDRE                                         r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[29]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X148Y171       FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.079     0.108 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[29]/Q
+                         net (fo=287, routed)         2.033     2.141    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/s_axis_b_tdata[6]
+    SLICE_X181Y216       LUT2 (Prop_G6LUT_SLICEL_I0_O)
+                                                      0.050     2.191 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[6].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=1, routed)           0.008     2.199    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/EXP_ADD.a_xor_b_ip[6]
+    SLICE_X181Y216       CARRY8 (Prop_CARRY8_SLICEL_S[6]_CO[7])
+                                                      0.115     2.314 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8/CO[7]
+                         net (fo=1, routed)           0.026     2.340    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/carry_8
+    SLICE_X181Y217       CARRY8 (Prop_CARRY8_SLICEL_CI_O[0])
+                                                      0.056     2.396 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_EXIT_CARRY4_CARRY8/O[0]
+                         net (fo=1, routed)           0.025     2.421    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.carry_int
+    SLICE_X181Y217       FDRE                                         r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.020     2.520    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/aclk
+    SLICE_X181Y217       FDRE                                         r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/C
+                         clock pessimism              0.000     2.520    
+                         clock uncertainty           -0.035     2.485    
+    SLICE_X181Y217       FDRE (Setup_AFF_SLICEL_C_D)
+                                                      0.025     2.510    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD
+  -------------------------------------------------------------------
+                         required time                          2.510    
+                         arrival time                          -2.421    
+  -------------------------------------------------------------------
+                         slack                                  0.089    
+
+Slack (MET) :             0.099ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[28]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U355/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.383ns  (logic 0.331ns (13.888%)  route 2.052ns (86.112%))
+  Logic Levels:           3  (CARRY8=2 LUT2=1)
+  Clock Path Skew:        -0.007ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 2.521 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.028     0.028    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/ap_clk
+    SLICE_X148Y172       FDRE                                         r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[28]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X148Y172       FDRE (Prop_CFF_SLICEL_C_Q)
+                                                      0.079     0.107 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[28]/Q
+                         net (fo=287, routed)         1.979     2.086    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U355/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/s_axis_b_tdata[5]
+    SLICE_X150Y235       LUT2 (Prop_F6LUT_SLICEM_I0_O)
+                                                      0.037     2.123 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U355/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[5].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=1, routed)           0.022     2.145    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U355/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/EXP_ADD.a_xor_b_ip[5]
+    SLICE_X150Y235       CARRY8 (Prop_CARRY8_SLICEM_S[5]_CO[7])
+                                                      0.159     2.304 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U355/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8/CO[7]
+                         net (fo=1, routed)           0.026     2.330    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U355/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/carry_8
+    SLICE_X150Y236       CARRY8 (Prop_CARRY8_SLICEM_CI_O[0])
+                                                      0.056     2.386 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U355/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_EXIT_CARRY4_CARRY8/O[0]
+                         net (fo=1, routed)           0.025     2.411    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U355/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.carry_int
+    SLICE_X150Y236       FDRE                                         r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U355/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.021     2.521    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U355/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/aclk
+    SLICE_X150Y236       FDRE                                         r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U355/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/C
+                         clock pessimism              0.000     2.521    
+                         clock uncertainty           -0.035     2.486    
+    SLICE_X150Y236       FDRE (Setup_AFF_SLICEM_C_D)
+                                                      0.025     2.511    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U355/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD
+  -------------------------------------------------------------------
+                         required time                          2.511    
+                         arrival time                          -2.411    
+  -------------------------------------------------------------------
+                         slack                                  0.099    
+
+Slack (MET) :             0.119ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U84/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.362ns  (logic 0.401ns (16.974%)  route 1.961ns (83.026%))
+  Logic Levels:           3  (CARRY8=2 LUT2=1)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.520 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.028     0.028    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/ap_clk
+    SLICE_X134Y111       FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X134Y111       FDRE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.080     0.108 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]/Q
+                         net (fo=273, routed)         1.900     2.008    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U84/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/s_axis_b_tdata[7]
+    SLICE_X147Y144       LUT2 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.150     2.158 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U84/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[7].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=1, routed)           0.010     2.168    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U84/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/EXP_ADD.a_xor_b_ip[7]
+    SLICE_X147Y144       CARRY8 (Prop_CARRY8_SLICEL_S[7]_CO[7])
+                                                      0.115     2.283 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U84/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8/CO[7]
+                         net (fo=1, routed)           0.026     2.309    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U84/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/carry_8
+    SLICE_X147Y145       CARRY8 (Prop_CARRY8_SLICEL_CI_O[0])
+                                                      0.056     2.365 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U84/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_EXIT_CARRY4_CARRY8/O[0]
+                         net (fo=1, routed)           0.025     2.390    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U84/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.carry_int
+    SLICE_X147Y145       FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U84/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.020     2.520    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U84/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/aclk
+    SLICE_X147Y145       FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U84/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/C
+                         clock pessimism              0.000     2.520    
+                         clock uncertainty           -0.035     2.485    
+    SLICE_X147Y145       FDRE (Setup_AFF_SLICEL_C_D)
+                                                      0.025     2.510    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U84/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD
+  -------------------------------------------------------------------
+                         required time                          2.510    
+                         arrival time                          -2.390    
+  -------------------------------------------------------------------
+                         slack                                  0.119    
+
+Slack (MET) :             0.139ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[28]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U338/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.342ns  (logic 0.325ns (13.875%)  route 2.017ns (86.125%))
+  Logic Levels:           3  (CARRY8=2 LUT2=1)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.520 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.028     0.028    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/ap_clk
+    SLICE_X148Y172       FDRE                                         r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[28]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X148Y172       FDRE (Prop_CFF_SLICEL_C_Q)
+                                                      0.079     0.107 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[28]/Q
+                         net (fo=287, routed)         1.955     2.062    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U338/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/s_axis_b_tdata[5]
+    SLICE_X148Y215       LUT2 (Prop_F6LUT_SLICEL_I0_O)
+                                                      0.035     2.097 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U338/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[5].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=1, routed)           0.011     2.108    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U338/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/EXP_ADD.a_xor_b_ip[5]
+    SLICE_X148Y215       CARRY8 (Prop_CARRY8_SLICEL_S[5]_CO[7])
+                                                      0.155     2.263 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U338/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8/CO[7]
+                         net (fo=1, routed)           0.026     2.289    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U338/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/carry_8
+    SLICE_X148Y216       CARRY8 (Prop_CARRY8_SLICEL_CI_O[0])
+                                                      0.056     2.345 r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U338/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_EXIT_CARRY4_CARRY8/O[0]
+                         net (fo=1, routed)           0.025     2.370    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U338/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.carry_int
+    SLICE_X148Y216       FDRE                                         r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U338/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.020     2.520    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U338/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/aclk
+    SLICE_X148Y216       FDRE                                         r  bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U338/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/C
+                         clock pessimism              0.000     2.520    
+                         clock uncertainty           -0.035     2.485    
+    SLICE_X148Y216       FDRE (Setup_AFF_SLICEL_C_D)
+                                                      0.025     2.510    bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U338/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD
+  -------------------------------------------------------------------
+                         required time                          2.510    
+                         arrival time                          -2.370    
+  -------------------------------------------------------------------
+                         slack                                  0.139    
+
+Slack (MET) :             0.149ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U117/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.332ns  (logic 0.303ns (12.991%)  route 2.029ns (87.009%))
+  Logic Levels:           3  (LUT6=3)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.520 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.028     0.028    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/ap_clk
+    SLICE_X134Y111       FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X134Y111       FDRE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.080     0.108 f  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]/Q
+                         net (fo=273, routed)         1.800     1.908    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U117/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/s_axis_b_tdata[7]
+    SLICE_X174Y144       LUT6 (Prop_F6LUT_SLICEL_I1_O)
+                                                      0.097     2.005 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U117/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q[0]_i_6/O
+                         net (fo=1, routed)           0.039     2.044    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U117/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q[0]_i_6_n_0
+    SLICE_X174Y144       LUT6 (Prop_H6LUT_SLICEL_I5_O)
+                                                      0.036     2.080 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U117/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q[0]_i_2__2/O
+                         net (fo=1, routed)           0.139     2.219    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U117/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/COND_DET_A/MANT_CARRY.MANT_ALL_ZERO_DET/CARRY_ZERO_DET/opt_has_pipe.first_q_reg[0]_1
+    SLICE_X174Y145       LUT6 (Prop_H6LUT_SLICEL_I1_O)
+                                                      0.090     2.309 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U117/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/COND_DET_A/MANT_CARRY.MANT_ALL_ZERO_DET/CARRY_ZERO_DET/opt_has_pipe.first_q[0]_i_1__1/O
+                         net (fo=1, routed)           0.051     2.360    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U117/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/inf_x_zero_int
+    SLICE_X174Y145       FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U117/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.020     2.520    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U117/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/aclk
+    SLICE_X174Y145       FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U117/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]/C
+                         clock pessimism              0.000     2.520    
+                         clock uncertainty           -0.035     2.485    
+    SLICE_X174Y145       FDRE (Setup_HFF_SLICEL_C_D)
+                                                      0.025     2.510    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U117/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]
+  -------------------------------------------------------------------
+                         required time                          2.510    
+                         arrival time                          -2.360    
+  -------------------------------------------------------------------
+                         slack                                  0.149    
+
+Slack (MET) :             0.150ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[23]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U80/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.330ns  (logic 0.474ns (20.347%)  route 1.856ns (79.653%))
+  Logic Levels:           3  (CARRY8=2 LUT2=1)
+  Clock Path Skew:        -0.010ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.520 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.030     0.030    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/ap_clk
+    SLICE_X152Y117       FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[23]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X152Y117       FDRE (Prop_FFF2_SLICEM_C_Q)
+                                                      0.079     0.109 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[23]/Q
+                         net (fo=195, routed)         1.796     1.905    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U80/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/s_axis_b_tdata[0]
+    SLICE_X138Y167       LUT2 (Prop_A6LUT_SLICEL_I0_O)
+                                                      0.149     2.054 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U80/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_i_1/O
+                         net (fo=1, routed)           0.009     2.063    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U80/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/EXP_ADD.a_xor_b_ip[0]
+    SLICE_X138Y167       CARRY8 (Prop_CARRY8_SLICEL_S[0]_CO[7])
+                                                      0.190     2.253 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U80/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8/CO[7]
+                         net (fo=1, routed)           0.026     2.279    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U80/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/carry_8
+    SLICE_X138Y168       CARRY8 (Prop_CARRY8_SLICEL_CI_O[0])
+                                                      0.056     2.335 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U80/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_EXIT_CARRY4_CARRY8/O[0]
+                         net (fo=1, routed)           0.025     2.360    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U80/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.carry_int
+    SLICE_X138Y168       FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U80/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=48850, unset)        0.020     2.520    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U80/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/aclk
+    SLICE_X138Y168       FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U80/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/C
+                         clock pessimism              0.000     2.520    
+                         clock uncertainty           -0.035     2.485    
+    SLICE_X138Y168       FDRE (Setup_AFF_SLICEL_C_D)
+                                                      0.025     2.510    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U80/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD
+  -------------------------------------------------------------------
+                         required time                          2.510    
+                         arrival time                          -2.360    
+  -------------------------------------------------------------------
+                         slack                                  0.150    
+
+
+
+

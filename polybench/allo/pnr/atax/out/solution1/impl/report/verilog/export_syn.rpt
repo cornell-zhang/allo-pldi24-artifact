@@ -1,0 +1,602 @@
+================================================================
+== Vivado RTL Synthesis Results
+================================================================
++ General Information:
+    * Date:            Wed Nov 15 16:47:29 EST 2023
+    * Version:         2022.1 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
+    * Project:         out.prj
+    * Solution:        solution1 (Vivado IP Flow Target)
+    * Product family:  virtexuplusHBM
+    * Target device:   xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * RTL Synthesis target clock:  2.5 ns
+    * C-Synthesis target clock:    2.5 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== RTL Synthesis Resource Summary
+================================================================
+LUT:              40390
+FF:               44548
+DSP:              243
+BRAM:             2
+URAM:             0
+SRL:              984
+
+
+================================================================
+== RTL Synthesis Timing Summary
+================================================================
+* Timing was met
++------------+-------------+
+| Timing     | Period (ns) |
++------------+-------------+
+| Target     | 2.500       |
+| Post-Route | 1.569       |
++------------+-------------+
+
+
+================================================================
+== RTL Synthesis Resources
+================================================================
++-----------------------------------------------------+-------+-------+-----+------+------+-----+--------+--------+---------+-------------+---------------+
+| Name                                                | LUT   | FF    | DSP | BRAM | URAM | SRL | Pragma | Impl   | Latency | Variable    | Source        |
++-----------------------------------------------------+-------+-------+-----+------+------+-----+--------+--------+---------+-------------+---------------+
+| inst                                                | 40390 | 44548 | 243 | 2    |      |     |        |        |         |             |               |
+|   (inst)                                            |       | 2     |     |      |      |     |        |        |         |             |               |
+|   out_Ax_fifo_U                                     | 44    | 40    |     | 1    |      |     |        |        |         |             |               |
+|     bind_storage fifo                               |       |       |     |      |      |     |        | memory | 0       | out_Ax_fifo | kernel.cpp:83 |
+|   stage_M_U0                                        | 21858 | 23056 | 119 |      |      |     |        |        |         |             |               |
+|     (stage_M_U0)                                    | 2     | 20    |     |      |      |     |        |        |         |             |               |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U40              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9          | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U41              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_1        | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U42              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_2        | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U43              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_3        | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U44              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_4        | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U45              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_5        | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U46              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_6        | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U47              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_7        | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U48              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_8        | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U49              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_9        | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U50              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_10       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U51              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_11       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U52              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_12       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U53              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_13       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U54              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_14       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U55              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_15       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U56              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_16       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U57              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_17       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U58              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_18       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U59              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_19       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U60              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_20       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U61              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_21       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U62              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_22       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U63              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_23       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U64              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_24       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U65              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_25       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U66              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_26       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U67              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_27       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U68              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_28       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U69              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_29       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U70              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_30       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U71              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_31       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U72              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_32       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U73              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_33       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U74              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_34       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U75              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_35       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U76              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_36       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U77              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_37       | kernel.cpp:37 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U78              | 394   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v9_38       | kernel.cpp:37 |
+|       flow_control_loop_pipe_sequential_init_U      | 51    | 2     |     |      |      |     |        |        |         |             |               |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U100            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_21       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U101            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_22       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U102            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_23       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U103            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_24       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U104            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_25       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U105            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_26       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U106            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_27       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U107            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_28       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U108            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_29       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U109            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_30       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U110            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_31       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U111            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_32       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U112            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_33       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U113            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_34       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U114            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_35       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U115            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_36       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U116            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_37       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U117            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_38       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U79             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7          | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U80             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_1        | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U81             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_2        | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U82             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_3        | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U83             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_4        | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U84             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_5        | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U85             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_6        | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U86             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_7        | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U87             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_8        | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U88             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_9        | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U89             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_10       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U90             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_11       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U91             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_12       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U92             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_13       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U93             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_14       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U94             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_15       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U95             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_16       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U96             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_17       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U97             | 86    | 168   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_18       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U98             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_19       | kernel.cpp:35 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U99             | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v7_20       | kernel.cpp:35 |
+|       mac_muladd_4ns_9ns_9ns_13_4_1_U119            | 9     |       | 1   |      |      |     |        |        |         |             |               |
+|         bind_op mul                                 |       |       |     |      |      |     |        | dsp48  | 3       | mul_ln33_1  | kernel.cpp:33 |
+|         bind_op add                                 |       |       |     |      |      |     |        | dsp48  | 3       | add_ln33    | kernel.cpp:33 |
+|       mul_mul_9ns_10ns_19_4_1_U118                  | 1     |       | 1   |      |      |     |        |        |         |             |               |
+|         bind_op mul                                 |       |       |     |      |      |     |        | dsp48  | 3       | mul_ln33    | kernel.cpp:33 |
+|     v2_10_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_10       | kernel.cpp:23 |
+|     v2_11_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_11       | kernel.cpp:23 |
+|     v2_12_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_12       | kernel.cpp:23 |
+|     v2_13_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_13       | kernel.cpp:23 |
+|     v2_14_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_14       | kernel.cpp:23 |
+|     v2_15_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_15       | kernel.cpp:23 |
+|     v2_16_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_16       | kernel.cpp:23 |
+|     v2_17_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_17       | kernel.cpp:23 |
+|     v2_18_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_18       | kernel.cpp:23 |
+|     v2_19_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_19       | kernel.cpp:23 |
+|     v2_1_U                                          | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_1        | kernel.cpp:23 |
+|     v2_20_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_20       | kernel.cpp:23 |
+|     v2_21_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_21       | kernel.cpp:23 |
+|     v2_22_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_22       | kernel.cpp:23 |
+|     v2_23_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_23       | kernel.cpp:23 |
+|     v2_24_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_24       | kernel.cpp:23 |
+|     v2_25_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_25       | kernel.cpp:23 |
+|     v2_26_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_26       | kernel.cpp:23 |
+|     v2_27_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_27       | kernel.cpp:23 |
+|     v2_28_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_28       | kernel.cpp:23 |
+|     v2_29_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_29       | kernel.cpp:23 |
+|     v2_2_U                                          | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_2        | kernel.cpp:23 |
+|     v2_30_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_30       | kernel.cpp:23 |
+|     v2_31_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_31       | kernel.cpp:23 |
+|     v2_32_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_32       | kernel.cpp:23 |
+|     v2_33_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_33       | kernel.cpp:23 |
+|     v2_34_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_34       | kernel.cpp:23 |
+|     v2_35_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_35       | kernel.cpp:23 |
+|     v2_36_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_36       | kernel.cpp:23 |
+|     v2_37_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_37       | kernel.cpp:23 |
+|     v2_38_U                                         | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_38       | kernel.cpp:23 |
+|     v2_3_U                                          | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_3        | kernel.cpp:23 |
+|     v2_4_U                                          | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_4        | kernel.cpp:23 |
+|     v2_5_U                                          | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_5        | kernel.cpp:23 |
+|     v2_6_U                                          | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_6        | kernel.cpp:23 |
+|     v2_7_U                                          | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_7        | kernel.cpp:23 |
+|     v2_8_U                                          | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_8        | kernel.cpp:23 |
+|     v2_9_U                                          | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2_9        | kernel.cpp:23 |
+|     v2_U                                            | 64    | 64    |     |      |      |     |        |        |         |             |               |
+|       bind_storage ram_s2p                          |       |       |     |      |      |     |        | auto   | 1       | v2          | kernel.cpp:23 |
+|   stage_N_U0                                        | 18488 | 21450 | 124 | 1    |      |     |        |        |         |             |               |
+|     (stage_N_U0)                                    | 1     | 6     |     |      |      |     |        |        |         |             |               |
+|     grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190     | 20    | 32    |     |      |      |     |        |        |         |             |               |
+|       (grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190) | 6     | 30    |     |      |      |     |        |        |         |             |               |
+|       flow_control_loop_pipe_sequential_init_U      | 14    | 2     |     |      |      |     |        |        |         |             |               |
+|     grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198       | 18467 | 21412 | 124 |      |      |     |        |        |         |             |               |
+|       (grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198)   | 49    | 1452  |     |      |      |     |        |        |         |             |               |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U289             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19         | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U290             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_1       | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U291             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_2       | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U292             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_3       | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U293             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_4       | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U294             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_5       | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U295             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_6       | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U296             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_7       | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U297             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_8       | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U298             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_9       | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U299             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_10      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U300             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_11      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U301             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_12      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U302             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_13      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U303             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_14      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U304             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_15      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U305             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_16      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U306             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_17      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U307             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_18      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U308             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_19      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U309             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_20      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U310             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_21      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U311             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_22      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U312             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_23      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U313             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_24      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U314             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_25      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U315             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_26      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U316             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_27      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U317             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_28      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U318             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_29      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U319             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_30      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U320             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_31      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U321             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_32      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U322             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_33      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U323             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_34      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U324             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_35      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U325             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_36      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U326             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_37      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U327             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_38      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U328             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_39      | kernel.cpp:69 |
+|       fadd_32ns_32ns_32_8_no_dsp_1_U329             | 362   | 350   |     |      |      |     |        |        |         |             |               |
+|         bind_op fadd                                |       |       |     |      |      |     |        | fabric | 7       | v19_40      | kernel.cpp:69 |
+|       flow_control_loop_pipe_sequential_init_U      | 44    | 2     |     |      |      |     |        |        |         |             |               |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U330            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17         | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U331            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_1       | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U332            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_2       | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U333            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_3       | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U334            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_4       | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U335            | 86    | 168   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_5       | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U336            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_6       | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U337            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_7       | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U338            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_8       | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U339            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_9       | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U340            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_10      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U341            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_11      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U342            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_12      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U343            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_13      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U344            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_14      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U345            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_15      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U346            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_16      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U347            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_17      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U348            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_18      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U349            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_19      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U350            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_20      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U351            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_21      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U352            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_22      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U353            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_23      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U354            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_24      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U355            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_25      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U356            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_26      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U357            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_27      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U358            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_28      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U359            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_29      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U360            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_30      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U361            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_31      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U362            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_32      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U363            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_33      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U364            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_34      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U365            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_35      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U366            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_36      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U367            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_37      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U368            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_38      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U369            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_39      | kernel.cpp:67 |
+|       fmul_32ns_32ns_32_6_max_dsp_1_U370            | 86    | 136   | 3   |      |      |     |        |        |         |             |               |
+|         bind_op fmul                                |       |       |     |      |      |     |        | maxdsp | 5       | v17_40      | kernel.cpp:67 |
+|       mul_mul_9ns_10ns_19_4_1_U371                  | 6     |       | 1   |      |      |     |        |        |         |             |               |
+|         bind_op mul                                 |       |       |     |      |      |     |        | dsp48  | 3       | mul_ln65    | kernel.cpp:65 |
+|     v11_U                                           |       |       |     | 1    |      |     |        |        |         |             |               |
+|       bind_storage ram_1p                           |       |       |     |      |      |     |        | auto   | 1       | v11         | kernel.cpp:56 |
++-----------------------------------------------------+-------+-------+-----+------+------+-----+--------+--------+---------+-------------+---------------+
+
+
+================================================================
+== RTL Synthesis Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 3.10%  | OK     |
+| FD                                                        | 50%       | 1.71%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 0.58%  | OK     |
+| CARRY8                                                    | 25%       | 1.04%  | OK     |
+| MUXF7                                                     | 15%       | 0.05%  | OK     |
+| DSP                                                       | 80%       | 2.69%  | OK     |
+| RAMB/FIFO                                                 | 80%       | 0.05%  | OK     |
+| URAM                                                      | 80%       | 0.00%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 1.37%  | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 24444     | 463    | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.300ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.208ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== RTL Synthesis Timing Paths
+================================================================
+* Timing was met
++-------+-------+--------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN                                                                                                           | ENDPOINT PIN                                                    | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                                                                                                                          |                                                                 |              |            |                |          DELAY |        DELAY |
++-------+-------+--------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 0.937 | i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK | i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[0]/D |            4 |          8 |          1.513 |          1.024 |        0.489 |
+| Path2 | 0.937 | i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK | i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[1]/D |            4 |          8 |          1.513 |          1.024 |        0.489 |
+| Path3 | 0.937 | i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK | i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[2]/D |            4 |          8 |          1.513 |          1.024 |        0.489 |
+| Path4 | 0.937 | i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK | i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[3]/D |            4 |          8 |          1.513 |          1.024 |        0.489 |
+| Path5 | 0.937 | i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK | i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[4]/D |            4 |          8 |          1.513 |          1.024 |        0.489 |
++-------+-------+--------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +---------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | Path1 Cells                                                                                                                           | Primitive Type         |
+    +---------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST                  | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST    | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_6                                 | CLB.LUT.LUT4           |
+    | i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[0]_i_1                                                                         | CLB.LUT.LUT4           |
+    | i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[0]                                                                         | REGISTER.SDR.FDRE      |
+    +---------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+
+    +---------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | Path2 Cells                                                                                                                           | Primitive Type         |
+    +---------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST                  | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST    | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_6                                 | CLB.LUT.LUT4           |
+    | i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[1]_i_1                                                                         | CLB.LUT.LUT4           |
+    | i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[1]                                                                         | REGISTER.SDR.FDRE      |
+    +---------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+
+    +---------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | Path3 Cells                                                                                                                           | Primitive Type         |
+    +---------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST                  | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST    | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_6                                 | CLB.LUT.LUT4           |
+    | i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[2]_i_1                                                                         | CLB.LUT.LUT4           |
+    | i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[2]                                                                         | REGISTER.SDR.FDRE      |
+    +---------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+
+    +---------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | Path4 Cells                                                                                                                           | Primitive Type         |
+    +---------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST                  | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST    | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_6                                 | CLB.LUT.LUT4           |
+    | i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[3]_i_1                                                                         | CLB.LUT.LUT4           |
+    | i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[3]                                                                         | REGISTER.SDR.FDRE      |
+    +---------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+
+    +---------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | Path5 Cells                                                                                                                           | Primitive Type         |
+    +---------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+    | i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST                  | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST    | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST | ARITHMETIC.DSP.DSP48E2 |
+    | i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_6                                 | CLB.LUT.LUT4           |
+    | i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[4]_i_1                                                                         | CLB.LUT.LUT4           |
+    | i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[4]                                                                         | REGISTER.SDR.FDRE      |
+    +---------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+
+
+================================================================
+== RTL Synthesis Vivado Reports
+================================================================
++--------------------------+--------------------------------------------------------------------+
+| Report Type              | Report Location                                                    |
++--------------------------+--------------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/kernel_atax_design_analysis_synth.rpt          |
+| failfast                 | impl/verilog/report/kernel_atax_failfast_synth.rpt                 |
+| timing                   | impl/verilog/report/kernel_atax_timing_synth.rpt                   |
+| timing_paths             | impl/verilog/report/kernel_atax_timing_paths_synth.rpt             |
+| utilization              | impl/verilog/report/kernel_atax_utilization_synth.rpt              |
+| utilization_hierarchical | impl/verilog/report/kernel_atax_utilization_hierarchical_synth.rpt |
++--------------------------+--------------------------------------------------------------------+
+
+

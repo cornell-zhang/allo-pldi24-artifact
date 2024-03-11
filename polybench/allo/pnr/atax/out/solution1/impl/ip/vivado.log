@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2022.1.2 (64-bit)
+# SW Build 3605665 on Fri Aug  5 22:52:02 MDT 2022
+# IP Build 3603185 on Sat Aug  6 04:07:44 MDT 2022
+# Start of session at: Wed Nov 15 16:00:11 2023
+# Process ID: 60023
+# Current directory: /work/shared/users/phd/nz264/pldi/polybench/allo/atax/atax_ii_1/out.prj/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /work/shared/users/phd/nz264/pldi/polybench/allo/atax/atax_ii_1/out.prj/solution1/impl/ip/vivado.log
+# Journal file: /work/shared/users/phd/nz264/pldi/polybench/allo/atax/atax_ii_1/out.prj/solution1/impl/ip/vivado.jou
+# Running On: zhang-24.ece.cornell.edu, OS: Linux, CPU Frequency: 1396.606 MHz, CPU Physical cores: 32, Host memory: 810168 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/xilinx/2022.1/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/xilinx/2022.1/Vivado/2022.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 15 16:01:42 2023...
