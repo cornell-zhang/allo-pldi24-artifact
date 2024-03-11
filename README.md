@@ -171,9 +171,11 @@ We provide the placement and routing (PnR) projects and running logs as part of 
 ```bash
 cd /root/allo-pldi24-artifact/polybench/allo/pnr
 python report.py
+cd /root/allo-pldi24-artifact/polybench/scalehls/pnr
+python report.py
 ```
 
-This script reports the max clock frequency after PnR for each case presented in Table 3.
+These scripts report the max clock frequency after PnR for each case presented in Table 3.
 
 ### Table 4 - CNN (Est. Time: 3 hours)
 Next, we run the experiments for multiple kernels. We leverage the three CNN models, including [MobileNet](https://arxiv.org/abs/1704.04861), [ResNet18](https://arxiv.org/abs/1512.03385), and [VGG16](https://arxiv.org/abs/1409.1556), to evaluate the performance of Allo. The scripts to run the experiments are provided below.
