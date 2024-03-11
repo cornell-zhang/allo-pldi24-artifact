@@ -107,7 +107,7 @@ For end-to-end testing (not for AE), we also include the scripts to generate the
 
 #### Experimental Settings
 
-We evaluate the following benchmarks from [PolyBench](https://web.cs.ucla.edu/~pouchet/software/polybench/). The reference implementation is available in the [PolyBenchC-4.2.1](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1):
+We evaluate the following benchmarks from [PolyBench](https://web.cs.ucla.edu/~pouchet/software/polybench/). The reference implementations are available in the [PolyBenchC-4.2.1](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1):
 * [2mm](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/kernels/2mm/2mm.c#L75-L105)
 * [3mm](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/kernels/3mm/3mm.c#L71-L110)
 * [atax](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/kernels/atax/atax.c#L64-L86)
@@ -188,17 +188,30 @@ python3 plot.py
 ```
 
 ### Figure 12 - LLM (Not for AE)
-As this experiment requires a U280 FPGA for evaluation, and needs ~24 hours to push the design from high-level synthesis to backend synthesis and generate bitstream, this experiment is **NOT for AE** purpose. However, we provide a [reference HLS C++ code](llm/), which is generated from Allo and later made some modifications to fit on the chiplet-based FPGA. Need to have device license and set up the `XDEVICE` to continue.
+As this experiment requires a U280 FPGA for evaluation, and needs ~24 hours to push the design from high-level synthesis to backend synthesis and generate bitstream, this experiment is **NOT for AE** purpose. However, we provide a [reference HLS C++ code](llm/), which is generated from Allo and later made some modifications to fit on the chiplet-based FPGA. 
+
+To generate the hardware accelerator, please make sure you have set up the entire Vitis/Vivado toolchain and have device `xpfm` board file that is set as the `XDEVICE` environment variable. You may also need to prepare the exported parameters from a pretrained model, which is required to be put under a `const` folder. After setting up the environment, you can run the following command to invoke high-level synthesis and backend synthesis:
+
+```bash
+make all TARGET=hw PLATFORM=$XDEVICE
+```
+
+It may take around a day to generate the final bitstream. After obtaining the bitstream, you can run the following command to deploy the bitstream to the FPGA and run the experiment:
+
+```bash
+make run TARGET=hw PLATFORM=$XDEVICE EMU_PS=X86
+```
 
 For the Allo frontend code, please refer to the [example](https://github.com/cornell-zhang/allo/tree/main/examples) folder in the Allo repository, which describes how to import models from [PyTorch](https://pytorch.org/) and generate the corresponding Allo code.
 
 
 ## Further Usage
+
 ### Examples
-We provide a comprehensive sets of examples under the Allo repository.
+We provide a comprehensive sets of examples under the Allo repository. Please check out these [examples](https://github.com/cornell-zhang/allo/tree/main/examples) if you are interested!
 
 ### Tutorials
-We also provide detailed documentation and tutorials for users who are interested in using Allo for designing different hardware accelerators. Please refer to this [webpage](https://cornell-zhang.github.io/allo) for more information.
+We also provide detailed documentation and tutorials for users who are interested in using Allo for designing other hardware accelerators. Please refer to this [webpage](https://cornell-zhang.github.io/allo) for more information.
 
 
 ## More information
