@@ -9,7 +9,7 @@ This repository contains scripts for setting up environments and reproducing res
 
 ## Clone the Repository
 
-Please clone the repository following the instruction below. You can include the `--recursive` flag to download all the baseline systems under the `3rdparty` directory. Notice this may take a while to download all the baseline systems since most of the baselines require a separate LLVM build. **For AE, you can directly leverage the provided [docker image](https://hub.docker.com/repository/docker/alloprj/allo-container/general), which has already set up the required environment.**
+Please clone the repository following the instruction below. You can include the `--recursive` flag to download all the baseline systems under the `3rdparty` directory. Notice this may take a while to download all the baseline systems since most of the baselines require a separate LLVM build. **For AE, there's no need to perform this step. You can directly leverage the provided [docker image](https://hub.docker.com/repository/docker/alloprj/allo-container/general), which has already set up the required environment.**
 
 ```bash
 git clone https://github.com/cornell-zhang/allo-pldi24-artifact.git
@@ -32,21 +32,23 @@ docker tag alloprj/allo-container:latest allo
 
 #### Build from source
 
-If you do not want to use the pre-built docker, we also provide detailed instructions on how to build the baseline systems from scratch. Please refer to this [link](3rdparty/README.md) for more information.
+If you do not want to use the pre-built docker, we also provide detailed instructions on how to build the baseline systems from scratch. Please refer to this [link](3rdparty/README.md) for more information. **For AE, there's no need to build from source. All tools are provided in the docker container.**
 
 ### Vitis Toolchain
 
-#### Image Copy (For AE Only)
+#### Vitis Toolchain Volume (For AE Only)
 
-```diff
-- TODO: @Niansong
+We provide a pre-configured Vitis toolchain installation volume that can be downloaded from this [Drive](https://1drv.ms/u/s!An0eQqECDpELlKUQ4fytMBK5XRjjOg?e=CA5CAb). Notice this is only for artifact evaluation and should *not* be used for other purpose. This link will be invalid after the artifact evaluation period.
+
+Please verify the md5 checksum of the downloaded zip file:
+```bash
+$ md5sum vitis-docker-volume.zip 
+a52f2b2cb5e6a6eae44243a0fa1774d5  vitis-docker-volume.zip
 ```
 
-We provide an image that contains the necessary Vitis toolchain and can be downloaded from this [Drive](). Notice this is only for artifact evaluation and should *not* be used for other purpose. This link will be invalid after the artifact evaluation period.
-
-The image is about 50GB and can be unzip using the following command:
+The image is about 66GB and can be unzipped using the following command:
 ```bash
-tar -xzvf vitis-docker-volume.tar.gz
+unzip vitis-docker-volume.zip
 ```
 
 If you need full access to the Vitis toolchain, please download it from the official website following the instruction below.
@@ -60,7 +62,7 @@ Please visit the "[Vitis Core Development Kit - 2022.1 Full Product Installation
 
 ## Kick-the-Tires (Est. Time: 10 mins)
 
-To make sure the environment runs smoothly, we first examine if the docker and the required packages are installed correctly. You can launch the docker image with the following command. Notice that you need to replace `/your/path/to/vitis-docker-volume/` with the path to the Vitis toolchain that you downloaded from the official website or the path to the unzipped image.
+To make sure the environment runs smoothly, we first examine if the docker and the required packages are installed correctly. You can launch the docker image with the following command. **Notice that you need to replace `/your/path/to/vitis-docker-volume/` with the path to the Vitis toolchain** that you downloaded from the official website or the path to the unzipped volume.
 ```bash
 docker run -v /your/path/to/vitis-docker-volume/:/tools/xilinx -it allo-container:latest /bin/bash
 ```
@@ -150,16 +152,22 @@ If you want to speed up the above experiments, you can invoke multiple terminals
 
 The results will be dumped to each folder. Lastly, we can call the following command to collect the results and generate the final figure.
 
-```diff
-- TODO: @Niansong
+```bash
+cd /root/allo-pldi24-artifact/polybench/plot/
+# first build the result dataset with the results from previous experiments
+python build_dataset.py
+# then, we are ready to generate the latency plot
+python latency_plot.py
 ```
+The result figure will be generated to: `/root/allo-pldi24-artifact/polybench/plot/polybench.png`.
 
 ### Table 3 (Est. Time: 1 min)
-Please conduct the experiments in Figure 10 first.
-
-```diff
-- TODO: @Niansong
+We provide the placement and routing (PnR) projects and running logs as part of the AE. To reproduce the PnR results in Table 3, please run the following commands inside the docker container:
+```bash
+cd /root/allo-pldi24-artifact/polybench/allo/pnr
+python report.py
 ```
+This script reports the max clock frequency after PnR for each case presented in Table 3.
 
 ### Table 4 - CNN (Est. Time: 3 hours)
 Next, we run the experiments for multiple kernels. We leverage the three CNN models, including [MobileNet](https://arxiv.org/abs/1704.04861), [ResNet18](https://arxiv.org/abs/1512.03385), and [VGG16](https://arxiv.org/abs/1409.1556), to evaluate the performance of Allo. The scripts to run the experiments are provided below.
