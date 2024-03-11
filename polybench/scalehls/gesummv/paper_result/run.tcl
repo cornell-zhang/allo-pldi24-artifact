@@ -6,7 +6,7 @@
 # @brief: A Tcl script for synthesizing the design.
 
 # Project name
-set hls_prj atax.prj
+set hls_prj gesummv.prj
 
 # Open/reset the project
 open_project ${hls_prj} -reset
