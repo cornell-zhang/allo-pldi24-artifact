@@ -22,7 +22,7 @@ benchmarks = [
 results = []
 for i, benchmark in enumerate(benchmarks):
     print(f"[{i+1}/{len(benchmarks)}] Start running {benchmark}...")
-    # os.system(f"cd {benchmark}/paper_result && vitis_hls -f run.tcl")
+    os.system(f"cd {benchmark}/paper_result && vitis_hls -f run.tcl")
     report = minidom.parse(
         open(f"{benchmark}/paper_result/{benchmark}.prj/solution1/syn/report/test_{benchmark}_csynth.xml", "r")
     )
