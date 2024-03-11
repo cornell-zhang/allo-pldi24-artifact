@@ -10,36 +10,31 @@
 #include <math.h>
 #include <stdint.h>
 
-#define seq_num 512
+#define seq_num 128
+#define inp_num 8
 #define inp_len 1024
 #define head_num 16
 #define head_len 64
 #define gelu_len 4096
 
-#define inp_parallel 8
-#define w_parallel 16
+#define pack_seq_num seq_num/inp_num
+#define pack_inp_len inp_len/inp_num
+#define pack_head_len head_len/inp_num
+#define pack_inp_len_half inp_len/inp_num/2
+#define pack_gelu_len_half gelu_len/inp_num/2
 
-const int block_size_a = inp_parallel;
-const int block_size_b = w_parallel / 2;
+typedef ap_int<48> int48_t;
+typedef ap_int<24> int24_t;
+typedef ap_int<12> int12_t;
 
-#define pack_seq_num_inp seq_num/inp_parallel
-#define pack_inp_len_inp inp_len/inp_parallel
-#define pack_head_len_inp head_len/inp_parallel
-#define pack_gelu_len_inp gelu_len/inp_parallel
+typedef ap_uint<256> io_pack_float;
+typedef ap_uint<128> bus_pack_int8;
+typedef ap_uint<64> io_pack_int8;
+typedef ap_uint<192> io_pack_int24;
+typedef ap_uint<384> io_pack_int48;
 
-#define pack_seq_num_w seq_num/w_parallel
-#define pack_inp_len_w inp_len/w_parallel
-#define pack_head_len_w head_len/w_parallel
-#define pack_gelu_len_w gelu_len/w_parallel
-
-typedef ap_uint<32 * inp_parallel> io_pack_float;
-typedef ap_uint<8 * inp_parallel> io_pack_int8;
-typedef ap_uint<8 * w_parallel> io_pack_int16;
-typedef ap_uint<64 * inp_parallel> io_pack_int64;
-
-typedef ap_uint<32 * inp_parallel * 2> double_io_pack_float;
-typedef ap_uint<8 * inp_parallel * 2> double_io_pack_int8;
-typedef ap_uint<8 * w_parallel * 2> double_io_pack_int16;
+typedef ap_uint<512> double_io_pack_float;
+typedef ap_uint<128> double_io_pack_int8;
 
 typedef union {
   float f;
@@ -47,10 +42,10 @@ typedef union {
 } converter_t;
 
 
-typedef ap_axiu<8*inp_parallel, 0, 0, 0> pkt_int8;
-typedef ap_axiu<32*inp_parallel, 0, 0, 0> pkt_float;
+typedef ap_axiu<64, 0, 0, 0> pkt_int8;
+typedef ap_axiu<256, 0, 0, 0> pkt_float;
 
-typedef ap_axiu<8*inp_parallel*2, 0, 0, 0> double_pkt_int8;
-typedef ap_axiu<32*inp_parallel*2, 0, 0, 0> double_pkt_float;
+typedef ap_axiu<128, 0, 0, 0> double_pkt_int8;
+typedef ap_axiu<512, 0, 0, 0> double_pkt_float;
 
 #endif

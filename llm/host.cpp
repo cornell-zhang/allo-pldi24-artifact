@@ -46,24 +46,25 @@ int main(int argc, char** argv) {
     // user wish to create buffer using CL_MEM_USE_HOST_PTR to align user buffer to page
     // boundary. It will ensure that user buffer is used when user create Buffer/Mem object with
     // CL_MEM_USE_HOST_PTR
-    size_t size_bytes_in0 = sizeof(ap_uint<512>) * 32*1024;
-    std::vector<ap_uint<512>, aligned_allocator<ap_uint<512> > > source_in0(32*1024);
+    size_t size_bytes_in0 = sizeof(ap_uint<256>) * 16*1024;
+    std::vector<ap_uint<256>, aligned_allocator<ap_uint<256> > > source_in0(16*1024);
     
-    size_t size_bytes_wk = sizeof(ap_uint<128>) * 64*1024;
-    std::vector<ap_uint<128>, aligned_allocator<ap_uint<128> > > source_wk(64*1024);
-    size_t size_bytes_wv = sizeof(ap_uint<128>) * 64*1024;
-    std::vector<ap_uint<128>, aligned_allocator<ap_uint<128> > > source_wv(64*1024);
-    size_t size_bytes_wq = sizeof(ap_uint<128>) * 64*1024;
-    std::vector<ap_uint<128>, aligned_allocator<ap_uint<128> > > source_wq(64*1024);
-    size_t size_bytes_w_ds0 = sizeof(ap_uint<128>) * 64*1024;
-    std::vector<ap_uint<128>, aligned_allocator<ap_uint<128> > > source_w_ds0(64*1024);
-    size_t size_bytes_w_ds1 = sizeof(ap_uint<128>) * 256*1024;
-    std::vector<ap_uint<128>, aligned_allocator<ap_uint<128> > > source_w_ds1(256*1024);
-    size_t size_bytes_w_ds2 = sizeof(ap_uint<128>) * 64*4096;
-    std::vector<ap_uint<128>, aligned_allocator<ap_uint<128> > > source_w_ds2(64*4096);
+    size_t size_bytes_wk = sizeof(ap_uint<128>) * 32*1024;
+    std::vector<ap_uint<128>, aligned_allocator<ap_uint<128> > > source_wk(32*1024);
+    size_t size_bytes_wv = sizeof(ap_uint<128>) * 32*1024;
+    std::vector<ap_uint<128>, aligned_allocator<ap_uint<128> > > source_wv(32*1024);
+    size_t size_bytes_wq = sizeof(ap_uint<128>) * 32*1024;
+    std::vector<ap_uint<128>, aligned_allocator<ap_uint<128> > > source_wq(32*1024);
 
-    size_t size_bytes_out0 = sizeof(ap_uint<512>) * 32*1024;
-    std::vector<ap_uint<512>, aligned_allocator<ap_uint<512> > > source_out0(32*1024);
+    size_t size_bytes_w_ds0 = sizeof(ap_uint<128>) * 32*1024;
+    std::vector<ap_uint<128>, aligned_allocator<ap_uint<128> > > source_w_ds0(32*1024);
+    size_t size_bytes_w_ds1 = sizeof(ap_uint<128>) * 128*1024;
+    std::vector<ap_uint<128>, aligned_allocator<ap_uint<128> > > source_w_ds1(128*1024);
+    size_t size_bytes_w_ds2 = sizeof(ap_uint<128>) * 32*4096;
+    std::vector<ap_uint<128>, aligned_allocator<ap_uint<128> > > source_w_ds2(32*4096);
+
+    size_t size_bytes_out0 = sizeof(ap_uint<256>) * 16*1024;
+    std::vector<ap_uint<256>, aligned_allocator<ap_uint<256> > > source_out0(16*1024);
 
     // OPENCL HOST CODE AREA START
     // get_xil_devices() is a utility API which will find the xilinx

@@ -11,43 +11,40 @@ using namespace std;
 
 extern "C" {
 
-void PE_int8_int16(
-  hls::stream<ap_int<8>>& A_in, hls::stream<ap_int<8>>& A_out,
-  hls::stream<ap_int<16>>& B_in, hls::stream<ap_int<16>>& B_out,
-  ap_int<64>& C_out, int k_size
+const int inp_parallel = inp_num;
+const int block_size = inp_num;
+
+void PE_8_4_pack(
+  hls::stream<int8_t>& A_in, hls::stream<int8_t>& A_out,
+  hls::stream<int8_t>& B_in, hls::stream<int8_t>& B_out,
+  int48_t& C_out, int k_size
 ) {
-  ap_int<32> C_out1;
-  ap_int<32> C_out0;
-  PE_LOOP: for (int k = 0; k < k_size; k++) {
+  PE_LOOP:
+  for (int k = 0; k < k_size; k++) {
   #pragma HLS PIPELINE II=1
     ap_int<8> a = A_in.read();
-    ap_int<16> b = B_in.read();
-    ap_int<24> pack_b = ap_int<24>((b(15, 8), ap_uint<16>(0))) + ap_int<24>(b(7, 0));
-    ap_int<16> c1;
-    ap_int<16> c0;
-    (c1, c0) = a * pack_b;
-    c1 = c1 + c0[15];
-    C_out1 += c1;
-    C_out0 += c0;
+    ap_int<8> b = B_in.read();
+    ap_int<17> pack_b = (b(7, 4), ap_uint<13>(0)) + ap_int<17>(b(3, 0));
+    ap_int<25> pack_c = a * pack_b;
+    C_out += int48_t((pack_c(24, 13), ap_uint<24>(0)) + ap_int<36>(pack_c(11, 0)));
     A_out.write(a);
     B_out.write(b);
   }
-  C_out = (C_out1, C_out0);
 }
 
-void systolic_array_qkv(
+void systolic_array_k_1024_double(
   hls::stream<io_pack_int8>& A_loader, 
-  hls::stream<io_pack_int16>& B_loader, 
-  hls::stream<io_pack_int64>& C_drainer
+  hls::stream<io_pack_int8> B_loader[2], 
+  hls::stream<io_pack_int48>& C_drainer
 ) {
-  hls::stream<ap_int<8>> A_fifo[block_size_a][block_size_b + 1];
-  hls::stream<ap_int<16>> B_fifo[block_size_b][block_size_a + 1];
-  #pragma HLS STREAM variable=A_fifo depth=block_size_a + 1
+  hls::stream<int8_t> A_fifo[block_size][block_size * 2 + 1];
+  hls::stream<int8_t> B_fifo[block_size * 2][block_size + 1];
+  #pragma HLS STREAM variable=A_fifo depth=9
   #pragma HLS BIND_STORAGE variable=A_fifo type=fifo impl=srl
-  #pragma HLS STREAM variable=B_fifo depth=block_size_b + 1
+  #pragma HLS STREAM variable=B_fifo depth=17
   #pragma HLS BIND_STORAGE variable=B_fifo type=fifo impl=srl
 
-  ap_int<64> C[block_size_a][block_size_b] = {0};
+  int48_t C[block_size][block_size * 2] = {0};
   #pragma HLS ARRAY_PARTITION variable = C complete dim = 1
   #pragma HLS ARRAY_PARTITION variable = C complete dim = 2
 
@@ -55,40 +52,42 @@ void systolic_array_qkv(
 	data_load_AB:for (int k = 0; k < inp_len; k++) {
 	#pragma HLS PIPELINE II=1
 		io_pack_int8 A_temp = A_loader.read();
-    io_pack_int8 B_temp = B_loader.read();
+    io_pack_int8 B_temp_0 = B_loader[0].read();
+		io_pack_int8 B_temp_1 = B_loader[1].read();
 
-		for (int m = 0; m < block_size_a; m++) {
+		for (int m = 0; m < block_size; m++) {
 			A_fifo[m][0].write(A_temp.range(m*8 + 7, m*8));
 		}
 		
-		for (int n = 0; n < block_size_b; n++) {
-			B_fifo[n][0].write(B_temp.range(n*16 + 15, n*16));
+		for (int n = 0; n < block_size; n++) {
+			B_fifo[n][0].write(B_temp_0.range(n*8 + 7, n*8));
+			B_fifo[block_size + n][0].write(B_temp_1.range(n*8 + 7, n*8));
 		}
 	}
 
-	systolic_array: for (int m = 0; m < block_size_a; m++) {
+	systolic_array: for (int m = 0; m < block_size; m++) {
 	#pragma HLS UNROLL
-		for (int n = 0; n < block_size_b; n++) {
+		for (int n = 0; n < block_size * 2; n++) {
 		#pragma HLS UNROLL
-			PE_int8_int16(A_fifo[m][n], A_fifo[m][n+1], B_fifo[n][m], B_fifo[n][m+1], C[m][n], inp_len);
+			PE_8_4_pack(A_fifo[m][n], A_fifo[m][n+1], B_fifo[n][m], B_fifo[n][m+1], C[m][n], inp_len);
 		}
 	}
 
 	data_drain_AB:for (int k = 0; k < inp_len; k++) {
 	#pragma HLS PIPELINE II=1
-		for (int m = 0; m < block_size_a; m++) {
-			A_fifo[m][block_size_b].read();
+		for (int m = 0; m < block_size; m++) {
+			A_fifo[m][block_size * 2].read();
 		}
-		for (int n = 0; n < block_size_b; n++) {
-			B_fifo[n][block_size_a].read();
+		for (int n = 0; n < block_size * 2; n++) {
+			B_fifo[n][block_size].read();
 		}
 	}
 
-	data_drain_C: for (int n = 0; n < block_size_b; n++) {
+	data_drain_C: for (int n = 0; n < block_size * 2; n++) {
 	#pragma HLS PIPELINE II=1
-		io_pack_int64 C_temp;
-		for (int m = 0; m < block_size_a; m++) {
-			C_temp.range(m*64 + 63, m*64) = C[m][n];
+		io_pack_int48 C_temp;
+		for (int m = 0; m < block_size; m++) {
+			C_temp.range(m*48 + 47, m*48) = C[m][n];
 		}
 		C_drainer.write(C_temp);
 	}
@@ -96,7 +95,7 @@ void systolic_array_qkv(
 
 void Linear_layer_qkv(
   hls::stream<io_pack_int8>& inp,
-  hls::stream<io_pack_int16>& block_B_loader,
+  hls::stream<io_pack_int8> block_B_loader[2],
   const float s[seq_num],
   hls::stream<double_pkt_int8>& outp
 ){
@@ -106,13 +105,13 @@ void Linear_layer_qkv(
   #pragma HLS STREAM variable=block_A_loader depth=4
   #pragma HLS BIND_STORAGE variable=block_A_loader type=fifo impl=srl
 
-  hls::stream<io_pack_int64> block_C_drainer;
+  hls::stream<io_pack_int48> block_C_drainer;
   #pragma HLS STREAM variable=block_C_drainer depth=4
   #pragma HLS BIND_STORAGE variable=block_C_drainer type=fifo impl=srl
 
-  l_pack_seq: for (int ps_id = 0; ps_id < pack_seq_num_inp; ps_id++){
+  l_pack_seq: for (int ps_id = 0; ps_id < pack_seq_num; ps_id++){
   #pragma HLS DATAFLOW
-    int ps_offset = ps_id * inp_parallel;
+    int ps_offset = ps_id * inp_num;
 
     init_inp_buf: for (int j = 0; j < inp_len; j++) {    // L19
     #pragma HLS pipeline II=1
@@ -120,7 +119,7 @@ void Linear_layer_qkv(
     }
 
     block_gemm:
-    for(int jj = 0; jj < pack_inp_len_w; jj++){
+    for(int jj = 0; jj < pack_inp_len_half/2; jj++){
     #pragma HLS DATAFLOW
     
       init_block_AB:
@@ -129,19 +128,19 @@ void Linear_layer_qkv(
           block_A_loader.write(A[k]);
       }
 
-      systolic_array_qkv(block_A_loader, block_B_loader, block_C_drainer);
+      systolic_array_k_1024_double(block_A_loader, block_B_loader, block_C_drainer);
 
       io_pack_int8 outp_data_pack_0;
       io_pack_int8 outp_data_pack_1;
-      l_bias_scale_j: for (int j = 0; j < block_size_b; j++) {    // L41
+      l_bias_scale_j: for (int j = 0; j < block_size*2; j++) {    // L41
       #pragma HLS pipeline II=1
-        io_pack_int64 acc_temp = block_C_drainer.read();
-        l_bias_scale_i: for (int i = 0; i < block_size_a; i++) {    // L40
-          ap_int<64> outp_temp = acc_temp.range(i*64 + 63, i*64);
-          ap_int<32> outp0_dp = outp_temp.range(31, 0);
-          ap_int<32> outp1_dp = outp_temp.range(63, 32);
-          ap_int<8> outp0 = outp0_dp * s[ps_offset + i];
-          ap_int<8> outp1 = outp1_dp * s[ps_offset + i];
+        io_pack_int48 acc_temp = block_C_drainer.read();
+        l_bias_scale_i: for (int i = 0; i < block_size; i++) {    // L40
+          int48_t outp_temp = acc_temp.range(i*48 + 47, i*48);
+          int24_t outp0_dp = outp_temp.range(47, 24);
+          int24_t outp1_dp = outp_temp.range(23, 0);
+          int8_t outp0 = outp0_dp * s[ps_offset + i];
+          int8_t outp1 = outp1_dp * s[ps_offset + i];
           outp_data_pack_0.range(i*8 + 7, i*8) = outp0;
           outp_data_pack_1.range(i*8 + 7, i*8) = outp1;
         }
@@ -159,7 +158,7 @@ void input_loader(
 ){
   pkt_float pkt_temp;
 
-  l_pack_seq: for (int ps_id = 0; ps_id < pack_seq_num_inp; ps_id++){
+  l_pack_seq: for (int ps_id = 0; ps_id < pack_seq_num; ps_id++){
     l_load_j: for (int j = 0; j < inp_len; j++) {
     #pragma HLS pipeline II=1
       io_pack_float inp = inp_addr[ps_id * inp_len + j];
@@ -177,15 +176,15 @@ void input_loader_kv(
 ){
   io_pack_int8 data_pack;
   
-  l_pack_seq: for (int ps_id = 0; ps_id < pack_seq_num_inp; ps_id++){
+  l_pack_seq: for (int ps_id = 0; ps_id < pack_seq_num; ps_id++){
     l_load_j: for (int j = 0; j < inp_len; j++) {
     #pragma HLS pipeline II=1
       io_pack_float inp = inp_addr[ps_id * inp_len + j];
-      l_load_i: for (int i = 0; i < inp_parallel; i++) {
+      l_load_i: for (int i = 0; i < inp_num; i++) {
         converter_t data_temp;
         data_temp.i = inp.range(i*32 + 31, i*32);
-        data_temp.f *= s[ps_id * inp_parallel + i];
-        data_pack.range(i*8 + 7, i*8) = ap_int<8>(data_temp.f);
+        data_temp.f *= s[ps_id * inp_num + i];
+        data_pack.range(i*8 + 7, i*8) = int8_t(data_temp.f);
       }
       inp_k.write(data_pack);
       inp_v.write(data_pack);
@@ -200,15 +199,15 @@ void input_loader_q(
 ){
   io_pack_int8 data_pack;
 
-  l_pack_seq: for (int ps_id = 0; ps_id < pack_seq_num_inp; ps_id++){
+  l_pack_seq: for (int ps_id = 0; ps_id < pack_seq_num; ps_id++){
     l_load_j: for (int j = 0; j < inp_len; j++) {
     #pragma HLS pipeline II=1
       io_pack_float inp = inp_addr[ps_id * inp_len + j];
-      l_load_i: for (int i = 0; i < inp_parallel; i++) {
+      l_load_i: for (int i = 0; i < inp_num; i++) {
         converter_t data_temp;
         data_temp.i = inp.range(i*32 + 31, i*32);
-        data_temp.f *= s[ps_id * inp_parallel + i];
-        data_pack.range(i*8 + 7, i*8) = ap_int<8>(data_temp.f);
+        data_temp.f *= s[ps_id * inp_num + i];
+        data_pack.range(i*8 + 7, i*8) = int8_t(data_temp.f);
       }
       inp_q.write(data_pack);
     }
@@ -216,37 +215,43 @@ void input_loader_q(
 }
 
 void weight_loader_r1(
-  io_pack_int16 *wk_addr,
-  io_pack_int16 *wv_addr,
-  io_pack_int16 *wq_addr,
-  hls::stream<io_pack_int16> &wk_loader,
-  hls::stream<io_pack_int16> &wv_loader,
-  hls::stream<io_pack_int16> &wq_loader
+  bus_pack_int8 *wk_addr,
+  bus_pack_int8 *wv_addr,
+  bus_pack_int8 *wq_addr,
+  hls::stream<io_pack_int8> wk_loader[2],
+  hls::stream<io_pack_int8> wv_loader[2],
+  hls::stream<io_pack_int8> wq_loader[2]
 ){
   #pragma HLS DATAFLOW
-  l_pack_seq_wk: for (int ps_id = 0; ps_id < pack_seq_num_inp; ps_id++){
-    block_wk_load: for(int jj = 0; jj < pack_inp_len_w; jj++){
+  l_pack_seq_wk: for (int ps_id = 0; ps_id < pack_seq_num; ps_id++){
+    block_wk_load: for(int jj = 0; jj < pack_inp_len_half / 2; jj++){
       for(int k = 0; k < inp_len; k++){
       #pragma HLS PIPELINE II=1
-        wk_loader.write(wk_addr[jj * inp_len + k]);
+        bus_pack_int8 w_temp = wk_addr[jj * inp_len + k];
+        wk_loader[0].write(w_temp.range(63, 0));
+        wk_loader[1].write(w_temp.range(127, 64));
       }
     }
   }
 
-  l_pack_seq_wv: for (int ps_id = 0; ps_id < pack_seq_num_inp; ps_id++){
-    block_wv_load: for(int jj = 0; jj < pack_inp_len_w; jj++){
+  l_pack_seq_wv: for (int ps_id = 0; ps_id < pack_seq_num; ps_id++){
+    block_wv_load: for(int jj = 0; jj < pack_inp_len_half / 2; jj++){
       for(int k = 0; k < inp_len; k++){
       #pragma HLS PIPELINE II=1
-        wv_loader.write(wv_addr[jj * inp_len + k]);
+        bus_pack_int8 w_temp = wv_addr[jj * inp_len + k];
+        wv_loader[0].write(w_temp.range(63, 0));
+        wv_loader[1].write(w_temp.range(127, 64));
       }
     }
   }
 
-  l_pack_seq_wq: for (int ps_id = 0; ps_id < pack_seq_num_inp; ps_id++){
-    block_wq_load: for(int jj = 0; jj < pack_inp_len_w; jj++){
+  l_pack_seq_wq: for (int ps_id = 0; ps_id < pack_seq_num; ps_id++){
+    block_wq_load: for(int jj = 0; jj < pack_inp_len_half / 2; jj++){
       for(int k = 0; k < inp_len; k++){
       #pragma HLS PIPELINE II=1
-        wq_loader.write(wq_addr[jj * inp_len + k]);
+        bus_pack_int8 w_temp = wq_addr[jj * inp_len + k];
+        wq_loader[0].write(w_temp.range(63, 0));
+        wq_loader[1].write(w_temp.range(127, 64));
       }
     }
   }
@@ -261,9 +266,9 @@ void GPT_layer_dataflow_region_1(
   io_pack_float *inp_addr_0,
   io_pack_float *inp_addr_1,
   io_pack_float *inp_addr_2,
-  io_pack_int16 *wk_addr,
-  io_pack_int16 *wv_addr,
-  io_pack_int16 *wq_addr,
+  bus_pack_int8 *wk_addr,
+  bus_pack_int8 *wv_addr,
+  bus_pack_int8 *wq_addr,
   hls::stream<double_pkt_int8>& outp_k,
   hls::stream<double_pkt_int8>& outp_v,
   hls::stream<double_pkt_int8>& outp_q,
@@ -279,10 +284,10 @@ void GPT_layer_dataflow_region_1(
   #pragma HLS interface axis register both port=outp_v
   #pragma HLS interface axis register both port=outp_q
   #pragma HLS interface axis register both port=outp_inp
-  #pragma HLS array_partition variable=buf17 cyclic factor=8
-  #pragma HLS array_partition variable=buf18 cyclic factor=8
-  #pragma HLS array_partition variable=buf19 cyclic factor=8
-  #pragma HLS array_partition variable=buf20 cyclic factor=8
+  #pragma HLS array_partition variable=buf17 cyclic factor=inp_parallel/2
+  #pragma HLS array_partition variable=buf18 cyclic factor=inp_parallel/2
+  #pragma HLS array_partition variable=buf19 cyclic factor=inp_parallel/2
+  #pragma HLS array_partition variable=buf20 cyclic factor=inp_parallel/2
 
   hls::stream<io_pack_int8> inp_k;
   #pragma HLS STREAM variable=inp_k depth=4
@@ -294,13 +299,13 @@ void GPT_layer_dataflow_region_1(
   #pragma HLS STREAM variable=inp_q depth=4
   #pragma HLS BIND_STORAGE variable=inp_q type=fifo impl=srl
 
-  hls::stream<io_pack_int16> block_wk_loader;
+  hls::stream<io_pack_int8> block_wk_loader[2];
   #pragma HLS STREAM variable=block_wk_loader depth=4
   #pragma HLS BIND_STORAGE variable=block_wk_loader type=fifo impl=srl
-  hls::stream<io_pack_int16> block_wv_loader;
+  hls::stream<io_pack_int8> block_wv_loader[2];
   #pragma HLS STREAM variable=block_wv_loader depth=4
   #pragma HLS BIND_STORAGE variable=block_wv_loader type=fifo impl=srl
-  hls::stream<io_pack_int16> block_wq_loader;
+  hls::stream<io_pack_int8> block_wq_loader[2];
   #pragma HLS STREAM variable=block_wq_loader depth=4
   #pragma HLS BIND_STORAGE variable=block_wq_loader type=fifo impl=srl
   
