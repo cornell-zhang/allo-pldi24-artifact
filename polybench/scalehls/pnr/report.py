@@ -26,6 +26,6 @@ for benchmark in benchmarks:
             results.append((benchmark, 1000.0/latency))
             break
 
-headers = ["PnR Frequency (Allo)", "MHz"]
+headers = ["PnR Frequency (ScaleHLS)", "MHz"]
 table = tabulate(results, headers=headers)
 print(table)
