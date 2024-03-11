@@ -107,28 +107,28 @@ void l3_relu_conv(
   int8_t out[1][64][32][32],
   int8_t weight[64][32][1][1]
 ) {	// L1722
+
+  #pragma HLS array_partition variable=weight cyclic factor=32 dim=1
+  #pragma HLS array_partition variable=weight complete dim=2
+
   for (int b = 0; b < 1; b++) {     // L4
     for (int coo = 0; coo < 2; coo++) {     // L5
       for (int ho = 0; ho < 32; ho++) {   // L6
         for (int wo = 0; wo < 32; wo++) { // L7
-
-          int8_t temp[32];
           #pragma HLS pipeline II=1
-          for (int ci = 0; ci < 32; ci++) {    // L12
-            for (int r = 0; r < 1; r++) {  // L13
-              for (int c = 0; c < 1; c++) {        // L14
-                int8_t v11 = inp[b][ci][(ho + r)][(wo + c)];     // L15
+          
+          int8_t temp[32];
+          #pragma HLS array_partition variable=temp complete dim=1
 
+          for (int ci = 0; ci < 32; ci++) {    // L12
                 for (int coi = 0; coi < 32; coi++) {
-                  int co = coo * 32 + coi;
-                  int8_t v12 = weight[co][ci][r][c];  // L16
-                  int16_t v13 = v11;      // L17
+                  int co = coo << 5 + coi;
+                  int8_t v12 = weight[co][ci][0][0];  // L16
+                  int16_t v13 = inp[b][ci][ho][wo];      // L17
                   int16_t v14 = v12;      // L18
                   int16_t v15 = v13 * v14;        // L19
                   temp[coi] += v15;
                 }
-              }
-            }
           }
           for (int coi = 0; coi < 32; coi++) {
             int co = coo * 32 + coi;
@@ -2140,4 +2140,3 @@ void main_graph(
   l34_avgpool(l33_out, l34_out);	// L36023
   l35_linear(l34_out, l35_out, l35_weight);	// L36025
 }
-

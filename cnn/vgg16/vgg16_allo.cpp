@@ -1211,7 +1211,7 @@ void l9_pad_conv(
       for (int ho = 0; ho < 10; ho++) {   // L11
         for (int wo = 0; wo < 10; wo++) { // L12
 
-          int8_t temp = 0;
+          int8_t temp[2] = {0,0};
           for (int v9o = 0; v9o < 64; v9o++) {
               #pragma HLS pipeline II=1
             for (int v9 = 0; v9 < 8; v9++) {    // L13
@@ -1253,12 +1253,12 @@ void l9_pad_conv(
                 }
                 int8_t v30 = v;   // L52
                 // v2[b][co][((ho / 2) - 1)][((wo / 2) - 1)] = v30;  // L53
-                temp += v30;
+                temp[v9o % 2] += v30;
               }
             }
           }
           if (ho >= 2 && wo >= 2 && ho % 2 == 0 && wo % 2 == 0) {
-            out[b][co][(ho/2)-1][(wo/2)-1] = temp;
+            out[b][co][(ho/2)-1][(wo/2)-1] = temp[0] + temp[1];
           }
         }
       }
@@ -1520,4 +1520,3 @@ void main_graph(
 
   l20_linear(l19_out, l20_out, l20_weight);	// L18778
 }
-
