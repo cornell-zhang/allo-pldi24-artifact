@@ -1,6 +1,7 @@
 import os
 import xml.dom.minidom as minidom
 from tabulate import tabulate
+import json
 
 assert os.system("which vitis_hls >> /dev/null") == 0, "Vitis HLS not found in PATH"
 benchmarks = [
@@ -21,7 +22,7 @@ benchmarks = [
 results = []
 for i, benchmark in enumerate(benchmarks):
     print(f"[{i+1}/{len(benchmarks)}] Start running {benchmark}...")
-    os.system(f"cd {benchmark} && vitis_hls -f run.tcl")
+    # os.system(f"cd {benchmark} && vitis_hls -f run.tcl")
     report = minidom.parse(
         open(f"{benchmark}/{benchmark}.prj/solution1/syn/report/kernel_{benchmark}_csynth.xml", "r")
     )
@@ -45,3 +46,12 @@ for i, benchmark in enumerate(benchmarks):
 headers = ["Benchmark (Allo)", "Latency (ms)"]
 table = tabulate(results, headers=headers)
 print(table)
+
+
+# convert results to dict
+results = dict(results)
+# replace key "jacobi_2d" with "jacobi-2d"
+results["jacobi-2d"] = results.pop("jacobi_2d")
+# save results to file
+with open('results.json', 'w') as f:
+    json.dump(results, f, indent=4)

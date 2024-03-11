@@ -66,13 +66,6 @@ void compute_sum(
           float v20 = v19 * 1.500000;	// L33
           float v21 = v8[j1][k1];	// L34
           float v22 = v20 * v21;	// L35
-// WARNING: [HLS 200-880] The II Violation in module 
-// 'compute_sum_Pipeline_l_k1' (loop 'l_k1'): 
-// Unable to enforce a carried dependence constraint 
-// (II = 1, distance = 1, offset = 1) between 
-// 'store' operation ('buffer_1_addr_write_ln71', kernel.cpp:71) 
-// of variable 'v24', kernel.cpp:70 on array 'buffer_1' 
-// and 'load' operation ('v23', kernel.cpp:69) on array 'buffer_1'.
           float v23 = buffer[i1][j1];	// L36
           float v24 = v23 + v22;	// L37
           buffer[i1][j1] = v24;	// L38
@@ -89,13 +82,13 @@ void compute_sum(
   }
 }
 
-void kernel_syr2k(
+void kernel_syrk(
   float v28[240][200],
   float v29[240][200],
   float v30[240][240],
   float v31[240][240]
 ) {	// L51
-#pragma HLS dataflow
+  #pragma HLS dataflow
   #pragma HLS array_partition variable=v29 complete dim=1
 
   #pragma HLS array_partition variable=v30 complete dim=2
