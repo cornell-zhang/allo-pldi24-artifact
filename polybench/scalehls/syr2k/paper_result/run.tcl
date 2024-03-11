@@ -6,7 +6,7 @@
 # @brief: A Tcl script for synthesizing the design.
 
 # Project name
-set hls_prj syrk.prj
+set hls_prj syr2k.prj
 
 # Open/reset the project
 open_project ${hls_prj} -reset
