@@ -19,21 +19,21 @@ void compute_sum(
   float v2[200][240]
 ) {	// L4
   #pragma HLS inline off
-  #pragma HLS array_partition variable=v1 cyclic factor=24 dim=2
-  #pragma HLS array_partition variable=v2 cyclic factor=24 dim=2
+  #pragma HLS array_partition variable=v1 cyclic factor=30 dim=2
+  #pragma HLS array_partition variable=v2 cyclic factor=30 dim=2
 
   l_sum_i1: for (int i1 = 0; i1 < 200; i1++) {	// L5
     float v4[240];	// L6
-    #pragma HLS array_partition variable=v4 cyclic factor=24 dim=1
+    #pragma HLS array_partition variable=v4 cyclic factor=30 dim=1
     l_j1_init: for (int j1_init = 0; j1_init < 240; j1_init++) {	// L8
     #pragma HLS pipeline II=1
-    #pragma HLS unroll factor=24
+    #pragma HLS unroll factor=30
       v4[j1_init] = 0.000000;	// L9
     }
     l_k1_k1: for (int k1 = 0; k1 < 200; k1++) {	// L11
       l_j1: for (int j1 = 0; j1 < 240; j1++) {	// L12
       #pragma HLS pipeline II=1
-      #pragma HLS unroll factor=24
+      #pragma HLS unroll factor=30
         bool v8 = k1 < i1;	// L13
         if (v8) {	// L14
           float v9 = v1[k1][j1];	// L15
@@ -47,7 +47,7 @@ void compute_sum(
     }
     l_j1_back: for (int j1_back = 0; j1_back < 240; j1_back++) {	// L24
     #pragma HLS pipeline II=1
-    #pragma HLS unroll factor=24
+    #pragma HLS unroll factor=30
       float v15 = v4[j1_back];	// L25
       v2[i1][j1_back] = v15;	// L26
     }
@@ -81,8 +81,8 @@ void update_C(
     }
     l_S_j1_2_j11: for (int j11 = 0; j11 < 240; j11++) {	// L45
     #pragma HLS pipeline II=1
-      float v24 = v19[i][j11];	// L46
-      float v31 = v24 * 1.200000;	// L48
+      float v30 = v19[i][j11];	// L46
+      float v31 = v30 * 1.200000;	// L48
       float v32 = v17[i][j11];	// L49
       float v33 = v32 * 1.500000;	// L51
       float v34 = v16[i][i];	// L52
@@ -113,4 +113,3 @@ void kernel_symm(
   compute_sum(v40, v42, summ);	// L65
   update_C(v41, v43, summ, v44);	// L66
 }
-

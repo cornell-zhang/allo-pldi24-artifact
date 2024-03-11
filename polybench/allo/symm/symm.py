@@ -61,7 +61,7 @@ def symm(concrete_type, M, N, alpha=1.5, beta=1.2):
     s1.buffer_at(s1.summ, "i1")
     s1.partition(s1.B, dim=2, partition_type=2, factor=24)
     s1.pipeline("j1")
-    s1.unroll("j1", factor=24)
+    s1.unroll("j1", factor=30)
 
     sch = allo.customize(kernel_symm, instantiate=[concrete_type, M, N])
     sch.compose(s0)
