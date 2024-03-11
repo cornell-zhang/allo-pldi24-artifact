@@ -84,40 +84,71 @@ You are expected to see the following outputs:
 Congratulations! You have successfully set up the environment and passed the basic tests :) You can now proceed to the next step to reproduce the experiments in the paper.
 
 
-## Reproduce Experiments (Est. Time: X hours)
+## Reproduce Experiments (Est. Time: 17 hours)
 
 Below are the scripts to reproduce experiments in Allo paper. Each script will emit logging files that are used to generate the final results.
 
 We provide scripts for reproducing the results of **Figure 10**, **Table 3**, and **Table 4**, which construct the main conclusion of our paper. For Figure 12, it requires a U280 FPGA to run the experiment. Due to campus security settings, we are unable to grant reviewers access to the machine, and thus, Figure 12 is not part of the artifact evaluation. However, we provide the code and instructions for users with access to FPGA machines. Additionally, the synthesis report is included for reference.
 
-First, we can run the following command to enter the docker image. We highly recommend **lanuching a `tmux` terminal before executing the docker image**, as the experiments may take a long time to finish. 
+First, we can run the following command to enter the docker image. It will mount the Vitis toolchain and the AE folder to the docker, so please make sure you have already cloned this repository and downloaded the Vitis toolchain. We highly recommend **lanuching a `tmux` terminal before executing the docker image**, as the experiments may take a long time to finish. 
 
 ```bash
-docker run -v /your/path/to/vitis-docker-volume/:/tools/xilinx -it allo-container:latest /bin/bash
+docker run -v /your/path/to/vitis-docker-volume/:/tools/xilinx -v $(pwd):/root/allo-pldi24-artifact -it allo-container:latest /bin/bash
 ```
 
-### Figure 10 - PolyBench (Est. Time: 4 hours)
+### Figure 10 - PolyBench (Est. Time: 14 hours)
 As it requires more than 200G disk space to install all the baseline packages, we do not contain all the packages in the docker image, and thus will not perform end-to-end code generation, which also costs lots of time. Instead, we generate the optimized HLS C++ code from each baseline offline, and reviewers only need to run the Vitis HLS to obtain the final report. Specifically, the HLS C++ code from [ScaleHLS](https://github.com/hanchenye/scalehls), [HeteroCL](https://github.com/cornell-zhang/heterocl), [Pylog](https://github.com/hst10/pylog), and [Dahlia](https://github.com/cucapra/dahlia) are generated offline.
 
-For end-to-end testing, we also include the scripts to generate the optimized HLS C++ code from each baseline. Please refer to this [link](3rdparty/README.md) to install the required packages and generate the optimized HLS C++ code.
+For end-to-end testing (not for AE), we also include the scripts to generate the optimized HLS C++ code from each baseline. Please refer to this [link](3rdparty/README.md) to install the required packages and generate the optimized HLS C++ code.
 
-| Benchmark | Script |
-| --- | --- |
-| [2mm](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/kernels/2mm/2mm.c#L75-L105) |
-| [3mm](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/kernels/3mm/3mm.c#L71-L110) |
-| [atax](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/kernels/atax/atax.c#L64-L86) |
-| [bicg](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/kernels/bicg/bicg.c#L72-L96) |
-| [correlation](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/datamining/correlation/correlation.c#L65-L124) |
-| [gemm](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/gemm/gemm.c#L72-L99) |
-| [gesummv](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/gesummv/gesummv.c#L68-L96) |
-| [jacobi-2d](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/stencils/jacobi-2d/jacobi-2d.c#L64-L84) |
-| [mvt](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/kernels/mvt/mvt.c#L77-L96) | 
-| [symm](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/symm/symm.c#L73-L105) |
-| [syr2k](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/syr2k/syr2k.c#L72-L99) |
-| [syrk](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/syrk/syrk.c#L67-L93) |
-| [trmm](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/trmm/trmm.c#L69-L94) |
+#### Experimental Settings
 
-### Table 3 (Est. Time: 4 hours)
+We evaluate the following benchmarks from [PolyBench](https://web.cs.ucla.edu/~pouchet/software/polybench/). The reference implementation is available in the [PolyBenchC-4.2.1](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1):
+* [2mm](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/kernels/2mm/2mm.c#L75-L105)
+* [3mm](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/kernels/3mm/3mm.c#L71-L110)
+* [atax](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/kernels/atax/atax.c#L64-L86)
+* [bicg](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/kernels/bicg/bicg.c#L72-L96)
+* [correlation](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/datamining/correlation/correlation.c#L65-L124)
+* [gemm](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/gemm/gemm.c#L72-L99)
+* [gesummv](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/gesummv/gesummv.c#L68-L96)
+* [jacobi-2d](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/stencils/jacobi-2d/jacobi-2d.c#L64-L84)
+* [mvt](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/kernels/mvt/mvt.c#L77-L96)
+* [symm](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/symm/symm.c#L73-L105)
+* [syr2k](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/syr2k/syr2k.c#L72-L99)
+* [syrk](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/syrk/syrk.c#L67-L93)
+* [trmm](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/trmm/trmm.c#L69-L94)
+
+Each folder contains the original baseline implementation files and the generated HLS C++ files. You can go to each folder to check the details. For example, `polybench/allo/2mm` is the Allo implementation for the 2mm benchmark, and there are three files under this folder:
+* `two_mm.py`: The Allo implementation
+* `two_mm.cpp`: The generated HLS C++ file
+* `run.tcl`: The Vitis HLS script to run the synthesis
+
+#### Run the Experiment
+Inside the docker, you can use the following command to run the experiment:
+
+```bash
+cd /root/allo-pldi24-artifact/polybench
+# Allo (Est. Time: 4 hours)
+cd allo && python3 run.py
+# ScaleHLS (Est. Time: 4 hours)
+cd ../scalehls && python3 run.py
+# HeteroCL (Est. Time: 3 hours)
+cd ../heterocl && python3 run.py
+# Pylog (Est. Time: 1 hour)
+cd ../pylog && python3 run.py
+# Dahlia (Est. Time: 1 hour)
+cd ../dahlia && python3 run.py
+# Vitis (Est. Time: 1 hour)
+cd ../vitis && python3 run.py
+```
+
+The results will be dumped to each folder. Lastly, we can call the following command to collect the results and generate the final figure.
+
+```bash
+cd plot && python3 plot.py
+```
+
+### Table 3 (Est. Time: 10 hours)
 
 
 ### Table 4 - CNN (Est. Time: 3 hours)
