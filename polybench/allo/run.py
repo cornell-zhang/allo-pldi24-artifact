@@ -4,13 +4,13 @@ from tabulate import tabulate
 
 assert os.system("which vitis_hls >> /dev/null") == 0, "Vitis HLS not found in PATH"
 benchmarks = [
-    # "2mm",
-    # "3mm",
-    # "atax",
-    # "bicg",
-    # "correlation",
-    # "gemm",
-    # "gesummv",
+    "2mm",
+    "3mm",
+    "atax",
+    "bicg",
+    "correlation",
+    "gemm",
+    "gesummv",
     "jacobi_2d",
     "mvt",
     "symm",
