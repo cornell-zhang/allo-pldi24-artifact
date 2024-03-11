@@ -96,7 +96,7 @@ First, we can run the following command to enter the docker image. It will mount
 docker run -v /your/path/to/vitis-docker-volume/:/tools/xilinx -v $(pwd):/root/allo-pldi24-artifact -it allo-container:latest /bin/bash
 ```
 
-### Figure 10 - PolyBench (Est. Time: 14 hours)
+### Figure 10 - PolyBench (Est. Time: 20 hours)
 As it requires more than 200G disk space to install all the baseline packages, we do not contain all the packages in the docker image, and thus will not perform end-to-end code generation, which also costs lots of time. Instead, we generate the optimized HLS C++ code from each baseline offline, and reviewers only need to run the Vitis HLS to obtain the final report. Specifically, the HLS C++ code from [ScaleHLS](https://github.com/hanchenye/scalehls), [HeteroCL](https://github.com/cornell-zhang/heterocl), [Pylog](https://github.com/hst10/pylog), and [Dahlia](https://github.com/cucapra/dahlia) are generated offline.
 
 For end-to-end testing (not for AE), we also include the scripts to generate the optimized HLS C++ code from each baseline. Please refer to this [link](3rdparty/README.md) to install the required packages and generate the optimized HLS C++ code.
@@ -128,7 +128,7 @@ Inside the docker, you can use the following command to run the experiment:
 
 ```bash
 cd /root/allo-pldi24-artifact/polybench
-# Allo (Est. Time: 4 hours)
+# Allo (Est. Time: 6 hours)
 cd allo && python3 run.py
 # ScaleHLS (Est. Time: 4 hours)
 cd ../scalehls && python3 run.py
@@ -146,15 +146,19 @@ If you want to speed up the above experiments, you can invoke multiple terminals
 
 The results will be dumped to each folder. Lastly, we can call the following command to collect the results and generate the final figure.
 
+TODO: @Niansong
+
 ```bash
-cd plot && python3 plot.py
+...
 ```
 
 ### Table 3 (Est. Time: 1 min)
 Please conduct the experiments in Figure 10 first.
 
+TODO: @Niansong
+
 ### Table 4 - CNN (Est. Time: 3 hours)
-Next, we run the experiments for multiple kernels. We leverage the three CNN models, including MobileNet, ResNet18, and VGG16, to evaluate the performance of Allo. The scripts to run the experiments are provided below.
+Next, we run the experiments for multiple kernels. We leverage the three CNN models, including [MobileNet](https://arxiv.org/abs/1704.04861), [ResNet18](https://arxiv.org/abs/1512.03385), and [VGG16](https://arxiv.org/abs/1409.1556), to evaluate the performance of Allo. The scripts to run the experiments are provided below.
 
 Please run the following commands in the docker and make sure you have launched the `tmux` terminal in case the experiments take a long time to finish.
 ```bash
@@ -173,11 +177,18 @@ vitis_hls -f vgg16_allo.tcl
 vitis_hls -f vgg16_scalehls.tcl
 ```
 
+After running all the neural network models, we can generate the result table by running:
+```bash
+cd /root/allo-pldi24-artifact/cnn
+python3 plot.py
+```
+
 ### Figure 12 - LLM (Not for AE)
 
 
-## Further Customization
-
+## Further Usage
+### Examples
+We provide a comprehensive sets of examples under the Allo repository.
 
 ### Tutorials
 We also provide detailed documentation and tutorials for users who are interested in using Allo for designing different hardware accelerators. Please refer to this [webpage](https://cornell-zhang.github.io/allo) for more information.
