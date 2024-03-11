@@ -15,7 +15,7 @@ open_project ${hls_prj} -reset
 open_solution -reset solution1 -flow_target vivado
 
 # Top function of the design is "top"
-set_top jacobi_2d
+set_top kernel_jacobi_2d
 
 # Add design and testbench files
 add_files jacobi_2d.cpp
