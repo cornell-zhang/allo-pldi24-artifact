@@ -166,7 +166,18 @@ python latency_plot.py
 
 The result figure will be generated to: `/root/allo-pldi24-artifact/polybench/plot/polybench.pdf`.
 
-### Table 3 (Est. Time: 1 min)
+#### End-to-end Generation (Optional)
+The `polybench` folder contains all the required code to generate the optimized HLS C++ code from each baseline. Please refer to this [link](3rdparty/README.md) to install the required packages, and those optimized C++ code can be generated using the following commands:
+
+| Frameworks | Commands |
+| --- | --- |
+| Allo | `python <allo_code>.py` |
+| ScaleHLS | `bash run_dse.sh` |
+| Pylog | `python <pylog_code>.py` |
+| Dahlia | Copy `<dahlia_code>.fuse` to the [website](https://capra.cs.cornell.edu/dahlia/) |
+| HeteroCL | `python <heterocl_code>.py` |
+
+### Table 3 (Est. Time: 10 min)
 We provide the placement and routing (PnR) projects and running logs as part of the AE. To reproduce the PnR results in Table 3, please run the following commands inside the docker container:
 ```bash
 cd /root/allo-pldi24-artifact/polybench/allo/pnr
@@ -224,13 +235,13 @@ It may take around a day to generate the final bitstream. After obtaining the bi
 make run TARGET=hw PLATFORM=$XDEVICE EMU_PS=X86
 ```
 
-For the Allo frontend code, please refer to the [example](https://github.com/cornell-zhang/allo/tree/main/examples) folder in the Allo repository, which describes how to import models from [PyTorch](https://pytorch.org/) and generate the corresponding Allo code.
+For the Allo frontend code, please refer to the [example](https://github.com/cornell-zhang/allo/tree/main/examples) folder in the Allo repository, which describes how to import models (e.g., GPT2) from [PyTorch](https://pytorch.org/) and generate the corresponding Allo code.
 
 
 ## Further Usage
 
 ### Examples
-We provide a comprehensive sets of examples under the Allo repository. Please check out these [examples](https://github.com/cornell-zhang/allo/tree/main/examples) if you are interested!
+We provide a comprehensive sets of examples under the Allo repository. Please check out these [examples](https://github.com/cornell-zhang/allo/tree/main/examples) and [test cases](https://github.com/cornell-zhang/allo/tree/main/tests) if you are interested!
 
 ### Tutorials
 We also provide detailed documentation and tutorials for users who are interested in using Allo for designing other hardware accelerators. Please refer to this [webpage](https://cornell-zhang.github.io/allo) for more information.
