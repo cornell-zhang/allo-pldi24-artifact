@@ -34,7 +34,7 @@ for i, benchmark in enumerate(benchmarks):
     avg_lat = (
         report.getElementsByTagName("PerformanceEstimates")[0]
         .getElementsByTagName("SummaryOfOverallLatency")[0]
-        .getElementsByTagName("Average-caseLatency")[0]
+        .getElementsByTagName("Worst-caseLatency")[0]
         .childNodes[0]
         .data
     )
