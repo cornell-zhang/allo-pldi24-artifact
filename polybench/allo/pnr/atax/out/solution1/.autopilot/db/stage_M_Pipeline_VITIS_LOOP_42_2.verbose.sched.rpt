@@ -1,0 +1,281 @@
+
+
+================================================================
+== Vitis HLS Report for 'stage_M_Pipeline_VITIS_LOOP_42_2'
+================================================================
+* Date:           Wed Nov 15 15:58:08 2023
+
+* Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
+* Project:        out.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  2.50 ns|  1.435 ns|     0.68 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      393|      393|  0.983 us|  0.983 us|  393|  393|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_42_2  |      391|      391|         3|          1|          1|   390|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.18>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%phi_urem951 = alloca i32 1"   --->   Operation 6 'alloca' 'phi_urem951' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%phi_mul949 = alloca i32 1"   --->   Operation 7 'alloca' 'phi_mul949' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 8 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %out_Ax_fifo1, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.38ns)   --->   "%store_ln0 = store i9 0, i9 %i"   --->   Operation 10 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 11 [1/1] (0.38ns)   --->   "%store_ln0 = store i19 0, i19 %phi_mul949"   --->   Operation 11 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 12 [1/1] (0.38ns)   --->   "%store_ln0 = store i9 0, i9 %phi_urem951"   --->   Operation 12 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc31"   --->   Operation 13 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%i_1 = load i9 %i" [kernel.cpp:42]   --->   Operation 14 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 15 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.59ns)   --->   "%icmp_ln42 = icmp_eq  i9 %i_1, i9 390" [kernel.cpp:42]   --->   Operation 16 'icmp' 'icmp_ln42' <Predicate = true> <Delay = 0.59> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 390, i64 390, i64 390"   --->   Operation 17 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.71ns)   --->   "%add_ln42 = add i9 %i_1, i9 1" [kernel.cpp:42]   --->   Operation 18 'add' 'add_ln42' <Predicate = true> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln42 = br i1 %icmp_ln42, void %for.inc31.split, void %for.end33.exitStub" [kernel.cpp:42]   --->   Operation 19 'br' 'br_ln42' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%phi_mul949_load = load i19 %phi_mul949" [kernel.cpp:43]   --->   Operation 20 'load' 'phi_mul949_load' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.80ns)   --->   "%add_ln43 = add i19 %phi_mul949_load, i19 841" [kernel.cpp:43]   --->   Operation 21 'add' 'add_ln43' <Predicate = (!icmp_ln42)> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_2 = partselect i4 @_ssdm_op_PartSelect.i4.i19.i32.i32, i19 %phi_mul949_load, i32 15, i32 18" [kernel.cpp:43]   --->   Operation 22 'partselect' 'tmp_2' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln43 = zext i4 %tmp_2" [kernel.cpp:43]   --->   Operation 23 'zext' 'zext_ln43' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%v2_addr = getelementptr i32 %v2, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 24 'getelementptr' 'v2_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%v2_1_addr = getelementptr i32 %v2_1, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 25 'getelementptr' 'v2_1_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%v2_2_addr = getelementptr i32 %v2_2, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 26 'getelementptr' 'v2_2_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%v2_3_addr = getelementptr i32 %v2_3, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 27 'getelementptr' 'v2_3_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%v2_4_addr = getelementptr i32 %v2_4, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 28 'getelementptr' 'v2_4_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%v2_5_addr = getelementptr i32 %v2_5, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 29 'getelementptr' 'v2_5_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%v2_6_addr = getelementptr i32 %v2_6, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 30 'getelementptr' 'v2_6_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%v2_7_addr = getelementptr i32 %v2_7, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 31 'getelementptr' 'v2_7_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%v2_8_addr = getelementptr i32 %v2_8, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 32 'getelementptr' 'v2_8_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%v2_9_addr = getelementptr i32 %v2_9, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 33 'getelementptr' 'v2_9_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%v2_10_addr = getelementptr i32 %v2_10, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 34 'getelementptr' 'v2_10_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%v2_11_addr = getelementptr i32 %v2_11, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 35 'getelementptr' 'v2_11_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%v2_12_addr = getelementptr i32 %v2_12, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 36 'getelementptr' 'v2_12_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%v2_13_addr = getelementptr i32 %v2_13, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 37 'getelementptr' 'v2_13_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%v2_14_addr = getelementptr i32 %v2_14, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 38 'getelementptr' 'v2_14_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%v2_15_addr = getelementptr i32 %v2_15, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 39 'getelementptr' 'v2_15_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%v2_16_addr = getelementptr i32 %v2_16, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 40 'getelementptr' 'v2_16_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%v2_17_addr = getelementptr i32 %v2_17, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 41 'getelementptr' 'v2_17_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%v2_18_addr = getelementptr i32 %v2_18, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 42 'getelementptr' 'v2_18_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%v2_19_addr = getelementptr i32 %v2_19, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 43 'getelementptr' 'v2_19_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%v2_20_addr = getelementptr i32 %v2_20, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 44 'getelementptr' 'v2_20_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%v2_21_addr = getelementptr i32 %v2_21, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 45 'getelementptr' 'v2_21_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%v2_22_addr = getelementptr i32 %v2_22, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 46 'getelementptr' 'v2_22_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%v2_23_addr = getelementptr i32 %v2_23, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 47 'getelementptr' 'v2_23_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%v2_24_addr = getelementptr i32 %v2_24, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 48 'getelementptr' 'v2_24_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%v2_25_addr = getelementptr i32 %v2_25, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 49 'getelementptr' 'v2_25_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%v2_26_addr = getelementptr i32 %v2_26, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 50 'getelementptr' 'v2_26_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%v2_27_addr = getelementptr i32 %v2_27, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 51 'getelementptr' 'v2_27_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%v2_28_addr = getelementptr i32 %v2_28, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 52 'getelementptr' 'v2_28_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%v2_29_addr = getelementptr i32 %v2_29, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 53 'getelementptr' 'v2_29_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%v2_30_addr = getelementptr i32 %v2_30, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 54 'getelementptr' 'v2_30_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%v2_31_addr = getelementptr i32 %v2_31, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 55 'getelementptr' 'v2_31_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%v2_32_addr = getelementptr i32 %v2_32, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 56 'getelementptr' 'v2_32_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%v2_33_addr = getelementptr i32 %v2_33, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 57 'getelementptr' 'v2_33_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%v2_34_addr = getelementptr i32 %v2_34, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 58 'getelementptr' 'v2_34_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%v2_35_addr = getelementptr i32 %v2_35, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 59 'getelementptr' 'v2_35_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%v2_36_addr = getelementptr i32 %v2_36, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 60 'getelementptr' 'v2_36_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%v2_37_addr = getelementptr i32 %v2_37, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 61 'getelementptr' 'v2_37_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%v2_38_addr = getelementptr i32 %v2_38, i64 0, i64 %zext_ln43" [kernel.cpp:43]   --->   Operation 62 'getelementptr' 'v2_38_addr' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_1 : Operation 63 [2/2] (0.69ns)   --->   "%v2_load = load i4 %v2_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 63 'load' 'v2_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 64 [2/2] (0.69ns)   --->   "%v2_1_load = load i4 %v2_1_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 64 'load' 'v2_1_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 65 [2/2] (0.69ns)   --->   "%v2_2_load = load i4 %v2_2_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 65 'load' 'v2_2_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 66 [2/2] (0.69ns)   --->   "%v2_3_load = load i4 %v2_3_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 66 'load' 'v2_3_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 67 [2/2] (0.69ns)   --->   "%v2_4_load = load i4 %v2_4_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 67 'load' 'v2_4_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 68 [2/2] (0.69ns)   --->   "%v2_5_load = load i4 %v2_5_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 68 'load' 'v2_5_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 69 [2/2] (0.69ns)   --->   "%v2_6_load = load i4 %v2_6_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 69 'load' 'v2_6_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 70 [2/2] (0.69ns)   --->   "%v2_7_load = load i4 %v2_7_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 70 'load' 'v2_7_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 71 [2/2] (0.69ns)   --->   "%v2_8_load = load i4 %v2_8_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 71 'load' 'v2_8_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 72 [2/2] (0.69ns)   --->   "%v2_9_load = load i4 %v2_9_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 72 'load' 'v2_9_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 73 [2/2] (0.69ns)   --->   "%v2_10_load = load i4 %v2_10_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 73 'load' 'v2_10_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 74 [2/2] (0.69ns)   --->   "%v2_11_load = load i4 %v2_11_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 74 'load' 'v2_11_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 75 [2/2] (0.69ns)   --->   "%v2_12_load = load i4 %v2_12_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 75 'load' 'v2_12_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 76 [2/2] (0.69ns)   --->   "%v2_13_load = load i4 %v2_13_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 76 'load' 'v2_13_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 77 [2/2] (0.69ns)   --->   "%v2_14_load = load i4 %v2_14_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 77 'load' 'v2_14_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 78 [2/2] (0.69ns)   --->   "%v2_15_load = load i4 %v2_15_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 78 'load' 'v2_15_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 79 [2/2] (0.69ns)   --->   "%v2_16_load = load i4 %v2_16_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 79 'load' 'v2_16_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 80 [2/2] (0.69ns)   --->   "%v2_17_load = load i4 %v2_17_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 80 'load' 'v2_17_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 81 [2/2] (0.69ns)   --->   "%v2_18_load = load i4 %v2_18_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 81 'load' 'v2_18_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 82 [2/2] (0.69ns)   --->   "%v2_19_load = load i4 %v2_19_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 82 'load' 'v2_19_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 83 [2/2] (0.69ns)   --->   "%v2_20_load = load i4 %v2_20_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 83 'load' 'v2_20_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 84 [2/2] (0.69ns)   --->   "%v2_21_load = load i4 %v2_21_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 84 'load' 'v2_21_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 85 [2/2] (0.69ns)   --->   "%v2_22_load = load i4 %v2_22_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 85 'load' 'v2_22_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 86 [2/2] (0.69ns)   --->   "%v2_23_load = load i4 %v2_23_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 86 'load' 'v2_23_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 87 [2/2] (0.69ns)   --->   "%v2_24_load = load i4 %v2_24_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 87 'load' 'v2_24_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 88 [2/2] (0.69ns)   --->   "%v2_25_load = load i4 %v2_25_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 88 'load' 'v2_25_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 89 [2/2] (0.69ns)   --->   "%v2_26_load = load i4 %v2_26_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 89 'load' 'v2_26_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 90 [2/2] (0.69ns)   --->   "%v2_27_load = load i4 %v2_27_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 90 'load' 'v2_27_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 91 [2/2] (0.69ns)   --->   "%v2_28_load = load i4 %v2_28_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 91 'load' 'v2_28_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 92 [2/2] (0.69ns)   --->   "%v2_29_load = load i4 %v2_29_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 92 'load' 'v2_29_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 93 [2/2] (0.69ns)   --->   "%v2_30_load = load i4 %v2_30_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 93 'load' 'v2_30_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 94 [2/2] (0.69ns)   --->   "%v2_31_load = load i4 %v2_31_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 94 'load' 'v2_31_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 95 [2/2] (0.69ns)   --->   "%v2_32_load = load i4 %v2_32_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 95 'load' 'v2_32_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 96 [2/2] (0.69ns)   --->   "%v2_33_load = load i4 %v2_33_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 96 'load' 'v2_33_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 97 [2/2] (0.69ns)   --->   "%v2_34_load = load i4 %v2_34_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 97 'load' 'v2_34_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 98 [2/2] (0.69ns)   --->   "%v2_35_load = load i4 %v2_35_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 98 'load' 'v2_35_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 99 [2/2] (0.69ns)   --->   "%v2_36_load = load i4 %v2_36_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 99 'load' 'v2_36_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 100 [2/2] (0.69ns)   --->   "%v2_37_load = load i4 %v2_37_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 100 'load' 'v2_37_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 101 [2/2] (0.69ns)   --->   "%v2_38_load = load i4 %v2_38_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 101 'load' 'v2_38_load' <Predicate = (!icmp_ln42)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 102 [1/1] (0.38ns)   --->   "%store_ln42 = store i9 %add_ln42, i9 %i" [kernel.cpp:42]   --->   Operation 102 'store' 'store_ln42' <Predicate = (!icmp_ln42)> <Delay = 0.38>
+ST_1 : Operation 103 [1/1] (0.38ns)   --->   "%store_ln42 = store i19 %add_ln43, i19 %phi_mul949" [kernel.cpp:42]   --->   Operation 103 'store' 'store_ln42' <Predicate = (!icmp_ln42)> <Delay = 0.38>
+
+State 2 <SV = 1> <Delay = 1.43>
+ST_2 : Operation 104 [1/1] (0.00ns)   --->   "%phi_urem951_load = load i9 %phi_urem951" [kernel.cpp:42]   --->   Operation 104 'load' 'phi_urem951_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 105 [1/1] (0.71ns)   --->   "%add_ln42_1 = add i9 %phi_urem951_load, i9 1" [kernel.cpp:42]   --->   Operation 105 'add' 'add_ln42_1' <Predicate = true> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 106 [1/1] (0.59ns)   --->   "%icmp_ln42_1 = icmp_ult  i9 %add_ln42_1, i9 39" [kernel.cpp:42]   --->   Operation 106 'icmp' 'icmp_ln42_1' <Predicate = true> <Delay = 0.59> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 107 [1/2] (0.69ns)   --->   "%v2_load = load i4 %v2_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 107 'load' 'v2_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 108 [1/2] (0.69ns)   --->   "%v2_1_load = load i4 %v2_1_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 108 'load' 'v2_1_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 109 [1/2] (0.69ns)   --->   "%v2_2_load = load i4 %v2_2_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 109 'load' 'v2_2_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 110 [1/2] (0.69ns)   --->   "%v2_3_load = load i4 %v2_3_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 110 'load' 'v2_3_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 111 [1/2] (0.69ns)   --->   "%v2_4_load = load i4 %v2_4_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 111 'load' 'v2_4_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 112 [1/2] (0.69ns)   --->   "%v2_5_load = load i4 %v2_5_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 112 'load' 'v2_5_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 113 [1/2] (0.69ns)   --->   "%v2_6_load = load i4 %v2_6_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 113 'load' 'v2_6_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 114 [1/2] (0.69ns)   --->   "%v2_7_load = load i4 %v2_7_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 114 'load' 'v2_7_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 115 [1/2] (0.69ns)   --->   "%v2_8_load = load i4 %v2_8_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 115 'load' 'v2_8_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 116 [1/2] (0.69ns)   --->   "%v2_9_load = load i4 %v2_9_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 116 'load' 'v2_9_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 117 [1/2] (0.69ns)   --->   "%v2_10_load = load i4 %v2_10_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 117 'load' 'v2_10_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 118 [1/2] (0.69ns)   --->   "%v2_11_load = load i4 %v2_11_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 118 'load' 'v2_11_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 119 [1/2] (0.69ns)   --->   "%v2_12_load = load i4 %v2_12_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 119 'load' 'v2_12_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 120 [1/2] (0.69ns)   --->   "%v2_13_load = load i4 %v2_13_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 120 'load' 'v2_13_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 121 [1/2] (0.69ns)   --->   "%v2_14_load = load i4 %v2_14_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 121 'load' 'v2_14_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 122 [1/2] (0.69ns)   --->   "%v2_15_load = load i4 %v2_15_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 122 'load' 'v2_15_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 123 [1/2] (0.69ns)   --->   "%v2_16_load = load i4 %v2_16_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 123 'load' 'v2_16_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 124 [1/2] (0.69ns)   --->   "%v2_17_load = load i4 %v2_17_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 124 'load' 'v2_17_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 125 [1/2] (0.69ns)   --->   "%v2_18_load = load i4 %v2_18_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 125 'load' 'v2_18_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 126 [1/2] (0.69ns)   --->   "%v2_19_load = load i4 %v2_19_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 126 'load' 'v2_19_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 127 [1/2] (0.69ns)   --->   "%v2_20_load = load i4 %v2_20_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 127 'load' 'v2_20_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 128 [1/2] (0.69ns)   --->   "%v2_21_load = load i4 %v2_21_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 128 'load' 'v2_21_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 129 [1/2] (0.69ns)   --->   "%v2_22_load = load i4 %v2_22_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 129 'load' 'v2_22_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 130 [1/2] (0.69ns)   --->   "%v2_23_load = load i4 %v2_23_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 130 'load' 'v2_23_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 131 [1/2] (0.69ns)   --->   "%v2_24_load = load i4 %v2_24_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 131 'load' 'v2_24_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 132 [1/2] (0.69ns)   --->   "%v2_25_load = load i4 %v2_25_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 132 'load' 'v2_25_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 133 [1/2] (0.69ns)   --->   "%v2_26_load = load i4 %v2_26_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 133 'load' 'v2_26_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 134 [1/2] (0.69ns)   --->   "%v2_27_load = load i4 %v2_27_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 134 'load' 'v2_27_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 135 [1/2] (0.69ns)   --->   "%v2_28_load = load i4 %v2_28_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 135 'load' 'v2_28_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 136 [1/2] (0.69ns)   --->   "%v2_29_load = load i4 %v2_29_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 136 'load' 'v2_29_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 137 [1/2] (0.69ns)   --->   "%v2_30_load = load i4 %v2_30_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 137 'load' 'v2_30_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 138 [1/2] (0.69ns)   --->   "%v2_31_load = load i4 %v2_31_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 138 'load' 'v2_31_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 139 [1/2] (0.69ns)   --->   "%v2_32_load = load i4 %v2_32_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 139 'load' 'v2_32_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 140 [1/2] (0.69ns)   --->   "%v2_33_load = load i4 %v2_33_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 140 'load' 'v2_33_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 141 [1/2] (0.69ns)   --->   "%v2_34_load = load i4 %v2_34_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 141 'load' 'v2_34_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 142 [1/2] (0.69ns)   --->   "%v2_35_load = load i4 %v2_35_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 142 'load' 'v2_35_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 143 [1/2] (0.69ns)   --->   "%v2_36_load = load i4 %v2_36_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 143 'load' 'v2_36_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 144 [1/2] (0.69ns)   --->   "%v2_37_load = load i4 %v2_37_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 144 'load' 'v2_37_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 145 [1/2] (0.69ns)   --->   "%v2_38_load = load i4 %v2_38_addr" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 145 'load' 'v2_38_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 146 [1/1] (0.73ns)   --->   "%tmp = mux i32 @_ssdm_op_Mux.ap_auto.39float.i9, i32 %v2_load, i32 %v2_1_load, i32 %v2_2_load, i32 %v2_3_load, i32 %v2_4_load, i32 %v2_5_load, i32 %v2_6_load, i32 %v2_7_load, i32 %v2_8_load, i32 %v2_9_load, i32 %v2_10_load, i32 %v2_11_load, i32 %v2_12_load, i32 %v2_13_load, i32 %v2_14_load, i32 %v2_15_load, i32 %v2_16_load, i32 %v2_17_load, i32 %v2_18_load, i32 %v2_19_load, i32 %v2_20_load, i32 %v2_21_load, i32 %v2_22_load, i32 %v2_23_load, i32 %v2_24_load, i32 %v2_25_load, i32 %v2_26_load, i32 %v2_27_load, i32 %v2_28_load, i32 %v2_29_load, i32 %v2_30_load, i32 %v2_31_load, i32 %v2_32_load, i32 %v2_33_load, i32 %v2_34_load, i32 %v2_35_load, i32 %v2_36_load, i32 %v2_37_load, i32 %v2_38_load, i9 %phi_urem951_load" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 146 'mux' 'tmp' <Predicate = true> <Delay = 0.73> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 153 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 153 'ret' 'ret_ln0' <Predicate = (icmp_ln42)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.91>
+ST_3 : Operation 147 [1/1] (0.30ns)   --->   "%select_ln42 = select i1 %icmp_ln42_1, i9 %add_ln42_1, i9 0" [kernel.cpp:42]   --->   Operation 147 'select' 'select_ln42' <Predicate = true> <Delay = 0.30> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 148 [1/1] (0.00ns)   --->   "%specloopname_ln42 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [kernel.cpp:42]   --->   Operation 148 'specloopname' 'specloopname_ln42' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 149 [1/1] (0.00ns)   --->   "%bitcast_ln174 = bitcast i32 %tmp" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 149 'bitcast' 'bitcast_ln174' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 150 [1/1] (0.91ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %out_Ax_fifo1, i32 %bitcast_ln174" [/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 150 'write' 'write_ln174' <Predicate = true> <Delay = 0.91> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.19> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 390> <FIFO>
+ST_3 : Operation 151 [1/1] (0.38ns)   --->   "%store_ln42 = store i9 %select_ln42, i9 %phi_urem951" [kernel.cpp:42]   --->   Operation 151 'store' 'store_ln42' <Predicate = true> <Delay = 0.38>
+ST_3 : Operation 152 [1/1] (0.00ns)   --->   "%br_ln42 = br void %for.inc31" [kernel.cpp:42]   --->   Operation 152 'br' 'br_ln42' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 2.5ns, clock uncertainty: 0.675ns.
+
+ <State 1>: 1.19ns
+The critical path consists of the following:
+	'alloca' operation ('phi_mul949') [42]  (0 ns)
+	'load' operation ('phi_mul949_load', kernel.cpp:43) on local variable 'phi_mul949' [58]  (0 ns)
+	'add' operation ('add_ln43', kernel.cpp:43) [63]  (0.803 ns)
+	'store' operation ('store_ln42', kernel.cpp:42) of variable 'add_ln43', kernel.cpp:43 on local variable 'phi_mul949' [148]  (0.387 ns)
+
+ <State 2>: 1.44ns
+The critical path consists of the following:
+	'load' operation ('v2_load', /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on array 'v2' [105]  (0.699 ns)
+	'mux' operation ('tmp', /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [144]  (0.736 ns)
+
+ <State 3>: 0.913ns
+The critical path consists of the following:
+	fifo write operation ('write_ln174', /opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'out_Ax_fifo1' (/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [146]  (0.913 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

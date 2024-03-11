@@ -1,0 +1,922 @@
+<profile>
+<RunData>
+  <RUN_TYPE>impl</RUN_TYPE>
+  <VIVADO_VERSION>v.2022.1.2</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>2.500</TargetClockPeriod>
+  <AchievedClockPeriod>2.432</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>2.432</CP_FINAL>
+  <CP_ROUTE>2.432</CP_ROUTE>
+  <CP_SYNTH>1.569</CP_SYNTH>
+  <CP_TARGET>2.500</CP_TARGET>
+  <SLACK_FINAL>0.068</SLACK_FINAL>
+  <SLACK_ROUTE>0.068</SLACK_ROUTE>
+  <SLACK_SYNTH>0.931</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>0.000</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>0.068</WNS_FINAL>
+  <WNS_ROUTE>0.068</WNS_ROUTE>
+  <WNS_SYNTH>0.937</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>2</BRAM>
+    <CLB>7365</CLB>
+    <DSP>243</DSP>
+    <FF>43909</FF>
+    <LATCH>0</LATCH>
+    <LUT>36839</LUT>
+    <SRL>984</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>4032</BRAM>
+    <CLB>162960</CLB>
+    <DSP>9024</DSP>
+    <FF>2607360</FF>
+    <LUT>1303680</LUT>
+    <URAM>960</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="kernel_atax" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="3">out_Ax_fifo_U stage_M_U0 stage_N_U0</SubModules>
+    <Resources BRAM="2" DSP="243" FF="43909" LUT="36839" LUTRAM="1524" LogicLUT="34331" RAMB18="2" SRL="984"/>
+    <LocalResources FF="2"/>
+  </RtlModule>
+  <RtlModule CELL="inst/out_Ax_fifo_U" BINDMODULE="kernel_atax_fifo_w32_d390_A" DEPTH="1" FILE_NAME="kernel_atax.v" ORIG_REF_NAME="kernel_atax_fifo_w32_d390_A">
+    <Resources BRAM="1" FF="40" LUT="44" LogicLUT="44" RAMB18="1"/>
+    <LocalResources FF="31" LUT="31" LogicLUT="31"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0" DEPTH="1" FILE_NAME="kernel_atax.v" ORIG_REF_NAME="kernel_atax_stage_M">
+    <SubModules count="42">grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260 grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465 grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342 v2_10_U v2_11_U v2_12_U v2_13_U v2_14_U v2_15_U v2_16_U v2_17_U v2_18_U v2_19_U v2_1_U v2_20_U v2_21_U v2_22_U v2_23_U v2_24_U v2_25_U v2_26_U v2_27_U v2_28_U v2_29_U v2_2_U v2_30_U v2_31_U v2_32_U v2_33_U v2_34_U v2_35_U v2_36_U v2_37_U v2_38_U v2_3_U v2_4_U v2_5_U v2_6_U v2_7_U v2_8_U v2_9_U v2_U</SubModules>
+    <Resources DSP="119" FF="22745" LUT="19325" LUTRAM="1524" LogicLUT="17320" SRL="481"/>
+    <LocalResources FF="20" LUT="2" LogicLUT="2"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_Pipeline_VITIS_LOOP_25_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="50" LUT="95" LogicLUT="95"/>
+    <LocalResources FF="48" LUT="56" LogicLUT="56"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260/flow_control_loop_pipe_sequential_init_U" BINDMODULE="kernel_atax_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_VITIS_LOOP_25_1.v" ORIG_REF_NAME="kernel_atax_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="39" LogicLUT="39"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_Pipeline_VITIS_LOOP_42_2">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="84" LUT="461" LogicLUT="461"/>
+    <LocalResources FF="82" LUT="379" LogicLUT="379"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465/flow_control_loop_pipe_sequential_init_U" BINDMODULE="kernel_atax_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_VITIS_LOOP_42_2.v" ORIG_REF_NAME="kernel_atax_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="82" LogicLUT="82"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m">
+    <SubModules count="81">fadd_32ns_32ns_32_8_no_dsp_1_U40 fadd_32ns_32ns_32_8_no_dsp_1_U41 fadd_32ns_32ns_32_8_no_dsp_1_U42 fadd_32ns_32ns_32_8_no_dsp_1_U43 fadd_32ns_32ns_32_8_no_dsp_1_U44 fadd_32ns_32ns_32_8_no_dsp_1_U45 fadd_32ns_32ns_32_8_no_dsp_1_U46 fadd_32ns_32ns_32_8_no_dsp_1_U47 fadd_32ns_32ns_32_8_no_dsp_1_U48 fadd_32ns_32ns_32_8_no_dsp_1_U49 fadd_32ns_32ns_32_8_no_dsp_1_U50 fadd_32ns_32ns_32_8_no_dsp_1_U51 fadd_32ns_32ns_32_8_no_dsp_1_U52 fadd_32ns_32ns_32_8_no_dsp_1_U53 fadd_32ns_32ns_32_8_no_dsp_1_U54 fadd_32ns_32ns_32_8_no_dsp_1_U55 fadd_32ns_32ns_32_8_no_dsp_1_U56 fadd_32ns_32ns_32_8_no_dsp_1_U57 fadd_32ns_32ns_32_8_no_dsp_1_U58 fadd_32ns_32ns_32_8_no_dsp_1_U59 fadd_32ns_32ns_32_8_no_dsp_1_U60 fadd_32ns_32ns_32_8_no_dsp_1_U61 fadd_32ns_32ns_32_8_no_dsp_1_U62 fadd_32ns_32ns_32_8_no_dsp_1_U63 fadd_32ns_32ns_32_8_no_dsp_1_U64 fadd_32ns_32ns_32_8_no_dsp_1_U65 fadd_32ns_32ns_32_8_no_dsp_1_U66 fadd_32ns_32ns_32_8_no_dsp_1_U67 fadd_32ns_32ns_32_8_no_dsp_1_U68 fadd_32ns_32ns_32_8_no_dsp_1_U69 fadd_32ns_32ns_32_8_no_dsp_1_U70 fadd_32ns_32ns_32_8_no_dsp_1_U71 fadd_32ns_32ns_32_8_no_dsp_1_U72 fadd_32ns_32ns_32_8_no_dsp_1_U73 fadd_32ns_32ns_32_8_no_dsp_1_U74 fadd_32ns_32ns_32_8_no_dsp_1_U75 fadd_32ns_32ns_32_8_no_dsp_1_U76 fadd_32ns_32ns_32_8_no_dsp_1_U77 fadd_32ns_32ns_32_8_no_dsp_1_U78 flow_control_loop_pipe_sequential_init_U fmul_32ns_32ns_32_6_max_dsp_1_U100 fmul_32ns_32ns_32_6_max_dsp_1_U101 fmul_32ns_32ns_32_6_max_dsp_1_U102 fmul_32ns_32ns_32_6_max_dsp_1_U103 fmul_32ns_32ns_32_6_max_dsp_1_U104 fmul_32ns_32ns_32_6_max_dsp_1_U105 fmul_32ns_32ns_32_6_max_dsp_1_U106 fmul_32ns_32ns_32_6_max_dsp_1_U107 fmul_32ns_32ns_32_6_max_dsp_1_U108 fmul_32ns_32ns_32_6_max_dsp_1_U109 fmul_32ns_32ns_32_6_max_dsp_1_U110 fmul_32ns_32ns_32_6_max_dsp_1_U111 fmul_32ns_32ns_32_6_max_dsp_1_U112 fmul_32ns_32ns_32_6_max_dsp_1_U113 fmul_32ns_32ns_32_6_max_dsp_1_U114 fmul_32ns_32ns_32_6_max_dsp_1_U115 fmul_32ns_32ns_32_6_max_dsp_1_U116 fmul_32ns_32ns_32_6_max_dsp_1_U117 fmul_32ns_32ns_32_6_max_dsp_1_U79 fmul_32ns_32ns_32_6_max_dsp_1_U80 fmul_32ns_32ns_32_6_max_dsp_1_U81 fmul_32ns_32ns_32_6_max_dsp_1_U82 fmul_32ns_32ns_32_6_max_dsp_1_U83 fmul_32ns_32ns_32_6_max_dsp_1_U84 fmul_32ns_32ns_32_6_max_dsp_1_U85 fmul_32ns_32ns_32_6_max_dsp_1_U86 fmul_32ns_32ns_32_6_max_dsp_1_U87 fmul_32ns_32ns_32_6_max_dsp_1_U88 fmul_32ns_32ns_32_6_max_dsp_1_U89 fmul_32ns_32ns_32_6_max_dsp_1_U90 fmul_32ns_32ns_32_6_max_dsp_1_U91 fmul_32ns_32ns_32_6_max_dsp_1_U92 fmul_32ns_32ns_32_6_max_dsp_1_U93 fmul_32ns_32ns_32_6_max_dsp_1_U94 fmul_32ns_32ns_32_6_max_dsp_1_U95 fmul_32ns_32ns_32_6_max_dsp_1_U96 fmul_32ns_32ns_32_6_max_dsp_1_U97 fmul_32ns_32ns_32_6_max_dsp_1_U98 fmul_32ns_32ns_32_6_max_dsp_1_U99 mac_muladd_4ns_9ns_9ns_13_4_1_U119 mul_mul_9ns_10ns_19_4_1_U118</SubModules>
+    <Resources DSP="119" FF="20095" LUT="17243" LogicLUT="16762" SRL="481"/>
+    <LocalResources FF="1419" LUT="21" LogicLUT="8" SRL="13"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U40" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U41" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U42" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="359" LogicLUT="347" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U43" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U44" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U45" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="359" LogicLUT="347" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U46" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="359" LogicLUT="347" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U47" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U48" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U49" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U50" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U51" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U52" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U53" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U54" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U55" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="359" LogicLUT="347" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U56" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U57" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U58" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U59" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="360" LogicLUT="348" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U60" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U61" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U62" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="360" LogicLUT="348" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U63" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U64" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U65" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U66" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U67" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U68" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="357" LogicLUT="345" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U69" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U70" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U71" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U72" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="359" LogicLUT="347" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U73" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U74" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="358" LogicLUT="346" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U75" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="360" LogicLUT="348" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U76" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="360" LogicLUT="348" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U77" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="360" LogicLUT="348" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U78" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="359" LogicLUT="347" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/flow_control_loop_pipe_sequential_init_U" BINDMODULE="kernel_atax_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="45" LogicLUT="45"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="82" LogicLUT="82"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U102" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U103" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U104" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U105" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U106" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U107" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U108" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U109" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U110" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U111" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U112" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U113" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U116" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U117" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U79" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U80" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U81" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U82" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U83" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U84" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U85" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U86" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U87" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U88" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U89" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U90" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U91" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U92" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U93" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U94" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U95" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U96" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="166" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="96"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U98" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U99" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/mac_muladd_4ns_9ns_9ns_13_4_1_U119" BINDMODULE="kernel_atax_mac_muladd_4ns_9ns_9ns_13_4_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_mac_muladd_4ns_9ns_9ns_13_4_1">
+    <Resources DSP="1" LUT="6" LogicLUT="6"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/mul_mul_9ns_10ns_19_4_1_U118" BINDMODULE="kernel_atax_mul_mul_9ns_10ns_19_4_1" DEPTH="3" FILE_NAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m.v" ORIG_REF_NAME="kernel_atax_mul_mul_9ns_10ns_19_4_1">
+    <Resources DSP="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_10_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="34" LUTRAM="34"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_11_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="38" LUTRAM="38"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_12_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="34" LUTRAM="34"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_13_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="38" LUTRAM="38"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_14_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="34" LUTRAM="34"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_15_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="38" LUTRAM="38"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_16_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="44" LUTRAM="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_17_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="44" LUTRAM="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_18_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="44" LUTRAM="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_19_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="44" LUTRAM="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_1_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="38" LUTRAM="38"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_20_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="44" LUTRAM="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_21_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="44" LUTRAM="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_22_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="44" LUTRAM="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_23_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="44" LUTRAM="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_24_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="44" LUTRAM="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_25_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="44" LUTRAM="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_26_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="44" LUTRAM="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_27_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="44" LUTRAM="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_28_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="34" LUTRAM="34"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_29_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="34" LUTRAM="34"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_2_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="38" LUTRAM="38"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_30_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="34" LUTRAM="34"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_31_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="34" LUTRAM="34"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_32_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="34" LUTRAM="34"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_33_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="34" LUTRAM="34"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_34_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="34" LUTRAM="34"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_35_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="34" LUTRAM="34"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_36_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="44" LUTRAM="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_37_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="44" LUTRAM="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_38_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="44" LUTRAM="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_3_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="34" LUTRAM="34"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_4_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="38" LUTRAM="38"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_5_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="38" LUTRAM="38"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_6_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="38" LUTRAM="38"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_7_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="38" LUTRAM="38"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_8_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="38" LUTRAM="38"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_9_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="38" LUTRAM="38"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_M_U0/v2_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_M.v" ORIG_REF_NAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+    <Resources FF="64" LUT="38" LUTRAM="38"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0" DEPTH="1" FILE_NAME="kernel_atax.v" ORIG_REF_NAME="kernel_atax_stage_N">
+    <SubModules count="3">grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190 grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198 v11_U</SubModules>
+    <Resources BRAM="1" DSP="124" FF="21122" LUT="17474" LogicLUT="16971" RAMB18="1" SRL="503"/>
+    <LocalResources FF="6" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190" DEPTH="2" FILE_NAME="kernel_atax_stage_N.v" ORIG_REF_NAME="kernel_atax_stage_N_Pipeline_VITIS_LOOP_57_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="32" LUT="20" LogicLUT="20"/>
+    <LocalResources FF="30" LUT="6" LogicLUT="6"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190/flow_control_loop_pipe_sequential_init_U" BINDMODULE="kernel_atax_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_VITIS_LOOP_57_1.v" ORIG_REF_NAME="kernel_atax_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="14" LogicLUT="14"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198" DEPTH="2" FILE_NAME="kernel_atax_stage_N.v" ORIG_REF_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n">
+    <SubModules count="84">fadd_32ns_32ns_32_8_no_dsp_1_U289 fadd_32ns_32ns_32_8_no_dsp_1_U290 fadd_32ns_32ns_32_8_no_dsp_1_U291 fadd_32ns_32ns_32_8_no_dsp_1_U292 fadd_32ns_32ns_32_8_no_dsp_1_U293 fadd_32ns_32ns_32_8_no_dsp_1_U294 fadd_32ns_32ns_32_8_no_dsp_1_U295 fadd_32ns_32ns_32_8_no_dsp_1_U296 fadd_32ns_32ns_32_8_no_dsp_1_U297 fadd_32ns_32ns_32_8_no_dsp_1_U298 fadd_32ns_32ns_32_8_no_dsp_1_U299 fadd_32ns_32ns_32_8_no_dsp_1_U300 fadd_32ns_32ns_32_8_no_dsp_1_U301 fadd_32ns_32ns_32_8_no_dsp_1_U302 fadd_32ns_32ns_32_8_no_dsp_1_U303 fadd_32ns_32ns_32_8_no_dsp_1_U304 fadd_32ns_32ns_32_8_no_dsp_1_U305 fadd_32ns_32ns_32_8_no_dsp_1_U306 fadd_32ns_32ns_32_8_no_dsp_1_U307 fadd_32ns_32ns_32_8_no_dsp_1_U308 fadd_32ns_32ns_32_8_no_dsp_1_U309 fadd_32ns_32ns_32_8_no_dsp_1_U310 fadd_32ns_32ns_32_8_no_dsp_1_U311 fadd_32ns_32ns_32_8_no_dsp_1_U312 fadd_32ns_32ns_32_8_no_dsp_1_U313 fadd_32ns_32ns_32_8_no_dsp_1_U314 fadd_32ns_32ns_32_8_no_dsp_1_U315 fadd_32ns_32ns_32_8_no_dsp_1_U316 fadd_32ns_32ns_32_8_no_dsp_1_U317 fadd_32ns_32ns_32_8_no_dsp_1_U318 fadd_32ns_32ns_32_8_no_dsp_1_U319 fadd_32ns_32ns_32_8_no_dsp_1_U320 fadd_32ns_32ns_32_8_no_dsp_1_U321 fadd_32ns_32ns_32_8_no_dsp_1_U322 fadd_32ns_32ns_32_8_no_dsp_1_U323 fadd_32ns_32ns_32_8_no_dsp_1_U324 fadd_32ns_32ns_32_8_no_dsp_1_U325 fadd_32ns_32ns_32_8_no_dsp_1_U326 fadd_32ns_32ns_32_8_no_dsp_1_U327 fadd_32ns_32ns_32_8_no_dsp_1_U328 fadd_32ns_32ns_32_8_no_dsp_1_U329 flow_control_loop_pipe_sequential_init_U fmul_32ns_32ns_32_6_max_dsp_1_U330 fmul_32ns_32ns_32_6_max_dsp_1_U331 fmul_32ns_32ns_32_6_max_dsp_1_U332 fmul_32ns_32ns_32_6_max_dsp_1_U333 fmul_32ns_32ns_32_6_max_dsp_1_U334 fmul_32ns_32ns_32_6_max_dsp_1_U335 fmul_32ns_32ns_32_6_max_dsp_1_U336 fmul_32ns_32ns_32_6_max_dsp_1_U337 fmul_32ns_32ns_32_6_max_dsp_1_U338 fmul_32ns_32ns_32_6_max_dsp_1_U339 fmul_32ns_32ns_32_6_max_dsp_1_U340 fmul_32ns_32ns_32_6_max_dsp_1_U341 fmul_32ns_32ns_32_6_max_dsp_1_U342 fmul_32ns_32ns_32_6_max_dsp_1_U343 fmul_32ns_32ns_32_6_max_dsp_1_U344 fmul_32ns_32ns_32_6_max_dsp_1_U345 fmul_32ns_32ns_32_6_max_dsp_1_U346 fmul_32ns_32ns_32_6_max_dsp_1_U347 fmul_32ns_32ns_32_6_max_dsp_1_U348 fmul_32ns_32ns_32_6_max_dsp_1_U349 fmul_32ns_32ns_32_6_max_dsp_1_U350 fmul_32ns_32ns_32_6_max_dsp_1_U351 fmul_32ns_32ns_32_6_max_dsp_1_U352 fmul_32ns_32ns_32_6_max_dsp_1_U353 fmul_32ns_32ns_32_6_max_dsp_1_U354 fmul_32ns_32ns_32_6_max_dsp_1_U355 fmul_32ns_32ns_32_6_max_dsp_1_U356 fmul_32ns_32ns_32_6_max_dsp_1_U357 fmul_32ns_32ns_32_6_max_dsp_1_U358 fmul_32ns_32ns_32_6_max_dsp_1_U359 fmul_32ns_32ns_32_6_max_dsp_1_U360 fmul_32ns_32ns_32_6_max_dsp_1_U361 fmul_32ns_32ns_32_6_max_dsp_1_U362 fmul_32ns_32ns_32_6_max_dsp_1_U363 fmul_32ns_32ns_32_6_max_dsp_1_U364 fmul_32ns_32ns_32_6_max_dsp_1_U365 fmul_32ns_32ns_32_6_max_dsp_1_U366 fmul_32ns_32ns_32_6_max_dsp_1_U367 fmul_32ns_32ns_32_6_max_dsp_1_U368 fmul_32ns_32ns_32_6_max_dsp_1_U369 fmul_32ns_32ns_32_6_max_dsp_1_U370 mul_mul_9ns_10ns_19_4_1_U371</SubModules>
+    <Resources DSP="124" FF="21084" LUT="17453" LogicLUT="16950" SRL="503"/>
+    <LocalResources FF="1452" LUT="49" LogicLUT="38" SRL="11"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U289" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U290" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U291" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U292" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U293" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U294" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U295" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U296" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U297" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U298" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U299" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U300" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="342" LogicLUT="330" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U301" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="342" LogicLUT="330" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U302" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U303" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U304" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U305" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U306" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U307" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U308" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U309" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U310" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U311" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U312" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U313" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U314" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="342" LogicLUT="330" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U315" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U316" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U317" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="342" LogicLUT="330" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U318" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U319" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U320" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="342" LogicLUT="330" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U321" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U322" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U323" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U324" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U325" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U326" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="342" LogicLUT="330" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U327" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U328" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U329" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="344" LUT="341" LogicLUT="329" SRL="12"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/flow_control_loop_pipe_sequential_init_U" BINDMODULE="kernel_atax_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="42" LogicLUT="42"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U331" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U333" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U334" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="166" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="96"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U336" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U337" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U338" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U339" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U340" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U341" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U342" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U343" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U344" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U345" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U346" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U347" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U348" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U349" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U350" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U351" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U352" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U353" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U354" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U355" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U356" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U357" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U358" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U359" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U360" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U361" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U362" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U363" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U364" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U365" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U366" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U367" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U369" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U370" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+    <Resources DSP="3" FF="134" LUT="83" LogicLUT="83"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/mul_mul_9ns_10ns_19_4_1_U371" BINDMODULE="kernel_atax_mul_mul_9ns_10ns_19_4_1" DEPTH="3" FILE_NAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n.v" ORIG_REF_NAME="kernel_atax_mul_mul_9ns_10ns_19_4_1">
+    <Resources DSP="1" LUT="6" LogicLUT="6"/>
+  </RtlModule>
+  <RtlModule CELL="inst/stage_N_U0/v11_U" BINDMODULE="kernel_atax_stage_N_v11_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="kernel_atax_stage_N.v" ORIG_REF_NAME="kernel_atax_stage_N_v11_RAM_AUTO_1R1W">
+    <Resources BRAM="1" RAMB18="1"/>
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="2.413" DATAPATH_LOGIC_DELAY="0.374" DATAPATH_NET_DELAY="2.039" ENDPOINT_PIN="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D" LOGIC_LEVELS="3" MAX_FANOUT="287" SLACK="0.068" STARTPOINT_PIN="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[30]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[30]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="10"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[7].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_EXIT_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="2.402" DATAPATH_LOGIC_DELAY="0.302" DATAPATH_NET_DELAY="2.100" ENDPOINT_PIN="bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D" LOGIC_LEVELS="3" MAX_FANOUT="273" SLACK="0.079" STARTPOINT_PIN="bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="10"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[7].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_EXIT_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="2.398" DATAPATH_LOGIC_DELAY="0.438" DATAPATH_NET_DELAY="1.960" ENDPOINT_PIN="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D" LOGIC_LEVELS="3" MAX_FANOUT="287" SLACK="0.084" STARTPOINT_PIN="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[28]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[28]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="10"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[5].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_EXIT_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="2.396" DATAPATH_LOGIC_DELAY="0.255" DATAPATH_NET_DELAY="2.141" ENDPOINT_PIN="bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]/D" LOGIC_LEVELS="3" MAX_FANOUT="273" SLACK="0.086" STARTPOINT_PIN="bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="10"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q[0]_i_6" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q[0]_i_2__1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/COND_DET_A/MANT_CARRY.MANT_ALL_ZERO_DET/CARRY_ZERO_DET/opt_has_pipe.first_q[0]_i_1__1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="2.392" DATAPATH_LOGIC_DELAY="0.300" DATAPATH_NET_DELAY="2.092" ENDPOINT_PIN="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D" LOGIC_LEVELS="3" MAX_FANOUT="287" SLACK="0.089" STARTPOINT_PIN="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[29]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[29]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="10"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[6].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_EXIT_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/kernel_atax_design_analysis_routed.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/kernel_atax_failfast_routed.rpt"/>
+  <ReportFile TYPE="status" PATH="verilog/report/kernel_atax_status_routed.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/kernel_atax_timing_routed.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/kernel_atax_timing_paths_routed.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/kernel_atax_utilization_routed.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/kernel_atax_utilization_hierarchical_routed.rpt"/>
+</VivadoReportFiles>
+</profile>

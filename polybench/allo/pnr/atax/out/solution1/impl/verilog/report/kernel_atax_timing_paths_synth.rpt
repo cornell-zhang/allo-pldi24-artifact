@@ -1,0 +1,577 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2022.1.2 (lin64) Build 3605665 Fri Aug  5 22:52:02 MDT 2022
+| Date              : Wed Nov 15 16:11:16 2023
+| Host              : zhang-24.ece.cornell.edu running 64-bit unknown
+| Command           : report_timing -max_paths 10 -file ./report/kernel_atax_timing_paths_synth.rpt
+| Design            : bd_0_wrapper
+| Device            : xcu280-fsvh2892
+| Speed File        : -2L  PRODUCTION 1.30 05-01-2022
+| Temperature Grade : E
+----------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.937ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+                            (rising edge-triggered cell DSP_OUTPUT clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.513ns  (logic 1.024ns (67.680%)  route 0.489ns (32.320%))
+  Logic Levels:           4  (DSP_ALU=1 DSP_OUTPUT=1 LUT4=2)
+  Clock Path Skew:        -0.040ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.520 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.060ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.060     0.060    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/CLK
+                         DSP_OUTPUT                                   r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+  -------------------------------------------------------------------    -------------------
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_CLK_PCOUT[47])
+                                                      0.231     0.291 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     0.305    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[30])
+                                                      0.546     0.851 f  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[30]
+                         net (fo=1, unplaced)         0.000     0.851    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<30>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[30]_P[30])
+                                                      0.109     0.960 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[30]
+                         net (fo=1, unplaced)         0.214     1.174    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op_reg[7][23]
+                         LUT4 (Prop_LUT4_I1_O)        0.100     1.274 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_6/O
+                         net (fo=8, unplaced)         0.213     1.487    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/round_exp_inc_op
+                         LUT4 (Prop_LUT4_I1_O)        0.038     1.525 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[0]_i_1/O
+                         net (fo=1, unplaced)         0.048     1.573    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[0]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.020     2.520    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/aclk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[0]/C
+                         clock pessimism              0.000     2.520    
+                         clock uncertainty           -0.035     2.485    
+                         FDRE (Setup_FDRE_C_D)        0.025     2.510    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[0]
+  -------------------------------------------------------------------
+                         required time                          2.510    
+                         arrival time                          -1.573    
+  -------------------------------------------------------------------
+                         slack                                  0.937    
+
+Slack (MET) :             0.937ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+                            (rising edge-triggered cell DSP_OUTPUT clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.513ns  (logic 1.024ns (67.680%)  route 0.489ns (32.320%))
+  Logic Levels:           4  (DSP_ALU=1 DSP_OUTPUT=1 LUT4=2)
+  Clock Path Skew:        -0.040ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.520 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.060ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.060     0.060    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/CLK
+                         DSP_OUTPUT                                   r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+  -------------------------------------------------------------------    -------------------
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_CLK_PCOUT[47])
+                                                      0.231     0.291 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     0.305    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[30])
+                                                      0.546     0.851 f  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[30]
+                         net (fo=1, unplaced)         0.000     0.851    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<30>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[30]_P[30])
+                                                      0.109     0.960 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[30]
+                         net (fo=1, unplaced)         0.214     1.174    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op_reg[7][23]
+                         LUT4 (Prop_LUT4_I1_O)        0.100     1.274 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_6/O
+                         net (fo=8, unplaced)         0.213     1.487    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/round_exp_inc_op
+                         LUT4 (Prop_LUT4_I1_O)        0.038     1.525 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[1]_i_1/O
+                         net (fo=1, unplaced)         0.048     1.573    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[1]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.020     2.520    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/aclk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[1]/C
+                         clock pessimism              0.000     2.520    
+                         clock uncertainty           -0.035     2.485    
+                         FDRE (Setup_FDRE_C_D)        0.025     2.510    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[1]
+  -------------------------------------------------------------------
+                         required time                          2.510    
+                         arrival time                          -1.573    
+  -------------------------------------------------------------------
+                         slack                                  0.937    
+
+Slack (MET) :             0.937ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+                            (rising edge-triggered cell DSP_OUTPUT clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.513ns  (logic 1.024ns (67.680%)  route 0.489ns (32.320%))
+  Logic Levels:           4  (DSP_ALU=1 DSP_OUTPUT=1 LUT4=2)
+  Clock Path Skew:        -0.040ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.520 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.060ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.060     0.060    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/CLK
+                         DSP_OUTPUT                                   r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+  -------------------------------------------------------------------    -------------------
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_CLK_PCOUT[47])
+                                                      0.231     0.291 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     0.305    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[30])
+                                                      0.546     0.851 f  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[30]
+                         net (fo=1, unplaced)         0.000     0.851    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<30>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[30]_P[30])
+                                                      0.109     0.960 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[30]
+                         net (fo=1, unplaced)         0.214     1.174    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op_reg[7][23]
+                         LUT4 (Prop_LUT4_I1_O)        0.100     1.274 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_6/O
+                         net (fo=8, unplaced)         0.213     1.487    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/round_exp_inc_op
+                         LUT4 (Prop_LUT4_I1_O)        0.038     1.525 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[2]_i_1/O
+                         net (fo=1, unplaced)         0.048     1.573    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[2]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.020     2.520    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/aclk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[2]/C
+                         clock pessimism              0.000     2.520    
+                         clock uncertainty           -0.035     2.485    
+                         FDRE (Setup_FDRE_C_D)        0.025     2.510    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[2]
+  -------------------------------------------------------------------
+                         required time                          2.510    
+                         arrival time                          -1.573    
+  -------------------------------------------------------------------
+                         slack                                  0.937    
+
+Slack (MET) :             0.937ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+                            (rising edge-triggered cell DSP_OUTPUT clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.513ns  (logic 1.024ns (67.680%)  route 0.489ns (32.320%))
+  Logic Levels:           4  (DSP_ALU=1 DSP_OUTPUT=1 LUT4=2)
+  Clock Path Skew:        -0.040ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.520 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.060ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.060     0.060    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/CLK
+                         DSP_OUTPUT                                   r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+  -------------------------------------------------------------------    -------------------
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_CLK_PCOUT[47])
+                                                      0.231     0.291 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     0.305    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[30])
+                                                      0.546     0.851 f  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[30]
+                         net (fo=1, unplaced)         0.000     0.851    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<30>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[30]_P[30])
+                                                      0.109     0.960 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[30]
+                         net (fo=1, unplaced)         0.214     1.174    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op_reg[7][23]
+                         LUT4 (Prop_LUT4_I1_O)        0.100     1.274 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_6/O
+                         net (fo=8, unplaced)         0.213     1.487    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/round_exp_inc_op
+                         LUT4 (Prop_LUT4_I1_O)        0.038     1.525 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[3]_i_1/O
+                         net (fo=1, unplaced)         0.048     1.573    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[3]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.020     2.520    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/aclk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[3]/C
+                         clock pessimism              0.000     2.520    
+                         clock uncertainty           -0.035     2.485    
+                         FDRE (Setup_FDRE_C_D)        0.025     2.510    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[3]
+  -------------------------------------------------------------------
+                         required time                          2.510    
+                         arrival time                          -1.573    
+  -------------------------------------------------------------------
+                         slack                                  0.937    
+
+Slack (MET) :             0.937ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+                            (rising edge-triggered cell DSP_OUTPUT clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.513ns  (logic 1.024ns (67.680%)  route 0.489ns (32.320%))
+  Logic Levels:           4  (DSP_ALU=1 DSP_OUTPUT=1 LUT4=2)
+  Clock Path Skew:        -0.040ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.520 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.060ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.060     0.060    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/CLK
+                         DSP_OUTPUT                                   r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+  -------------------------------------------------------------------    -------------------
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_CLK_PCOUT[47])
+                                                      0.231     0.291 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     0.305    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[30])
+                                                      0.546     0.851 f  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[30]
+                         net (fo=1, unplaced)         0.000     0.851    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<30>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[30]_P[30])
+                                                      0.109     0.960 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[30]
+                         net (fo=1, unplaced)         0.214     1.174    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op_reg[7][23]
+                         LUT4 (Prop_LUT4_I1_O)        0.100     1.274 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_6/O
+                         net (fo=8, unplaced)         0.213     1.487    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/round_exp_inc_op
+                         LUT4 (Prop_LUT4_I1_O)        0.038     1.525 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[4]_i_1/O
+                         net (fo=1, unplaced)         0.048     1.573    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[4]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.020     2.520    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/aclk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[4]/C
+                         clock pessimism              0.000     2.520    
+                         clock uncertainty           -0.035     2.485    
+                         FDRE (Setup_FDRE_C_D)        0.025     2.510    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[4]
+  -------------------------------------------------------------------
+                         required time                          2.510    
+                         arrival time                          -1.573    
+  -------------------------------------------------------------------
+                         slack                                  0.937    
+
+Slack (MET) :             0.937ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+                            (rising edge-triggered cell DSP_OUTPUT clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.513ns  (logic 1.024ns (67.680%)  route 0.489ns (32.320%))
+  Logic Levels:           4  (DSP_ALU=1 DSP_OUTPUT=1 LUT4=2)
+  Clock Path Skew:        -0.040ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.520 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.060ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.060     0.060    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/CLK
+                         DSP_OUTPUT                                   r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+  -------------------------------------------------------------------    -------------------
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_CLK_PCOUT[47])
+                                                      0.231     0.291 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     0.305    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[30])
+                                                      0.546     0.851 f  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[30]
+                         net (fo=1, unplaced)         0.000     0.851    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<30>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[30]_P[30])
+                                                      0.109     0.960 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[30]
+                         net (fo=1, unplaced)         0.214     1.174    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op_reg[7][23]
+                         LUT4 (Prop_LUT4_I1_O)        0.100     1.274 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_6/O
+                         net (fo=8, unplaced)         0.213     1.487    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/round_exp_inc_op
+                         LUT4 (Prop_LUT4_I1_O)        0.038     1.525 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[5]_i_1/O
+                         net (fo=1, unplaced)         0.048     1.573    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[5]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.020     2.520    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/aclk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[5]/C
+                         clock pessimism              0.000     2.520    
+                         clock uncertainty           -0.035     2.485    
+                         FDRE (Setup_FDRE_C_D)        0.025     2.510    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[5]
+  -------------------------------------------------------------------
+                         required time                          2.510    
+                         arrival time                          -1.573    
+  -------------------------------------------------------------------
+                         slack                                  0.937    
+
+Slack (MET) :             0.937ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+                            (rising edge-triggered cell DSP_OUTPUT clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.513ns  (logic 1.024ns (67.680%)  route 0.489ns (32.320%))
+  Logic Levels:           4  (DSP_ALU=1 DSP_OUTPUT=1 LUT4=2)
+  Clock Path Skew:        -0.040ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.520 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.060ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.060     0.060    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/CLK
+                         DSP_OUTPUT                                   r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+  -------------------------------------------------------------------    -------------------
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_CLK_PCOUT[47])
+                                                      0.231     0.291 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     0.305    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[30])
+                                                      0.546     0.851 f  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[30]
+                         net (fo=1, unplaced)         0.000     0.851    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<30>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[30]_P[30])
+                                                      0.109     0.960 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[30]
+                         net (fo=1, unplaced)         0.214     1.174    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op_reg[7][23]
+                         LUT4 (Prop_LUT4_I1_O)        0.100     1.274 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_6/O
+                         net (fo=8, unplaced)         0.213     1.487    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/round_exp_inc_op
+                         LUT4 (Prop_LUT4_I1_O)        0.038     1.525 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[6]_i_1/O
+                         net (fo=1, unplaced)         0.048     1.573    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[6]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.020     2.520    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/aclk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[6]/C
+                         clock pessimism              0.000     2.520    
+                         clock uncertainty           -0.035     2.485    
+                         FDRE (Setup_FDRE_C_D)        0.025     2.510    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[6]
+  -------------------------------------------------------------------
+                         required time                          2.510    
+                         arrival time                          -1.573    
+  -------------------------------------------------------------------
+                         slack                                  0.937    
+
+Slack (MET) :             0.937ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+                            (rising edge-triggered cell DSP_OUTPUT clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.513ns  (logic 1.024ns (67.680%)  route 0.489ns (32.320%))
+  Logic Levels:           4  (DSP_ALU=1 DSP_OUTPUT=1 LUT4=1 LUT5=1)
+  Clock Path Skew:        -0.040ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.520 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.060ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.060     0.060    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/CLK
+                         DSP_OUTPUT                                   r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+  -------------------------------------------------------------------    -------------------
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_CLK_PCOUT[47])
+                                                      0.231     0.291 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     0.305    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[30])
+                                                      0.546     0.851 f  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[30]
+                         net (fo=1, unplaced)         0.000     0.851    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<30>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[30]_P[30])
+                                                      0.109     0.960 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[30]
+                         net (fo=1, unplaced)         0.214     1.174    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op_reg[7][23]
+                         LUT4 (Prop_LUT4_I1_O)        0.100     1.274 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_6/O
+                         net (fo=8, unplaced)         0.213     1.487    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/round_exp_inc_op
+                         LUT5 (Prop_LUT5_I1_O)        0.038     1.525 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[7]_i_2/O
+                         net (fo=1, unplaced)         0.048     1.573    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[7]_i_2_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.020     2.520    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/aclk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[7]/C
+                         clock pessimism              0.000     2.520    
+                         clock uncertainty           -0.035     2.485    
+                         FDRE (Setup_FDRE_C_D)        0.025     2.510    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[7]
+  -------------------------------------------------------------------
+                         required time                          2.510    
+                         arrival time                          -1.573    
+  -------------------------------------------------------------------
+                         slack                                  0.937    
+
+Slack (MET) :             0.937ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+                            (rising edge-triggered cell DSP_OUTPUT clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.513ns  (logic 1.024ns (67.680%)  route 0.489ns (32.320%))
+  Logic Levels:           4  (DSP_ALU=1 DSP_OUTPUT=1 LUT4=2)
+  Clock Path Skew:        -0.040ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.520 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.060ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.060     0.060    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/CLK
+                         DSP_OUTPUT                                   r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+  -------------------------------------------------------------------    -------------------
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_CLK_PCOUT[47])
+                                                      0.231     0.291 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     0.305    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[30])
+                                                      0.546     0.851 f  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[30]
+                         net (fo=1, unplaced)         0.000     0.851    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<30>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[30]_P[30])
+                                                      0.109     0.960 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[30]
+                         net (fo=1, unplaced)         0.214     1.174    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op_reg[7][23]
+                         LUT4 (Prop_LUT4_I1_O)        0.100     1.274 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_6/O
+                         net (fo=8, unplaced)         0.213     1.487    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/round_exp_inc_op
+                         LUT4 (Prop_LUT4_I1_O)        0.038     1.525 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[0]_i_1/O
+                         net (fo=1, unplaced)         0.048     1.573    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[0]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.020     2.520    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/aclk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[0]/C
+                         clock pessimism              0.000     2.520    
+                         clock uncertainty           -0.035     2.485    
+                         FDRE (Setup_FDRE_C_D)        0.025     2.510    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[0]
+  -------------------------------------------------------------------
+                         required time                          2.510    
+                         arrival time                          -1.573    
+  -------------------------------------------------------------------
+                         slack                                  0.937    
+
+Slack (MET) :             0.937ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+                            (rising edge-triggered cell DSP_OUTPUT clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Destination:            bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@1.250ns period=2.500ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.500ns  (ap_clk rise@2.500ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.513ns  (logic 1.024ns (67.680%)  route 0.489ns (32.320%))
+  Logic Levels:           4  (DSP_ALU=1 DSP_OUTPUT=1 LUT4=2)
+  Clock Path Skew:        -0.040ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.520 - 2.500 ) 
+    Source Clock Delay      (SCD):    0.060ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.060     0.060    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/CLK
+                         DSP_OUTPUT                                   r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/CLK
+  -------------------------------------------------------------------    -------------------
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_CLK_PCOUT[47])
+                                                      0.231     0.291 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     0.305    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[30])
+                                                      0.546     0.851 f  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST/ALU_OUT[30]
+                         net (fo=1, unplaced)         0.000     0.851    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU.ALU_OUT<30>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[30]_P[30])
+                                                      0.109     0.960 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST/P[30]
+                         net (fo=1, unplaced)         0.214     1.174    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op_reg[7][23]
+                         LUT4 (Prop_LUT4_I1_O)        0.100     1.274 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_6/O
+                         net (fo=8, unplaced)         0.213     1.487    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/round_exp_inc_op
+                         LUT4 (Prop_LUT4_I1_O)        0.038     1.525 r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[1]_i_1/O
+                         net (fo=1, unplaced)         0.048     1.573    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[1]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     2.500     2.500 r  
+                                                      0.000     2.500 r  ap_clk (IN)
+                         net (fo=49489, unset)        0.020     2.520    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/aclk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[1]/C
+                         clock pessimism              0.000     2.520    
+                         clock uncertainty           -0.035     2.485    
+                         FDRE (Setup_FDRE_C_D)        0.025     2.510    bd_0_i/hls_inst/inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101/kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[1]
+  -------------------------------------------------------------------
+                         required time                          2.510    
+                         arrival time                          -1.573    
+  -------------------------------------------------------------------
+                         slack                                  0.937    
+
+
+
+

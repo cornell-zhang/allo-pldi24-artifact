@@ -1,0 +1,1158 @@
+<profile>
+  <RunData>
+    <RUN_TYPE>impl</RUN_TYPE>
+    <VIVADO_VERSION>v.2022.1.2</VIVADO_VERSION>
+    <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+  </RunData>
+  <TimingReport>
+    <TargetClockPeriod>2.500</TargetClockPeriod>
+    <AchievedClockPeriod>2.432</AchievedClockPeriod>
+    <CLOCK_NAME>ap_clk</CLOCK_NAME>
+    <CP_FINAL>2.432</CP_FINAL>
+    <CP_ROUTE>2.432</CP_ROUTE>
+    <CP_SYNTH>1.569</CP_SYNTH>
+    <CP_TARGET>2.500</CP_TARGET>
+    <SLACK_FINAL>0.068</SLACK_FINAL>
+    <SLACK_ROUTE>0.068</SLACK_ROUTE>
+    <SLACK_SYNTH>0.931</SLACK_SYNTH>
+    <TIMING_MET>TRUE</TIMING_MET>
+    <TNS_FINAL>0.000</TNS_FINAL>
+    <TNS_ROUTE>0.000</TNS_ROUTE>
+    <TNS_SYNTH>0.000</TNS_SYNTH>
+    <WNS_FINAL>0.068</WNS_FINAL>
+    <WNS_ROUTE>0.068</WNS_ROUTE>
+    <WNS_SYNTH>0.937</WNS_SYNTH>
+  </TimingReport>
+  <AreaReport>
+    <Resources>
+      <BRAM>2</BRAM>
+      <CLB>7365</CLB>
+      <DSP>243</DSP>
+      <FF>43909</FF>
+      <LATCH>0</LATCH>
+      <LUT>36839</LUT>
+      <SRL>984</SRL>
+      <URAM>0</URAM>
+    </Resources>
+    <AvailableResources>
+      <BRAM>4032</BRAM>
+      <CLB>162960</CLB>
+      <DSP>9024</DSP>
+      <FF>2607360</FF>
+      <LUT>1303680</LUT>
+      <URAM>960</URAM>
+    </AvailableResources>
+  </AreaReport>
+  <RtlModules>
+    <RtlModule CELL="inst" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="kernel_atax" DISPNAME="inst" RTLNAME="kernel_atax">
+      <SubModules count="3">out_Ax_fifo_U stage_M_U0 stage_N_U0</SubModules>
+      <Resources BRAM="2" DSP="243" FF="43909" LUT="36839"/>
+      <LocalResources FF="2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/out_Ax_fifo_U" BINDMODULE="kernel_atax_fifo_w32_d390_A" DEPTH="1" TYPE="resource" MODULENAME="fifo_w32_d390_A" DISPNAME="out_Ax_fifo_U" RTLNAME="kernel_atax_fifo_w32_d390_A">
+      <Resources BRAM="1" FF="40" LUT="44"/>
+      <LocalResources FF="31" LUT="31"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="out_Ax_fifo_U" SOURCE="kernel.cpp:83" URAM="0" VARIABLE="out_Ax_fifo"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0" DEPTH="1" TYPE="function" MODULENAME="stage_M" DISPNAME="stage_M_U0" RTLNAME="kernel_atax_stage_M">
+      <SubModules count="42">grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260 grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465 grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342 v2_10_U v2_11_U v2_12_U v2_13_U v2_14_U v2_15_U v2_16_U v2_17_U v2_18_U v2_19_U v2_1_U v2_20_U v2_21_U v2_22_U v2_23_U v2_24_U v2_25_U v2_26_U v2_27_U v2_28_U v2_29_U v2_2_U v2_30_U v2_31_U v2_32_U v2_33_U v2_34_U v2_35_U v2_36_U v2_37_U v2_38_U v2_3_U v2_4_U v2_5_U v2_6_U v2_7_U v2_8_U v2_9_U v2_U</SubModules>
+      <Resources DSP="119" FF="22745" LUT="19325"/>
+      <LocalResources FF="20" LUT="2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260" DEPTH="2" TYPE="function" MODULENAME="stage_M_Pipeline_VITIS_LOOP_25_1" DISPNAME="grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260" RTLNAME="kernel_atax_stage_M_Pipeline_VITIS_LOOP_25_1">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="50" LUT="95"/>
+      <LocalResources FF="48" LUT="56"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260/flow_control_loop_pipe_sequential_init_U" BINDMODULE="kernel_atax_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="kernel_atax_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="39"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465" DEPTH="2" TYPE="function" MODULENAME="stage_M_Pipeline_VITIS_LOOP_42_2" DISPNAME="grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465" RTLNAME="kernel_atax_stage_M_Pipeline_VITIS_LOOP_42_2">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="84" LUT="461"/>
+      <LocalResources FF="82" LUT="379"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465/flow_control_loop_pipe_sequential_init_U" BINDMODULE="kernel_atax_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="kernel_atax_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="82"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342" DEPTH="2" TYPE="function" MODULENAME="stage_M_Pipeline_l_S_m_0_r_l_m" DISPNAME="grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342" RTLNAME="kernel_atax_stage_M_Pipeline_l_S_m_0_r_l_m">
+      <SubModules count="81">fadd_32ns_32ns_32_8_no_dsp_1_U40 fadd_32ns_32ns_32_8_no_dsp_1_U41 fadd_32ns_32ns_32_8_no_dsp_1_U42 fadd_32ns_32ns_32_8_no_dsp_1_U43 fadd_32ns_32ns_32_8_no_dsp_1_U44 fadd_32ns_32ns_32_8_no_dsp_1_U45 fadd_32ns_32ns_32_8_no_dsp_1_U46 fadd_32ns_32ns_32_8_no_dsp_1_U47 fadd_32ns_32ns_32_8_no_dsp_1_U48 fadd_32ns_32ns_32_8_no_dsp_1_U49 fadd_32ns_32ns_32_8_no_dsp_1_U50 fadd_32ns_32ns_32_8_no_dsp_1_U51 fadd_32ns_32ns_32_8_no_dsp_1_U52 fadd_32ns_32ns_32_8_no_dsp_1_U53 fadd_32ns_32ns_32_8_no_dsp_1_U54 fadd_32ns_32ns_32_8_no_dsp_1_U55 fadd_32ns_32ns_32_8_no_dsp_1_U56 fadd_32ns_32ns_32_8_no_dsp_1_U57 fadd_32ns_32ns_32_8_no_dsp_1_U58 fadd_32ns_32ns_32_8_no_dsp_1_U59 fadd_32ns_32ns_32_8_no_dsp_1_U60 fadd_32ns_32ns_32_8_no_dsp_1_U61 fadd_32ns_32ns_32_8_no_dsp_1_U62 fadd_32ns_32ns_32_8_no_dsp_1_U63 fadd_32ns_32ns_32_8_no_dsp_1_U64 fadd_32ns_32ns_32_8_no_dsp_1_U65 fadd_32ns_32ns_32_8_no_dsp_1_U66 fadd_32ns_32ns_32_8_no_dsp_1_U67 fadd_32ns_32ns_32_8_no_dsp_1_U68 fadd_32ns_32ns_32_8_no_dsp_1_U69 fadd_32ns_32ns_32_8_no_dsp_1_U70 fadd_32ns_32ns_32_8_no_dsp_1_U71 fadd_32ns_32ns_32_8_no_dsp_1_U72 fadd_32ns_32ns_32_8_no_dsp_1_U73 fadd_32ns_32ns_32_8_no_dsp_1_U74 fadd_32ns_32ns_32_8_no_dsp_1_U75 fadd_32ns_32ns_32_8_no_dsp_1_U76 fadd_32ns_32ns_32_8_no_dsp_1_U77 fadd_32ns_32ns_32_8_no_dsp_1_U78 flow_control_loop_pipe_sequential_init_U fmul_32ns_32ns_32_6_max_dsp_1_U100 fmul_32ns_32ns_32_6_max_dsp_1_U101 fmul_32ns_32ns_32_6_max_dsp_1_U102 fmul_32ns_32ns_32_6_max_dsp_1_U103 fmul_32ns_32ns_32_6_max_dsp_1_U104 fmul_32ns_32ns_32_6_max_dsp_1_U105 fmul_32ns_32ns_32_6_max_dsp_1_U106 fmul_32ns_32ns_32_6_max_dsp_1_U107 fmul_32ns_32ns_32_6_max_dsp_1_U108 fmul_32ns_32ns_32_6_max_dsp_1_U109 fmul_32ns_32ns_32_6_max_dsp_1_U110 fmul_32ns_32ns_32_6_max_dsp_1_U111 fmul_32ns_32ns_32_6_max_dsp_1_U112 fmul_32ns_32ns_32_6_max_dsp_1_U113 fmul_32ns_32ns_32_6_max_dsp_1_U114 fmul_32ns_32ns_32_6_max_dsp_1_U115 fmul_32ns_32ns_32_6_max_dsp_1_U116 fmul_32ns_32ns_32_6_max_dsp_1_U117 fmul_32ns_32ns_32_6_max_dsp_1_U79 fmul_32ns_32ns_32_6_max_dsp_1_U80 fmul_32ns_32ns_32_6_max_dsp_1_U81 fmul_32ns_32ns_32_6_max_dsp_1_U82 fmul_32ns_32ns_32_6_max_dsp_1_U83 fmul_32ns_32ns_32_6_max_dsp_1_U84 fmul_32ns_32ns_32_6_max_dsp_1_U85 fmul_32ns_32ns_32_6_max_dsp_1_U86 fmul_32ns_32ns_32_6_max_dsp_1_U87 fmul_32ns_32ns_32_6_max_dsp_1_U88 fmul_32ns_32ns_32_6_max_dsp_1_U89 fmul_32ns_32ns_32_6_max_dsp_1_U90 fmul_32ns_32ns_32_6_max_dsp_1_U91 fmul_32ns_32ns_32_6_max_dsp_1_U92 fmul_32ns_32ns_32_6_max_dsp_1_U93 fmul_32ns_32ns_32_6_max_dsp_1_U94 fmul_32ns_32ns_32_6_max_dsp_1_U95 fmul_32ns_32ns_32_6_max_dsp_1_U96 fmul_32ns_32ns_32_6_max_dsp_1_U97 fmul_32ns_32ns_32_6_max_dsp_1_U98 fmul_32ns_32ns_32_6_max_dsp_1_U99 mac_muladd_4ns_9ns_9ns_13_4_1_U119 mul_mul_9ns_10ns_19_4_1_U118</SubModules>
+      <Resources DSP="119" FF="20095" LUT="17243"/>
+      <LocalResources FF="1419" LUT="21"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U40" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U40" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U40" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U41" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U41" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U41" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U42" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U42" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="359"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U42" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U43" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U43" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U43" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U44" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U44" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U44" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U45" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U45" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="359"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U45" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_5"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U46" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U46" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="359"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U46" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_6"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U47" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U47" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U47" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U48" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U48" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U48" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_8"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U49" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U49" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U49" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_9"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U50" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U50" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U50" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U51" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U51" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U51" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U52" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U52" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U52" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_12"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U53" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U53" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U53" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_13"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U54" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U54" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U54" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_14"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U55" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U55" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="359"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U55" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_15"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U56" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U56" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U56" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_16"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U57" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U57" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U57" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_17"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U58" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U58" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U58" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_18"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U59" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U59" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="360"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U59" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_19"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U60" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U60" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U60" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_20"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U61" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U61" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U61" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_21"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U62" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U62" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="360"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U62" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_22"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U63" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U63" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U63" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_23"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U64" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U64" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U64" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_24"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U65" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U65" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U65" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_25"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U66" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U66" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U66" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_26"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U67" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U67" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U67" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_27"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U68" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U68" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="357"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U68" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_28"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U69" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U69" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U69" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_29"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U70" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U70" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U70" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_30"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U71" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U71" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U71" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_31"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U72" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U72" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="359"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U72" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U73" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U73" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U73" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_33"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U74" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U74" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="358"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U74" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_34"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U75" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U75" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="360"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U75" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_35"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U76" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U76" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="360"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U76" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_36"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U77" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U77" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="360"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U77" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_37"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fadd_32ns_32ns_32_8_no_dsp_1_U78" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U78" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="359"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_m_0_r_l_m" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U78" SOURCE="kernel.cpp:37" URAM="0" VARIABLE="v9_38"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/flow_control_loop_pipe_sequential_init_U" BINDMODULE="kernel_atax_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="kernel_atax_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="45"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U100" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U100" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="82"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U100" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_21"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U101" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U101" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U101" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_22"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U102" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U102" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U102" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_23"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U103" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U103" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U103" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_24"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U104" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U104" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U104" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_25"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U105" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U105" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U105" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_26"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U106" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U106" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U106" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_27"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U107" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U107" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U107" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_28"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U108" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U108" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U108" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_29"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U109" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U109" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U109" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_30"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U110" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U110" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U110" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_31"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U111" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U111" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U111" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U112" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U112" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U112" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_33"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U113" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U113" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U113" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_34"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U114" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U114" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U114" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_35"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U115" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U115" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U115" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_36"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U116" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U116" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U116" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_37"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U117" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U117" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U117" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_38"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U79" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U79" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U79" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U80" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U80" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U80" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U81" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U81" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U81" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U82" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U82" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U82" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U83" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U83" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U83" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U84" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U84" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U84" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_5"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U85" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U85" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U85" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_6"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U86" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U86" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U86" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U87" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U87" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U87" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_8"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U88" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U88" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U88" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_9"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U89" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U89" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U89" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U90" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U90" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U90" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U91" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U91" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U91" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_12"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U92" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U92" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U92" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_13"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U93" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U93" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U93" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_14"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U94" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U94" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U94" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_15"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U95" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U95" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U95" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_16"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U96" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U96" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U96" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_17"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U97" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="166" LUT="83"/>
+      <LocalResources FF="96"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U97" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_18"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U98" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U98" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U98" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_19"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U99" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U99" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_m_0_r_l_m" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U99" SOURCE="kernel.cpp:35" URAM="0" VARIABLE="v7_20"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/mac_muladd_4ns_9ns_9ns_13_4_1_U119" BINDMODULE="kernel_atax_mac_muladd_4ns_9ns_9ns_13_4_1" DEPTH="3" TYPE="resource" MODULENAME="mac_muladd_4ns_9ns_9ns_13_4_1" DISPNAME="mac_muladd_4ns_9ns_9ns_13_4_1_U119" RTLNAME="kernel_atax_mac_muladd_4ns_9ns_9ns_13_4_1">
+      <Resources DSP="1" LUT="6"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="l_S_m_0_r_l_m" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_4ns_9ns_9ns_13_4_1_U119" SOURCE="kernel.cpp:33" URAM="0" VARIABLE="mul_ln33_1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="l_S_m_0_r_l_m" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_4ns_9ns_9ns_13_4_1_U119" SOURCE="kernel.cpp:33" URAM="0" VARIABLE="add_ln33"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/mul_mul_9ns_10ns_19_4_1_U118" BINDMODULE="kernel_atax_mul_mul_9ns_10ns_19_4_1" DEPTH="3" TYPE="resource" MODULENAME="mul_mul_9ns_10ns_19_4_1" DISPNAME="mul_mul_9ns_10ns_19_4_1_U118" RTLNAME="kernel_atax_mul_mul_9ns_10ns_19_4_1">
+      <Resources DSP="1" LUT="1"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="l_S_m_0_r_l_m" OPTYPE="mul" PRAGMA="" RTLNAME="mul_mul_9ns_10ns_19_4_1_U118" SOURCE="kernel.cpp:33" URAM="0" VARIABLE="mul_ln33"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_10_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_10_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="34"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_10_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_11_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_11_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="38"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_11_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_12_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_12_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="34"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_12_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_12"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_13_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_13_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="38"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_13_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_13"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_14_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_14_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="34"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_14_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_14"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_15_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_15_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="38"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_15_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_15"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_16_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_16_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="44"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_16_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_16"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_17_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_17_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="44"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_17_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_17"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_18_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_18_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="44"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_18_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_18"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_19_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_19_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="44"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_19_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_19"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_1_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_1_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="38"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_1_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_20_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_20_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="44"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_20_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_20"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_21_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_21_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="44"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_21_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_21"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_22_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_22_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="44"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_22_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_22"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_23_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_23_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="44"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_23_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_23"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_24_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_24_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="44"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_24_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_24"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_25_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_25_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="44"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_25_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_25"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_26_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_26_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="44"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_26_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_26"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_27_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_27_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="44"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_27_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_27"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_28_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_28_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="34"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_28_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_28"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_29_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_29_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="34"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_29_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_29"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_2_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_2_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="38"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_2_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_30_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_30_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="34"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_30_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_30"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_31_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_31_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="34"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_31_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_31"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_32_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_32_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="34"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_32_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_33_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_33_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="34"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_33_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_33"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_34_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_34_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="34"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_34_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_34"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_35_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_35_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="34"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_35_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_35"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_36_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_36_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="44"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_36_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_36"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_37_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_37_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="44"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_37_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_37"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_38_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_38_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="44"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_38_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_38"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_3_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_3_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="34"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_3_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_4_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_4_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="38"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_4_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_5_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_5_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="38"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_5_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_5"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_6_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_6_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="38"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_6_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_6"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_7_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_7_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="38"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_7_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_8_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_8_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="38"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_8_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_8"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_9_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_9_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="38"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_9_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2_9"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_M_U0/v2_U" BINDMODULE="kernel_atax_stage_M_v2_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_M_v2_RAM_AUTO_1R1W" DISPNAME="v2_U" RTLNAME="kernel_atax_stage_M_v2_RAM_AUTO_1R1W">
+      <Resources FF="64" LUT="38"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="v2_U" SOURCE="kernel.cpp:23" URAM="0" VARIABLE="v2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0" DEPTH="1" TYPE="function" MODULENAME="stage_N" DISPNAME="stage_N_U0" RTLNAME="kernel_atax_stage_N">
+      <SubModules count="3">grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190 grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198 v11_U</SubModules>
+      <Resources BRAM="1" DSP="124" FF="21122" LUT="17474"/>
+      <LocalResources FF="6" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190" DEPTH="2" TYPE="function" MODULENAME="stage_N_Pipeline_VITIS_LOOP_57_1" DISPNAME="grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190" RTLNAME="kernel_atax_stage_N_Pipeline_VITIS_LOOP_57_1">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="32" LUT="20"/>
+      <LocalResources FF="30" LUT="6"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190/flow_control_loop_pipe_sequential_init_U" BINDMODULE="kernel_atax_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="kernel_atax_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="14"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198" DEPTH="2" TYPE="function" MODULENAME="stage_N_Pipeline_l_S_n_0_k_l_n" DISPNAME="grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198" RTLNAME="kernel_atax_stage_N_Pipeline_l_S_n_0_k_l_n">
+      <SubModules count="84">fadd_32ns_32ns_32_8_no_dsp_1_U289 fadd_32ns_32ns_32_8_no_dsp_1_U290 fadd_32ns_32ns_32_8_no_dsp_1_U291 fadd_32ns_32ns_32_8_no_dsp_1_U292 fadd_32ns_32ns_32_8_no_dsp_1_U293 fadd_32ns_32ns_32_8_no_dsp_1_U294 fadd_32ns_32ns_32_8_no_dsp_1_U295 fadd_32ns_32ns_32_8_no_dsp_1_U296 fadd_32ns_32ns_32_8_no_dsp_1_U297 fadd_32ns_32ns_32_8_no_dsp_1_U298 fadd_32ns_32ns_32_8_no_dsp_1_U299 fadd_32ns_32ns_32_8_no_dsp_1_U300 fadd_32ns_32ns_32_8_no_dsp_1_U301 fadd_32ns_32ns_32_8_no_dsp_1_U302 fadd_32ns_32ns_32_8_no_dsp_1_U303 fadd_32ns_32ns_32_8_no_dsp_1_U304 fadd_32ns_32ns_32_8_no_dsp_1_U305 fadd_32ns_32ns_32_8_no_dsp_1_U306 fadd_32ns_32ns_32_8_no_dsp_1_U307 fadd_32ns_32ns_32_8_no_dsp_1_U308 fadd_32ns_32ns_32_8_no_dsp_1_U309 fadd_32ns_32ns_32_8_no_dsp_1_U310 fadd_32ns_32ns_32_8_no_dsp_1_U311 fadd_32ns_32ns_32_8_no_dsp_1_U312 fadd_32ns_32ns_32_8_no_dsp_1_U313 fadd_32ns_32ns_32_8_no_dsp_1_U314 fadd_32ns_32ns_32_8_no_dsp_1_U315 fadd_32ns_32ns_32_8_no_dsp_1_U316 fadd_32ns_32ns_32_8_no_dsp_1_U317 fadd_32ns_32ns_32_8_no_dsp_1_U318 fadd_32ns_32ns_32_8_no_dsp_1_U319 fadd_32ns_32ns_32_8_no_dsp_1_U320 fadd_32ns_32ns_32_8_no_dsp_1_U321 fadd_32ns_32ns_32_8_no_dsp_1_U322 fadd_32ns_32ns_32_8_no_dsp_1_U323 fadd_32ns_32ns_32_8_no_dsp_1_U324 fadd_32ns_32ns_32_8_no_dsp_1_U325 fadd_32ns_32ns_32_8_no_dsp_1_U326 fadd_32ns_32ns_32_8_no_dsp_1_U327 fadd_32ns_32ns_32_8_no_dsp_1_U328 fadd_32ns_32ns_32_8_no_dsp_1_U329 flow_control_loop_pipe_sequential_init_U fmul_32ns_32ns_32_6_max_dsp_1_U330 fmul_32ns_32ns_32_6_max_dsp_1_U331 fmul_32ns_32ns_32_6_max_dsp_1_U332 fmul_32ns_32ns_32_6_max_dsp_1_U333 fmul_32ns_32ns_32_6_max_dsp_1_U334 fmul_32ns_32ns_32_6_max_dsp_1_U335 fmul_32ns_32ns_32_6_max_dsp_1_U336 fmul_32ns_32ns_32_6_max_dsp_1_U337 fmul_32ns_32ns_32_6_max_dsp_1_U338 fmul_32ns_32ns_32_6_max_dsp_1_U339 fmul_32ns_32ns_32_6_max_dsp_1_U340 fmul_32ns_32ns_32_6_max_dsp_1_U341 fmul_32ns_32ns_32_6_max_dsp_1_U342 fmul_32ns_32ns_32_6_max_dsp_1_U343 fmul_32ns_32ns_32_6_max_dsp_1_U344 fmul_32ns_32ns_32_6_max_dsp_1_U345 fmul_32ns_32ns_32_6_max_dsp_1_U346 fmul_32ns_32ns_32_6_max_dsp_1_U347 fmul_32ns_32ns_32_6_max_dsp_1_U348 fmul_32ns_32ns_32_6_max_dsp_1_U349 fmul_32ns_32ns_32_6_max_dsp_1_U350 fmul_32ns_32ns_32_6_max_dsp_1_U351 fmul_32ns_32ns_32_6_max_dsp_1_U352 fmul_32ns_32ns_32_6_max_dsp_1_U353 fmul_32ns_32ns_32_6_max_dsp_1_U354 fmul_32ns_32ns_32_6_max_dsp_1_U355 fmul_32ns_32ns_32_6_max_dsp_1_U356 fmul_32ns_32ns_32_6_max_dsp_1_U357 fmul_32ns_32ns_32_6_max_dsp_1_U358 fmul_32ns_32ns_32_6_max_dsp_1_U359 fmul_32ns_32ns_32_6_max_dsp_1_U360 fmul_32ns_32ns_32_6_max_dsp_1_U361 fmul_32ns_32ns_32_6_max_dsp_1_U362 fmul_32ns_32ns_32_6_max_dsp_1_U363 fmul_32ns_32ns_32_6_max_dsp_1_U364 fmul_32ns_32ns_32_6_max_dsp_1_U365 fmul_32ns_32ns_32_6_max_dsp_1_U366 fmul_32ns_32ns_32_6_max_dsp_1_U367 fmul_32ns_32ns_32_6_max_dsp_1_U368 fmul_32ns_32ns_32_6_max_dsp_1_U369 fmul_32ns_32ns_32_6_max_dsp_1_U370 mul_mul_9ns_10ns_19_4_1_U371</SubModules>
+      <Resources DSP="124" FF="21084" LUT="17453"/>
+      <LocalResources FF="1452" LUT="49"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U289" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U289" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U289" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U290" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U290" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U290" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U291" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U291" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U291" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U292" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U292" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U292" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U293" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U293" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U293" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U294" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U294" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U294" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_5"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U295" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U295" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U295" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_6"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U296" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U296" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U296" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U297" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U297" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U297" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_8"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U298" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U298" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U298" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_9"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U299" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U299" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U299" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U300" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U300" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="342"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U300" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U301" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U301" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="342"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U301" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_12"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U302" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U302" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U302" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_13"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U303" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U303" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U303" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_14"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U304" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U304" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U304" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_15"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U305" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U305" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U305" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_16"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U306" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U306" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U306" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_17"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U307" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U307" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U307" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_18"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U308" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U308" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U308" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_19"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U309" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U309" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U309" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_20"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U310" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U310" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U310" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_21"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U311" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U311" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U311" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_22"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U312" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U312" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U312" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_23"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U313" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U313" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U313" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_24"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U314" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U314" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="342"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U314" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_25"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U315" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U315" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U315" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_26"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U316" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U316" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U316" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_27"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U317" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U317" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="342"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U317" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_28"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U318" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U318" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U318" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_29"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U319" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U319" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U319" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_30"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U320" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U320" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="342"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U320" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_31"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U321" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U321" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U321" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U322" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U322" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U322" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_33"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U323" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U323" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U323" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_34"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U324" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U324" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U324" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_35"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U325" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U325" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U325" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_36"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U326" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U326" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="342"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U326" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_37"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U327" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U327" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U327" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_38"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U328" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U328" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U328" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_39"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fadd_32ns_32ns_32_8_no_dsp_1_U329" BINDMODULE="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_8_no_dsp_1" DISPNAME="fadd_32ns_32ns_32_8_no_dsp_1_U329" RTLNAME="kernel_atax_fadd_32ns_32ns_32_8_no_dsp_1">
+      <Resources FF="344" LUT="341"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="l_S_n_0_k_l_n" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_8_no_dsp_1_U329" SOURCE="kernel.cpp:69" URAM="0" VARIABLE="v19_40"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/flow_control_loop_pipe_sequential_init_U" BINDMODULE="kernel_atax_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="kernel_atax_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="42"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U330" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U330" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U330" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U331" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U331" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U331" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U332" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U332" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U332" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U333" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U333" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U333" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U334" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U334" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U334" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U335" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="166" LUT="83"/>
+      <LocalResources FF="96"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U335" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_5"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U336" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U336" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U336" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_6"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U337" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U337" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U337" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U338" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U338" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U338" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_8"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U339" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U339" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U339" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_9"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U340" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U340" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U340" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U341" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U341" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U341" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_11"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U342" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U342" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U342" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_12"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U343" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U343" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U343" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_13"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U344" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U344" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U344" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_14"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U345" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U345" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U345" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_15"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U346" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U346" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U346" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_16"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U347" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U347" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U347" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_17"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U348" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U348" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U348" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_18"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U349" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U349" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U349" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_19"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U350" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U350" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U350" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_20"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U351" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U351" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U351" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_21"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U352" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U352" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U352" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_22"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U353" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U353" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U353" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_23"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U354" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U354" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U354" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_24"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U355" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U355" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U355" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_25"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U356" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U356" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U356" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_26"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U357" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U357" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U357" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_27"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U358" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U358" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U358" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_28"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U359" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U359" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U359" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_29"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U360" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U360" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U360" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_30"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U361" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U361" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U361" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_31"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U362" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U362" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U362" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_32"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U363" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U363" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U363" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_33"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U364" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U364" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U364" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_34"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U365" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U365" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U365" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_35"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U366" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U366" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U366" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_36"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U367" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U367" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U367" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_37"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U368" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U368" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U368" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_38"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U369" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U369" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U369" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_39"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U370" BINDMODULE="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1" DEPTH="3" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_6_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_6_max_dsp_1_U370" RTLNAME="kernel_atax_fmul_32ns_32ns_32_6_max_dsp_1">
+      <Resources DSP="3" FF="134" LUT="83"/>
+      <LocalResources FF="64"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="5" LOOP="l_S_n_0_k_l_n" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_6_max_dsp_1_U370" SOURCE="kernel.cpp:67" URAM="0" VARIABLE="v17_40"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/mul_mul_9ns_10ns_19_4_1_U371" BINDMODULE="kernel_atax_mul_mul_9ns_10ns_19_4_1" DEPTH="3" TYPE="resource" MODULENAME="mul_mul_9ns_10ns_19_4_1" DISPNAME="mul_mul_9ns_10ns_19_4_1_U371" RTLNAME="kernel_atax_mul_mul_9ns_10ns_19_4_1">
+      <Resources DSP="1" LUT="6"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="l_S_n_0_k_l_n" OPTYPE="mul" PRAGMA="" RTLNAME="mul_mul_9ns_10ns_19_4_1_U371" SOURCE="kernel.cpp:65" URAM="0" VARIABLE="mul_ln65"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stage_N_U0/v11_U" BINDMODULE="kernel_atax_stage_N_v11_RAM_AUTO_1R1W" DEPTH="2" TYPE="resource" MODULENAME="stage_N_v11_RAM_AUTO_1R1W" DISPNAME="v11_U" RTLNAME="kernel_atax_stage_N_v11_RAM_AUTO_1R1W">
+      <Resources BRAM="1"/>
+      <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="v11_U" SOURCE="kernel.cpp:56" URAM="0" VARIABLE="v11"/>
+    </RtlModule>
+  </RtlModules>
+  <TimingPaths>
+    <TPATH DATAPATH_DELAY="2.413" DATAPATH_LOGIC_DELAY="0.374" DATAPATH_NET_DELAY="2.039" ENDPOINT_PIN="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D" LOGIC_LEVELS="3" MAX_FANOUT="287" SLACK="0.068" STARTPOINT_PIN="stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[30]/C">
+      <CELL NAME="stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[30]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="10"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[7].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_EXIT_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="2.402" DATAPATH_LOGIC_DELAY="0.302" DATAPATH_NET_DELAY="2.100" ENDPOINT_PIN="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D" LOGIC_LEVELS="3" MAX_FANOUT="273" SLACK="0.079" STARTPOINT_PIN="stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]/C">
+      <CELL NAME="stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="10"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[7].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_EXIT_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="2.398" DATAPATH_LOGIC_DELAY="0.438" DATAPATH_NET_DELAY="1.960" ENDPOINT_PIN="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D" LOGIC_LEVELS="3" MAX_FANOUT="287" SLACK="0.084" STARTPOINT_PIN="stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[28]/C">
+      <CELL NAME="stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[28]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="10"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[5].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_EXIT_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="2.396" DATAPATH_LOGIC_DELAY="0.255" DATAPATH_NET_DELAY="2.141" ENDPOINT_PIN="i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]/D" LOGIC_LEVELS="3" MAX_FANOUT="273" SLACK="0.086" STARTPOINT_PIN="stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]/C">
+      <CELL NAME="stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/fmul_32ns_32ns_32_6_max_dsp_1_U97/din1_buf1_reg[30]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="10"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q[0]_i_6" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q[0]_i_2__1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/COND_DET_A/MANT_CARRY.MANT_ALL_ZERO_DET/CARRY_ZERO_DET/opt_has_pipe.first_q[0]_i_1__1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/INF_X_ZERO_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="2.392" DATAPATH_LOGIC_DELAY="0.300" DATAPATH_NET_DELAY="2.092" ENDPOINT_PIN="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD/D" LOGIC_LEVELS="3" MAX_FANOUT="287" SLACK="0.089" STARTPOINT_PIN="stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[29]/C">
+      <CELL NAME="stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/fmul_32ns_32ns_32_6_max_dsp_1_U335/din1_buf1_reg[29]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="10"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[6].C_MUX.CARRY_MUX_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_EXIT_CARRY4_CARRY8" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="1"/>
+      <CELL NAME="i_synth/MULT.OP/i_non_prim.EXP/EXP_ADD.C_CHAIN/CARRYS_Q_DEL.FAST_DEL.CARRY_FD" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+    </TPATH>
+  </TimingPaths>
+  <VivadoReportFiles>
+    <ReportFile TYPE="design_analysis" PATH="verilog/report/kernel_atax_design_analysis_routed.rpt"/>
+    <ReportFile TYPE="failfast" PATH="verilog/report/kernel_atax_failfast_routed.rpt"/>
+    <ReportFile TYPE="status" PATH="verilog/report/kernel_atax_status_routed.rpt"/>
+    <ReportFile TYPE="timing" PATH="verilog/report/kernel_atax_timing_routed.rpt"/>
+    <ReportFile TYPE="timing_paths" PATH="verilog/report/kernel_atax_timing_paths_routed.rpt"/>
+    <ReportFile TYPE="utilization" PATH="verilog/report/kernel_atax_utilization_routed.rpt"/>
+    <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/kernel_atax_utilization_hierarchical_routed.rpt"/>
+  </VivadoReportFiles>
+  <GeneralInfo NAME="General Information">
+    <item NAME="Date" VALUE="Wed Nov 15 16:47:22 EST 2023"/>
+    <item NAME="Version" VALUE="2022.1 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)"/>
+    <item NAME="Project" VALUE="out.prj"/>
+    <item NAME="Solution" VALUE="solution1 (Vivado IP Flow Target)"/>
+    <item NAME="Product family" VALUE="virtexuplusHBM"/>
+    <item NAME="Target device" VALUE="xcu280-fsvh2892-2L-e"/>
+  </GeneralInfo>
+  <RunOptions NAME="Run Constraints &amp; Options">
+    <General NAME="Design Constraints &amp; Options">
+      <item NAME="Place &amp; Route target clock" VALUE="2.5 ns"/>
+      <item NAME="C-Synthesis target clock" VALUE="2.5 ns"/>
+      <item NAME="C-Synthesis uncertainty" VALUE="27%"/>
+      <item NAME="config_export -ip_xdc_file" VALUE=""/>
+      <item NAME="config_export -ip_xdc_ooc_file" VALUE=""/>
+    </General>
+    <Syn NAME="RTL Synthesis Options">
+      <item NAME="config_export -vivado_synth_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_synth_design_args" VALUE="-directive sdx_optimization_effort_high"/>
+    </Syn>
+    <Impl NAME="Place &amp; Route Options">
+      <item NAME="config_export -vivado_impl_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_phys_opt" VALUE="none"/>
+      <item NAME="config_export -vivado_pblock" VALUE=""/>
+    </Impl>
+    <Reporting NAME="Reporting Options">
+      <item NAME="config_export -vivado_report_level" VALUE="2"/>
+      <item NAME="config_export -vivado_max_timing_paths" VALUE="10"/>
+    </Reporting>
+  </RunOptions>
+</profile>
+

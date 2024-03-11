@@ -1,0 +1,1858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="kernel_atax.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_kernel_atax_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax//AESL_inst_kernel_atax_activity">
+         <obj_property name="label">AESL_inst_kernel_atax_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_kernel_atax_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_kernel_atax_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax//AESL_inst_kernel_atax_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax//AESL_inst_kernel_atax_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax//AESL_inst_kernel_atax_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/stage_M_U0_activity">
+            <obj_property name="label">stage_M_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">stage_M_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">stage_M_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/stage_M_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/stage_M_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/stage_M_U0_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260/grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260_activity">
+               <obj_property name="label">grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260/grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260/grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260/grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342_activity">
+               <obj_property name="label">grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465/grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465_activity">
+               <obj_property name="label">grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465/grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465/grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465/grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/stage_N_U0_activity">
+            <obj_property name="label">stage_N_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">stage_N_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">stage_N_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/stage_N_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/stage_N_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/stage_N_U0_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190/grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190_activity">
+               <obj_property name="label">grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190/grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190/grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190/grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198_activity">
+               <obj_property name="label">grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax//AESL_inst_kernel_atax_activity">
+      <obj_property name="ElementShortName">AESL_inst_kernel_atax_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_kernel_atax_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_kernel_atax_group">
+      <obj_property name="label">AESL_inst_kernel_atax</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/stage_M_U0_activity">
+         <obj_property name="ElementShortName">stage_M_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">stage_M_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/stage_N_U0_activity">
+         <obj_property name="ElementShortName">stage_N_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">stage_N_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_kernel_atax_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="stage_M_U0_group">
+         <obj_property name="label">stage_M_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260/grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260_activity">
+            <obj_property name="ElementShortName">grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342_activity">
+            <obj_property name="ElementShortName">grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465/grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465_activity">
+            <obj_property name="ElementShortName">grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="stage_M_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="v20_0_group">
+               <obj_property name="label">v20_0(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_0_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_0_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_0_ce0">
+                  <obj_property name="ElementShortName">v20_0_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_0_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_1_group">
+               <obj_property name="label">v20_1(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_1_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_1_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_1_ce0">
+                  <obj_property name="ElementShortName">v20_1_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_1_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_2_group">
+               <obj_property name="label">v20_2(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_2_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_2_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_2_ce0">
+                  <obj_property name="ElementShortName">v20_2_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_2_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_3_group">
+               <obj_property name="label">v20_3(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_3_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_3_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_3_ce0">
+                  <obj_property name="ElementShortName">v20_3_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_3_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_4_group">
+               <obj_property name="label">v20_4(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_4_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_4_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_4_ce0">
+                  <obj_property name="ElementShortName">v20_4_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_4_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_5_group">
+               <obj_property name="label">v20_5(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_5_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_5_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_5_ce0">
+                  <obj_property name="ElementShortName">v20_5_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_5_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_6_group">
+               <obj_property name="label">v20_6(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_6_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_6_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_6_ce0">
+                  <obj_property name="ElementShortName">v20_6_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_6_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_7_group">
+               <obj_property name="label">v20_7(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_7_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_7_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_7_ce0">
+                  <obj_property name="ElementShortName">v20_7_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_7_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_8_group">
+               <obj_property name="label">v20_8(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_8_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_8_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_8_ce0">
+                  <obj_property name="ElementShortName">v20_8_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_8_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_9_group">
+               <obj_property name="label">v20_9(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_9_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_9_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_9_ce0">
+                  <obj_property name="ElementShortName">v20_9_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_9_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_10_group">
+               <obj_property name="label">v20_10(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_10_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_10_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_10_ce0">
+                  <obj_property name="ElementShortName">v20_10_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_10_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_11_group">
+               <obj_property name="label">v20_11(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_11_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_11_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_11_ce0">
+                  <obj_property name="ElementShortName">v20_11_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_11_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_12_group">
+               <obj_property name="label">v20_12(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_12_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_12_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_12_ce0">
+                  <obj_property name="ElementShortName">v20_12_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_12_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_13_group">
+               <obj_property name="label">v20_13(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_13_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_13_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_13_ce0">
+                  <obj_property name="ElementShortName">v20_13_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_13_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_14_group">
+               <obj_property name="label">v20_14(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_14_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_14_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_14_ce0">
+                  <obj_property name="ElementShortName">v20_14_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_14_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_15_group">
+               <obj_property name="label">v20_15(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_15_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_15_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_15_ce0">
+                  <obj_property name="ElementShortName">v20_15_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_15_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_16_group">
+               <obj_property name="label">v20_16(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_16_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_16_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_16_ce0">
+                  <obj_property name="ElementShortName">v20_16_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_16_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_17_group">
+               <obj_property name="label">v20_17(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_17_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_17_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_17_ce0">
+                  <obj_property name="ElementShortName">v20_17_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_17_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_18_group">
+               <obj_property name="label">v20_18(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_18_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_18_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_18_ce0">
+                  <obj_property name="ElementShortName">v20_18_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_18_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_19_group">
+               <obj_property name="label">v20_19(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_19_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_19_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_19_ce0">
+                  <obj_property name="ElementShortName">v20_19_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_19_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_20_group">
+               <obj_property name="label">v20_20(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_20_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_20_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_20_ce0">
+                  <obj_property name="ElementShortName">v20_20_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_20_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_21_group">
+               <obj_property name="label">v20_21(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_21_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_21_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_21_ce0">
+                  <obj_property name="ElementShortName">v20_21_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_21_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_22_group">
+               <obj_property name="label">v20_22(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_22_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_22_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_22_ce0">
+                  <obj_property name="ElementShortName">v20_22_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_22_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_23_group">
+               <obj_property name="label">v20_23(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_23_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_23_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_23_ce0">
+                  <obj_property name="ElementShortName">v20_23_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_23_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_24_group">
+               <obj_property name="label">v20_24(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_24_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_24_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_24_ce0">
+                  <obj_property name="ElementShortName">v20_24_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_24_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_25_group">
+               <obj_property name="label">v20_25(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_25_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_25_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_25_ce0">
+                  <obj_property name="ElementShortName">v20_25_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_25_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_26_group">
+               <obj_property name="label">v20_26(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_26_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_26_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_26_ce0">
+                  <obj_property name="ElementShortName">v20_26_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_26_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_27_group">
+               <obj_property name="label">v20_27(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_27_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_27_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_27_ce0">
+                  <obj_property name="ElementShortName">v20_27_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_27_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_28_group">
+               <obj_property name="label">v20_28(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_28_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_28_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_28_ce0">
+                  <obj_property name="ElementShortName">v20_28_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_28_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_29_group">
+               <obj_property name="label">v20_29(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_29_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_29_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_29_ce0">
+                  <obj_property name="ElementShortName">v20_29_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_29_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_30_group">
+               <obj_property name="label">v20_30(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_30_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_30_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_30_ce0">
+                  <obj_property name="ElementShortName">v20_30_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_30_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_31_group">
+               <obj_property name="label">v20_31(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_31_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_31_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_31_ce0">
+                  <obj_property name="ElementShortName">v20_31_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_31_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_32_group">
+               <obj_property name="label">v20_32(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_32_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_32_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_32_ce0">
+                  <obj_property name="ElementShortName">v20_32_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_32_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_33_group">
+               <obj_property name="label">v20_33(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_33_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_33_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_33_ce0">
+                  <obj_property name="ElementShortName">v20_33_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_33_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_34_group">
+               <obj_property name="label">v20_34(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_34_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_34_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_34_ce0">
+                  <obj_property name="ElementShortName">v20_34_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_34_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_35_group">
+               <obj_property name="label">v20_35(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_35_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_35_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_35_ce0">
+                  <obj_property name="ElementShortName">v20_35_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_35_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_36_group">
+               <obj_property name="label">v20_36(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_36_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_36_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_36_ce0">
+                  <obj_property name="ElementShortName">v20_36_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_36_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_37_group">
+               <obj_property name="label">v20_37(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_37_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_37_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_37_ce0">
+                  <obj_property name="ElementShortName">v20_37_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_37_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v20_38_group">
+               <obj_property name="label">v20_38(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_38_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_38_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v20_38_ce0">
+                  <obj_property name="ElementShortName">v20_38_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v20_38_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v22_group">
+               <obj_property name="label">v22(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v22_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v22_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/v22_ce0">
+                  <obj_property name="ElementShortName">v22_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v22_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="stage_M_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="stage_M_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="out_Ax_fifo1_group">
+               <obj_property name="label">out_Ax_fifo1(out_Ax_fifo_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/out_Ax_fifo1_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/out_Ax_fifo1_full_n">
+                  <obj_property name="ElementShortName">out_Ax_fifo1_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_Ax_fifo1_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/out_Ax_fifo1_write">
+                  <obj_property name="ElementShortName">out_Ax_fifo1_write</obj_property>
+                  <obj_property name="ObjectShortName">out_Ax_fifo1_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260_group">
+            <obj_property name="label">grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_25_1_fu_260/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342_group">
+            <obj_property name="label">grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_l_S_m_0_r_l_m_fu_342/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465_group">
+            <obj_property name="label">grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_M_U0/grp_stage_M_Pipeline_VITIS_LOOP_42_2_fu_465/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="stage_N_U0_group">
+         <obj_property name="label">stage_N_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190/grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190_activity">
+            <obj_property name="ElementShortName">grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198_activity">
+            <obj_property name="ElementShortName">grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="stage_N_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="v21_0_group">
+               <obj_property name="label">v21_0(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_0_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_0_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_0_ce0">
+                  <obj_property name="ElementShortName">v21_0_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_0_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_1_group">
+               <obj_property name="label">v21_1(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_1_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_1_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_1_ce0">
+                  <obj_property name="ElementShortName">v21_1_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_1_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_2_group">
+               <obj_property name="label">v21_2(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_2_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_2_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_2_ce0">
+                  <obj_property name="ElementShortName">v21_2_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_2_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_3_group">
+               <obj_property name="label">v21_3(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_3_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_3_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_3_ce0">
+                  <obj_property name="ElementShortName">v21_3_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_3_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_4_group">
+               <obj_property name="label">v21_4(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_4_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_4_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_4_ce0">
+                  <obj_property name="ElementShortName">v21_4_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_4_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_5_group">
+               <obj_property name="label">v21_5(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_5_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_5_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_5_ce0">
+                  <obj_property name="ElementShortName">v21_5_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_5_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_6_group">
+               <obj_property name="label">v21_6(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_6_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_6_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_6_ce0">
+                  <obj_property name="ElementShortName">v21_6_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_6_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_7_group">
+               <obj_property name="label">v21_7(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_7_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_7_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_7_ce0">
+                  <obj_property name="ElementShortName">v21_7_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_7_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_8_group">
+               <obj_property name="label">v21_8(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_8_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_8_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_8_ce0">
+                  <obj_property name="ElementShortName">v21_8_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_8_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_9_group">
+               <obj_property name="label">v21_9(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_9_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_9_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_9_ce0">
+                  <obj_property name="ElementShortName">v21_9_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_9_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_10_group">
+               <obj_property name="label">v21_10(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_10_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_10_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_10_ce0">
+                  <obj_property name="ElementShortName">v21_10_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_10_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_11_group">
+               <obj_property name="label">v21_11(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_11_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_11_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_11_ce0">
+                  <obj_property name="ElementShortName">v21_11_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_11_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_12_group">
+               <obj_property name="label">v21_12(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_12_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_12_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_12_ce0">
+                  <obj_property name="ElementShortName">v21_12_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_12_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_13_group">
+               <obj_property name="label">v21_13(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_13_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_13_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_13_ce0">
+                  <obj_property name="ElementShortName">v21_13_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_13_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_14_group">
+               <obj_property name="label">v21_14(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_14_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_14_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_14_ce0">
+                  <obj_property name="ElementShortName">v21_14_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_14_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_15_group">
+               <obj_property name="label">v21_15(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_15_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_15_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_15_ce0">
+                  <obj_property name="ElementShortName">v21_15_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_15_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_16_group">
+               <obj_property name="label">v21_16(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_16_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_16_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_16_ce0">
+                  <obj_property name="ElementShortName">v21_16_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_16_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_17_group">
+               <obj_property name="label">v21_17(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_17_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_17_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_17_ce0">
+                  <obj_property name="ElementShortName">v21_17_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_17_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_18_group">
+               <obj_property name="label">v21_18(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_18_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_18_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_18_ce0">
+                  <obj_property name="ElementShortName">v21_18_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_18_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_19_group">
+               <obj_property name="label">v21_19(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_19_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_19_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_19_ce0">
+                  <obj_property name="ElementShortName">v21_19_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_19_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_20_group">
+               <obj_property name="label">v21_20(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_20_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_20_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_20_ce0">
+                  <obj_property name="ElementShortName">v21_20_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_20_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_21_group">
+               <obj_property name="label">v21_21(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_21_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_21_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_21_ce0">
+                  <obj_property name="ElementShortName">v21_21_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_21_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_22_group">
+               <obj_property name="label">v21_22(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_22_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_22_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_22_ce0">
+                  <obj_property name="ElementShortName">v21_22_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_22_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_23_group">
+               <obj_property name="label">v21_23(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_23_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_23_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_23_ce0">
+                  <obj_property name="ElementShortName">v21_23_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_23_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_24_group">
+               <obj_property name="label">v21_24(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_24_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_24_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_24_ce0">
+                  <obj_property name="ElementShortName">v21_24_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_24_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_25_group">
+               <obj_property name="label">v21_25(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_25_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_25_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_25_ce0">
+                  <obj_property name="ElementShortName">v21_25_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_25_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_26_group">
+               <obj_property name="label">v21_26(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_26_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_26_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_26_ce0">
+                  <obj_property name="ElementShortName">v21_26_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_26_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_27_group">
+               <obj_property name="label">v21_27(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_27_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_27_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_27_ce0">
+                  <obj_property name="ElementShortName">v21_27_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_27_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_28_group">
+               <obj_property name="label">v21_28(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_28_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_28_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_28_ce0">
+                  <obj_property name="ElementShortName">v21_28_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_28_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_29_group">
+               <obj_property name="label">v21_29(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_29_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_29_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_29_ce0">
+                  <obj_property name="ElementShortName">v21_29_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_29_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_30_group">
+               <obj_property name="label">v21_30(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_30_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_30_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_30_ce0">
+                  <obj_property name="ElementShortName">v21_30_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_30_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_31_group">
+               <obj_property name="label">v21_31(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_31_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_31_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_31_ce0">
+                  <obj_property name="ElementShortName">v21_31_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_31_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_32_group">
+               <obj_property name="label">v21_32(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_32_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_32_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_32_ce0">
+                  <obj_property name="ElementShortName">v21_32_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_32_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_33_group">
+               <obj_property name="label">v21_33(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_33_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_33_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_33_ce0">
+                  <obj_property name="ElementShortName">v21_33_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_33_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_34_group">
+               <obj_property name="label">v21_34(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_34_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_34_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_34_ce0">
+                  <obj_property name="ElementShortName">v21_34_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_34_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_35_group">
+               <obj_property name="label">v21_35(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_35_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_35_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_35_ce0">
+                  <obj_property name="ElementShortName">v21_35_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_35_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_36_group">
+               <obj_property name="label">v21_36(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_36_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_36_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_36_ce0">
+                  <obj_property name="ElementShortName">v21_36_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_36_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_37_group">
+               <obj_property name="label">v21_37(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_37_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_37_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_37_ce0">
+                  <obj_property name="ElementShortName">v21_37_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_37_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_38_group">
+               <obj_property name="label">v21_38(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_38_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_38_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_38_ce0">
+                  <obj_property name="ElementShortName">v21_38_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_38_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_39_group">
+               <obj_property name="label">v21_39(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_39_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_39_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_39_ce0">
+                  <obj_property name="ElementShortName">v21_39_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_39_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v21_40_group">
+               <obj_property name="label">v21_40(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_40_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_40_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/v21_40_ce0">
+                  <obj_property name="ElementShortName">v21_40_ce0</obj_property>
+                  <obj_property name="ObjectShortName">v21_40_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  <obj_property name="label">ap_ready(t_read)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_Ax_fifo1_group">
+               <obj_property name="label">out_Ax_fifo1(out_Ax_fifo_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/out_Ax_fifo1_dout">
+                  <obj_property name="ElementShortName">out_Ax_fifo1_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">out_Ax_fifo1_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/out_Ax_fifo1_empty_n">
+                  <obj_property name="ElementShortName">out_Ax_fifo1_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">out_Ax_fifo1_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/out_Ax_fifo1_read">
+                  <obj_property name="ElementShortName">out_Ax_fifo1_read</obj_property>
+                  <obj_property name="ObjectShortName">out_Ax_fifo1_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="stage_N_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="stage_N_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190_group">
+            <obj_property name="label">grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/grp_stage_N_Pipeline_VITIS_LOOP_57_1_fu_190/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198_group">
+            <obj_property name="label">grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_kernel_atax_top/AESL_inst_kernel_atax/stage_N_U0/grp_stage_N_Pipeline_l_S_n_0_k_l_n_fu_198/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

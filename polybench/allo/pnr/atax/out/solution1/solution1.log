@@ -1,0 +1,290 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1.2 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_top kernel_atax 
+INFO: [HLS 200-1510] Running: add_files kernel.cpp 
+INFO: [HLS 200-10] Adding design file 'kernel.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb host.cpp -cflags -std=gnu++0x 
+INFO: [HLS 200-10] Adding test bench file 'host.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Opening solution '/work/shared/users/phd/nz264/pldi/polybench/allo/atax/atax_ii_1/out.prj/solution1'.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1.2 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1510] Running: create_clock -name ap_clk -period 2.5 
+INFO: [SYN 201-201] Setting up clock 'ap_clk' with a period of 2.5ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 456.180 MB.
+INFO: [HLS 200-10] Analyzing design file 'kernel.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 19.16 seconds. CPU system time: 1.65 seconds. Elapsed time: 21.06 seconds; current allocated memory: 456.180 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-188] Unrolling loop 'l_n' (kernel.cpp:62:10) in function 'stage_N' partially with a factor of 41 (kernel.cpp:52:0)
+INFO: [HLS 214-188] Unrolling loop 'l_m' (kernel.cpp:30:10) in function 'stage_M' partially with a factor of 39 (kernel.cpp:20:0)
+INFO: [HLS 214-248] Applying array_partition to 'v2': Cyclic partitioning with factor 39 on dimension 1. (kernel.cpp:23:8)
+INFO: [HLS 214-248] Applying array_partition to 'v20': Cyclic partitioning with factor 39 on dimension 1. (kernel.cpp:80:0)
+INFO: [HLS 214-248] Applying array_partition to 'v21': Cyclic partitioning with factor 41 on dimension 2. (kernel.cpp:80:0)
+INFO: [HLS 214-248] Applying array_partition to 'v23': Cyclic partitioning with factor 41 on dimension 1. (kernel.cpp:80:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.74 seconds. CPU system time: 0.55 seconds. Elapsed time: 4.48 seconds; current allocated memory: 456.180 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 456.180 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 456.180 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 456.180 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_57_1' (/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:0) in function 'stage_N' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_25_1' (kernel.cpp:25) in function 'stage_M' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_42_2' (kernel.cpp:42) in function 'stage_M' automatically.
+WARNING: [HLS 200-786] Detected dataflow-on-top in function  'kernel_atax' (kernel.cpp:75:1)  with default interface mode 'ap_ctrl_hs'. Overlapped execution of successive kernel calls will not happen unless interface mode 'ap_ctrl_chain' is used (or 'ap_ctrl_none' for a purely data-driven design).
+INFO: [XFORM 203-712] Applying dataflow to function 'kernel_atax' (kernel.cpp:75:1), detected/extracted 2 process function(s): 
+	 'stage_M'
+	 'stage_N'.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.52 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.55 seconds; current allocated memory: 520.180 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_S_n_0_k' (kernel.cpp:61:23) in function 'stage_N'.
+INFO: [XFORM 203-541] Flattening a loop nest 'l_S_m_0_r' (kernel.cpp:29:23) in function 'stage_M'.
+INFO: [HLS 200-472] Inferring partial write operation for 'v11' (kernel.cpp:58:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'v2' (kernel.cpp:26:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'v2' (kernel.cpp:38:13)
+WARNING: [HLS 200-1449] Process stage_N has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.31 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 584.180 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kernel_atax' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stage_M_Pipeline_VITIS_LOOP_25_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_25_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_25_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.38 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.5 seconds; current allocated memory: 584.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 584.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stage_M_Pipeline_l_S_m_0_r_l_m' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'l_S_m_0_r_l_m'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 22, loop 'l_S_m_0_r_l_m'
+WARNING: [HLS 200-871] Estimated clock period (2.231ns) exceeds the target (target clock period: 2.5ns, clock uncertainty: 0.675ns, effective delay budget: 1.825ns).
+WARNING: [HLS 200-1016] The critical path in module 'stage_M_Pipeline_l_S_m_0_r_l_m' consists of the following:	'load' operation ('v8', kernel.cpp:36) on array 'v2' [199]  (0.699 ns)
+	'fadd' operation ('v9', kernel.cpp:37) [200]  (1.53 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.16 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.21 seconds; current allocated memory: 584.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.98 seconds. CPU system time: 0 seconds. Elapsed time: 1.01 seconds; current allocated memory: 584.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stage_M_Pipeline_VITIS_LOOP_42_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_42_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_42_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.26 seconds; current allocated memory: 584.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 584.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stage_M' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 584.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.49 seconds. CPU system time: 0 seconds. Elapsed time: 0.51 seconds; current allocated memory: 584.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stage_N_Pipeline_VITIS_LOOP_57_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_57_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.55 seconds. CPU system time: 0 seconds. Elapsed time: 0.59 seconds; current allocated memory: 584.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 584.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stage_N_Pipeline_l_S_n_0_k_l_n' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln65) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'l_S_n_0_k_l_n'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 20, loop 'l_S_n_0_k_l_n'
+WARNING: [HLS 200-871] Estimated clock period (2.231ns) exceeds the target (target clock period: 2.5ns, clock uncertainty: 0.675ns, effective delay budget: 1.825ns).
+WARNING: [HLS 200-1016] The critical path in module 'stage_N_Pipeline_l_S_n_0_k_l_n' consists of the following:	'load' operation ('v23_0_load', kernel.cpp:68) on array 'v23_0' [248]  (0.699 ns)
+	'fadd' operation ('v19', kernel.cpp:69) [250]  (1.53 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.09 seconds. CPU system time: 0 seconds. Elapsed time: 1.14 seconds; current allocated memory: 584.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.05 seconds; current allocated memory: 584.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stage_N' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.24 seconds; current allocated memory: 584.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.38 seconds. CPU system time: 0 seconds. Elapsed time: 0.4 seconds; current allocated memory: 584.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kernel_atax' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.4 seconds. CPU system time: 0 seconds. Elapsed time: 0.43 seconds; current allocated memory: 584.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.61 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.64 seconds; current allocated memory: 584.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stage_M_Pipeline_VITIS_LOOP_25_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stage_M_Pipeline_VITIS_LOOP_25_1' pipeline 'VITIS_LOOP_25_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stage_M_Pipeline_VITIS_LOOP_25_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.22 seconds. CPU system time: 0 seconds. Elapsed time: 1.24 seconds; current allocated memory: 584.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stage_M_Pipeline_l_S_m_0_r_l_m' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stage_M_Pipeline_l_S_m_0_r_l_m' pipeline 'l_S_m_0_r_l_m' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_8_no_dsp_1': 39 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_6_max_dsp_1': 39 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_4ns_9ns_9ns_13_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_9ns_10ns_19_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stage_M_Pipeline_l_S_m_0_r_l_m'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.37 seconds; current allocated memory: 584.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stage_M_Pipeline_VITIS_LOOP_42_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stage_M_Pipeline_VITIS_LOOP_42_2' pipeline 'VITIS_LOOP_42_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_399_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stage_M_Pipeline_VITIS_LOOP_42_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.15 seconds. CPU system time: 0.07 seconds. Elapsed time: 2.26 seconds; current allocated memory: 584.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stage_M' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stage_M'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.4 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.47 seconds; current allocated memory: 584.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stage_N_Pipeline_VITIS_LOOP_57_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stage_N_Pipeline_VITIS_LOOP_57_1' pipeline 'VITIS_LOOP_57_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stage_N_Pipeline_VITIS_LOOP_57_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.45 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.51 seconds; current allocated memory: 584.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stage_N_Pipeline_l_S_n_0_k_l_n' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stage_N_Pipeline_l_S_n_0_k_l_n' pipeline 'l_S_n_0_k_l_n' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_8_no_dsp_1': 41 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_6_max_dsp_1': 41 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_9ns_10ns_19_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stage_N_Pipeline_l_S_n_0_k_l_n'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 648.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stage_N' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stage_N'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.14 seconds. CPU system time: 0.05 seconds. Elapsed time: 2.25 seconds; current allocated memory: 648.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kernel_atax' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v20_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_atax/v21_22' to 'ap_memory'.
+INFO

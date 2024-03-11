@@ -1,0 +1,24 @@
+
+
+Implementation tool: Xilinx Vivado v.2022.1.2
+Project:             out.prj
+Solution:            solution1
+Device target:       xcu280-fsvh2892-2L-e
+Report date:         Wed Nov 15 16:47:10 EST 2023
+
+#=== Post-Implementation Resource usage ===
+SLICE:            0
+LUT:          36839
+FF:           43909
+DSP:            243
+BRAM:             2
+URAM:             0
+LATCH:            0
+SRL:            984
+CLB:           7365
+
+#=== Final timing ===
+CP required:                     2.500
+CP achieved post-synthesis:      1.569
+CP achieved post-implementation: 2.432
+Timing met

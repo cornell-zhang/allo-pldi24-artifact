@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1.2 (64-bit)
+# SW Build 3605665 on Fri Aug  5 22:52:02 MDT 2022
+# IP Build 3603185 on Sat Aug  6 04:07:44 MDT 2022
+# Start of session at: Wed Nov 15 16:12:39 2023
+# Process ID: 65780
+# Current directory: /work/shared/users/phd/nz264/pldi/polybench/allo/atax/atax_ii_1/out.prj/solution1/impl/verilog/project.runs/impl_1
+# Command line: vivado -log bd_0_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source bd_0_wrapper.tcl -notrace
+# Log file: /work/shared/users/phd/nz264/pldi/polybench/allo/atax/atax_ii_1/out.prj/solution1/impl/verilog/project.runs/impl_1/bd_0_wrapper.vdi
+# Journal file: /work/shared/users/phd/nz264/pldi/polybench/allo/atax/atax_ii_1/out.prj/solution1/impl/verilog/project.runs/impl_1/vivado.jou
+# Running On: zhang-24.ece.cornell.edu, OS: Linux, CPU Frequency: 1202.160 MHz, CPU Physical cores: 32, Host memory: 810168 MB
+#-----------------------------------------------------------
+source bd_0_wrapper.tcl -notrace

@@ -1,0 +1,16 @@
+<pragmas>
+<pragma file="kernel.cpp" line="32" pragmaType="unroll" parentfunction="stage_M" factor="39" skip_exit_check="0"/>
+<pragma file="kernel.cpp" line="31" pragmaType="pipeline" parentfunction="stage_M" off="0" ii="1" rewind="0" style=""/>
+<pragma file="kernel.cpp" line="21" pragmaType="array_partition" parentfunction="stage_M" dim="1" factor="39" mode="cyclic" dynamic="0" variable="v0"/>
+<pragma file="kernel.cpp" line="24" pragmaType="array_partition" parentfunction="stage_M" dim="1" factor="39" mode="cyclic" dynamic="0" variable=""/>
+<pragma file="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="154" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="173" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="kernel.cpp" line="64" pragmaType="unroll" parentfunction="stage_N" factor="41" skip_exit_check="0"/>
+<pragma file="kernel.cpp" line="63" pragmaType="pipeline" parentfunction="stage_N" off="0" ii="1" rewind="0" style=""/>
+<pragma file="kernel.cpp" line="53" pragmaType="array_partition" parentfunction="stage_N" dim="2" factor="41" mode="cyclic" dynamic="0" variable="v10"/>
+<pragma file="kernel.cpp" line="54" pragmaType="array_partition" parentfunction="stage_N" dim="1" factor="41" mode="cyclic" dynamic="0" variable="v12"/>
+<pragma file="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="144" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="kernel.cpp" line="81" pragmaType="dataflow" parentfunction="kernel_atax" disable_start_propagation="0"/>
+<pragma file="kernel.cpp" line="84" pragmaType="stream" parentfunction="kernel_atax" depth="390" type="fifo" variable="out_Ax_fifo"/>
+<pragma file="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="103" pragmaType="inline" parentfunction="hls::stream<float, 0>::stream()" off="0" region="0" recursive="0"/>
+</pragmas>

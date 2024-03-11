@@ -1,0 +1,768 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:724:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:738:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:752:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:122:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_user_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:126:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_id_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:130:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_dest_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:160:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_strb_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:164:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_user_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:168:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_id_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:172:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_dest_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:178:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:182:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_keep" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:186:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_last" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:191:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="set_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:195:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="set_keep" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:199:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="set_last" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:203:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="keep_all" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:209:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:213:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:217:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:222:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:227:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:231:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator=" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:266:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="empty" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:273:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="full" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:281:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:291:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:302:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:312:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:327:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:363:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="empty" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:370:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="full" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:378:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:388:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:399:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:409:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:425:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/utils/x_hls_utils.h:250:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="reg" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/utils/x_hls_utils.h:251:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="reg" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=1 max=1" ARG_PragmaType="latency" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/utils/x_hls_utils.h:252:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="reg" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:116:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sin_or_cos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=swap_table complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:117:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sin_or_cos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=fourth_order_double::sin_cos_K0 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:118:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sin_or_cos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=fourth_order_double::sin_cos_K1 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:119:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sin_or_cos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=fourth_order_double::sin_cos_K2 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:120:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sin_or_cos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=fourth_order_double::sin_cos_K3 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:121:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sin_or_cos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=fourth_order_double::sin_cos_K4 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:151:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sincos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=fourth_order_double::cos_K0 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:152:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sincos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=fourth_order_double::cos_K1 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:153:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sincos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=fourth_order_double::cos_K2 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:154:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sincos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=fourth_order_double::cos_K3 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:155:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sincos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=fourth_order_double::cos_K4 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:156:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sincos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=fourth_order_double::sin_K0 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:157:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sincos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=fourth_order_double::sin_K1 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:158:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sincos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=fourth_order_double::sin_K2 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:159:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sincos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=fourth_order_double::sin_K3 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:160:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sincos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=fourth_order_double::sin_K4 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:209:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sin_or_cos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=swap_table complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:210:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sin_or_cos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=second_order_float::sin_cos_K0 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:211:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sin_or_cos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=second_order_float::sin_cos_K1 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:212:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sin_or_cos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=second_order_float::sin_cos_K2 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:239:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sincos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=second_order_float::cos_K0 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:240:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sincos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=second_order_float::cos_K1 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:241:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sincos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=second_order_float::cos_K2 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:242:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sincos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=second_order_float::sin_K0 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:243:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sincos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=second_order_float::sin_K1 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:244:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sincos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=second_order_float::sin_K2 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:280:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sin_or_cos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=first_order_fixed_16::sin_cos_K0 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:281:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sin_or_cos_approximation" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=first_order_fixed_16::sin_cos_K1 type=ROM_1P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:310:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sinf_or_cosf" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=swap_table complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:311:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sinf_or_cosf" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=neg_sin_table complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:312:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sinf_or_cosf" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=neg_cos_table complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:382:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sinf_or_cosf" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=swap_table complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:383:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sinf_or_cosf" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=neg_sin_table complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:384:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sinf_or_cosf" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=neg_cos_table complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:453:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sinf_or_cosf" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=neg_sin_table complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hotbm_apfixed.h:454:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sinf_or_cosf" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=neg_cos_table complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_cordic_apfixed.h:88:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cordic_circ_apfixed" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_cordic_apfixed.h:146:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="doublecordic_apfixed" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=5" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_cordic_apfixed.h:149:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="doublecordic_apfixed" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=3" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_cordic_apfixed.h:152:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="doublecordic_apfixed" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_cordic_apfixed.h:155:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="doublecordic_apfixed" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=4" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_cordic_apfixed.h:316:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_tan" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_cordic_apfixed.h:476:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_tanpi" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_cordic_apfixed.h:656:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_atan2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_cordic_apfixed.h:660:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_atan2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_cordic_apfixed.h:867:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sinh_cosh_range_redux_cordic" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_cordic_apfixed.h:886:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sinh_cosh_range_redux_cordic" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:41:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:95:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:101:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:105:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:172:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:178:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:182:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:197:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:205:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:270:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:276:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:280:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:295:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:303:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:532:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:538:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:542:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:552:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:556:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:566:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:574:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:935:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:941:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:945:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:959:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:1061:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:1067:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:1071:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:1158:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:1164:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:1168:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:1187:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:1194:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:1310:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:1316:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:1320:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:1340:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:1347:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:1609:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:1615:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:1619:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:1643:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:1650:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2080:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2086:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2090:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_core" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2220:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2227:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2231:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2278:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2285:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2289:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2307:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2362:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2369:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2373:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2391:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2480:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2487:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2491:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2501:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2505:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2516:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2524:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2849:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2856:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2860:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2948:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2955:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2959:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:2974:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:3006:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:3013:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:3017:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:3032:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:3082:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:3089:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:3093:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:3108:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:3245:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:3252:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:3256:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:3271:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:3431:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:3438:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_exp_apfixed.h:3442:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_log_apfixed.h:501:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="log" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_log_apfixed.h:730:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="log" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_log_apfixed.h:818:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="log10" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_log_apfixed.h:948:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="log10" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_log_apfixed.h:1094:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="log2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_log_apfixed.h:1372:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="log2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_sqrt_apfixed.h:44:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sqrt_fixed" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_sqrt_apfixed.h:267:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sqrt_fixed" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_sqrt_apfixed.h:295:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sqrt_fixed" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_sqrt_apfixed.h:393:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="rsqrt_fixed" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_sqrt_apfixed.h:440:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="recip_fixed" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_round_copysign_apfixed.h:40:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ceil_fixed" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_round_copysign_apfixed.h:57:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ceil_fixed" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_round_copysign_apfixed.h:117:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="trunc_fixed" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_round_copysign_apfixed.h:203:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="round_fixed" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_round_copysign_apfixed.h:239:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="rint_fixed" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_pow_apfixed.h:75:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pow" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_pow_apfixed.h:136:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pow" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_pow_apfixed.h:150:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pow" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_pow_apfixed.h:180:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pow" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_pow_apfixed.h:308:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pown" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_pow_apfixed.h:328:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pown" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_pow_apfixed.h:342:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pown" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_pow_apfixed.h:460:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="rootn" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_pow_apfixed.h:474:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="rootn" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_diff_apfixed.h:49:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fdim_fixed" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_diff_apfixed.h:60:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fdim_fixed" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_diff_apfixed.h:189:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="maxmag_fixed" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_diff_apfixed.h:210:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="maxmag_fixed" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_diff_apfixed.h:255:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="minmag_fixed" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_diff_apfixed.h:275:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="minmag_fixed" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_frexp_apfixed.h:72:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="frexp" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_isequal_isnotequal_apfixed.h:43:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_isequal" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_isequal_isnotequal_apfixed.h:51:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_isnotequal" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_isequal_isnotequal_apfixed.h:59:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_isequal" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_isequal_isnotequal_apfixed.h:67:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_isnotequal" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_isequal_isnotequal_apfixed.h:75:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_isequal" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_isequal_isnotequal_apfixed.h:83:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_isnotequal" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_isequal_isnotequal_apfixed.h:91:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_isequal" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_isequal_isnotequal_apfixed.h:99:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_isnotequal" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_isequal_isnotequal_apfixed.h:108:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_isequal" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_isequal_isnotequal_apfixed.h:116:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_isnotequal" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_isequal_isnotequal_apfixed.h:124:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_isequal" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_isequal_isnotequal_apfixed.h:132:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_isnotequal" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_isequal_isnotequal_apfixed.h:140:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_isequal" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_isequal_isnotequal_apfixed.h:148:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_isnotequal" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_isequal_isnotequal_apfixed.h:156:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_isequal" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_isequal_isnotequal_apfixed.h:164:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_isnotequal" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_all_any_apfixed.h:41:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_all" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_all_any_apfixed.h:52:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_all" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_all_any_apfixed.h:63:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_all" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_all_any_apfixed.h:74:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_all" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_all_any_apfixed.h:85:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_any" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_all_any_apfixed.h:96:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_any" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_all_any_apfixed.h:107:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_any" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_all_any_apfixed.h:118:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_any" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_select_bitselect_apfixed.h:65:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_bitselect" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_select_bitselect_apfixed.h:73:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_bitselect" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_select_bitselect_apfixed.h:81:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_bitselect" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_select_bitselect_apfixed.h:88:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_bitselect" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_erf_apfixed.h:516:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="erfc" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_lgamma_apfixed.h:43:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lgamma_generic" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_tgamma_apfixed.h:44:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tgamma_generic" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_mad_apfixed.h:24:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_mad" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/xilinx/2022.1/Vitis_HLS/2022.1/common/technology/autopilot/hls_hypot_apfixed.h:196:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hypot_fixed" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="kernel.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stage_M" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=v0 cyclic factor=39 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="kernel.cpp:24:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stage_M" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=v2 cyclic factor=39 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="kernel.cpp:31:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stage_M" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="kernel.cpp:32:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stage_M" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=39" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="kernel.cpp:53:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stage_N" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=v10 cyclic factor=41 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="kernel.cpp:54:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stage_N" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=v12 cyclic factor=41 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="kernel.cpp:63:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stage_N" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="kernel.cpp:64:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stage_N" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=41" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/work/shared/users/phd/nz264/pldi/polybench/allo/atax/atax_ii_1/run.tcl:38:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="kernel_atax" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=kernel_atax" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="kernel.cpp:81:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_atax" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="kernel.cpp:84:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_atax" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=out_Ax_fifo depth=390" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="kernel.cpp:52:0" msg_body="Unrolling loop 'l_n' (kernel.cpp:62:10) in function 'stage_N' partially with a factor of 41">
+        <args Factor="41" LoopLoc="kernel.cpp:62:10" LoopName="l_n"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="kernel.cpp:20:0" msg_body="Unrolling loop 'l_m' (kernel.cpp:30:10) in function 'stage_M' partially with a factor of 39">
+        <args Factor="39" LoopLoc="kernel.cpp:30:10" LoopName="l_m"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="kernel.cpp:23:8" msg_body="Applying array_partition to 'v2': Cyclic partitioning with factor 39 on dimension 1.">
+        <args Dim="1" Factor="39" Mode="Cyclic" UOName="v2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="kernel.cpp:80:0" msg_body="Applying array_partition to 'v20': Cyclic partitioning with factor 39 on dimension 1.">
+        <args Dim="1" Factor="39" Mode="Cyclic" UOName="v20"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="kernel.cpp:80:0" msg_body="Applying array_partition to 'v21': Cyclic partitioning with factor 41 on dimension 2.">
+        <args Dim="2" Factor="41" Mode="Cyclic" UOName="v21"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="kernel.cpp:80:0" msg_body="Applying array_partition to 'v23': Cyclic partitioning with factor 41 on dimension 1.">
+        <args Dim="1" Factor="41" Mode="Cyclic" UOName="v23"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+
