@@ -4,3 +4,4 @@
 !*.mk
 !xcl2.cpp
 !xcl2.hpp
+!*.rpt
