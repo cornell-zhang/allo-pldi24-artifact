@@ -38,6 +38,10 @@ If you do not want to use the pre-built docker, we also provide detailed instruc
 
 #### Image Copy (For AE Only)
 
+```diff
+- TODO: @Niansong
+```
+
 We provide an image that contains the necessary Vitis toolchain and can be downloaded from this [Drive](). Notice this is only for artifact evaluation and should *not* be used for other purpose. This link will be invalid after the artifact evaluation period.
 
 The image is about 50GB and can be unzip using the following command:
@@ -146,16 +150,16 @@ If you want to speed up the above experiments, you can invoke multiple terminals
 
 The results will be dumped to each folder. Lastly, we can call the following command to collect the results and generate the final figure.
 
-TODO: @Niansong
-
-```bash
-...
+```diff
+- TODO: @Niansong
 ```
 
 ### Table 3 (Est. Time: 1 min)
 Please conduct the experiments in Figure 10 first.
 
-TODO: @Niansong
+```diff
+- TODO: @Niansong
+```
 
 ### Table 4 - CNN (Est. Time: 3 hours)
 Next, we run the experiments for multiple kernels. We leverage the three CNN models, including [MobileNet](https://arxiv.org/abs/1704.04861), [ResNet18](https://arxiv.org/abs/1512.03385), and [VGG16](https://arxiv.org/abs/1409.1556), to evaluate the performance of Allo. The scripts to run the experiments are provided below.
@@ -184,6 +188,9 @@ python3 plot.py
 ```
 
 ### Figure 12 - LLM (Not for AE)
+As this experiment requires a U280 FPGA for evaluation, and needs ~24 hours to push the design from high-level synthesis to backend synthesis and generate bitstream, this experiment is **NOT for AE** purpose. However, we provide a [reference HLS C++ code](llm/), which is generated from Allo and later made some modifications to fit on the chiplet-based FPGA. Need to have device license and set up the `XDEVICE` to continue.
+
+For the Allo frontend code, please refer to the [example](https://github.com/cornell-zhang/allo/tree/main/examples) folder in the Allo repository, which describes how to import models from [PyTorch](https://pytorch.org/) and generate the corresponding Allo code.
 
 
 ## Further Usage

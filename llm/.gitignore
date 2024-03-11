@@ -1,0 +1,6 @@
+!*.cfg
+!*.h
+!Makefile
+!*.mk
+!xcl2.cpp
+!xcl2.hpp
