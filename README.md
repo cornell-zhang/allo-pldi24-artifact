@@ -1,6 +1,6 @@
 # Allo Artifact
 
-**Need DOI here**
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10806938.svg)](https://doi.org/10.5281/zenodo.10806938)
 
 This repository contains scripts for setting up environments and reproducing results presented in the PLDI 2024 paper entitled [Allo: A Programming Model for Composable Accelerator Design](). If you wish to access the core implementation, documentation, and tutorials for the Allo language, please refer to the following links. We encourage you to explore these resources if you are interested in using Allo for designing other hardware accelerators that are not presented in our paper.
 
