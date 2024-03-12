@@ -188,6 +188,8 @@ python report.py
 
 These scripts report the max clock frequency after PnR for each case presented in Table 3.
 
+The compilation time is not for the AE, as it highly depends on the CPUs that run this artifact. Moreover, since [ScaleHLS](https://ieeexplore.ieee.org/document/9773203) leverages randomized heuristic search, the compilation time is not deterministic and may vary from case to case.
+
 ### Table 4 - CNN (Est. Time: 3 hours)
 Next, we run the experiments for multiple kernels. We leverage the three CNN models, including [MobileNet](https://arxiv.org/abs/1704.04861), [ResNet18](https://arxiv.org/abs/1512.03385), and [VGG16](https://arxiv.org/abs/1409.1556), to evaluate the performance of Allo. The scripts to run the experiments are provided below.
 
