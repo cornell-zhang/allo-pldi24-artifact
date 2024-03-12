@@ -32,13 +32,25 @@ for i, benchmark in enumerate(benchmarks):
         .childNodes[0]
         .data
     )
-    avg_lat = (
-        report.getElementsByTagName("PerformanceEstimates")[0]
-        .getElementsByTagName("SummaryOfOverallLatency")[0]
-        .getElementsByTagName("Worst-caseLatency")[0]
+    overall_lat = report.getElementsByTagName("PerformanceEstimates")[
+        0
+    ].getElementsByTagName("SummaryOfOverallLatency")[0]
+    if (
+        len(overall_lat.getElementsByTagName("Average-caseLatency")) > 0
+        and overall_lat.getElementsByTagName("Average-caseLatency")[0]
         .childNodes[0]
         .data
-    )
+        != "undef"
+    ):
+        avg_lat = (
+            overall_lat.getElementsByTagName("Average-caseLatency")[0]
+            .childNodes[0]
+            .data
+        )
+    else:
+        avg_lat = (
+            overall_lat.getElementsByTagName("Worst-caseLatency")[0].childNodes[0].data
+        )
     latency = float(clock) * int(avg_lat) * 1e-6
     results.append((benchmark, latency))
     print(f"{benchmark}: {latency:.4f}ms\n")
@@ -51,5 +63,5 @@ print(table)
 # convert results to dict
 results = dict(results)
 # save results to file
-with open('results.json', 'w') as f:
+with open("results.json", "w") as f:
     json.dump(results, f, indent=4)

@@ -27,13 +27,27 @@ for framework in frameworks:
             .childNodes[0]
             .data
         )
-        avg_lat = (
-            report.getElementsByTagName("PerformanceEstimates")[0]
-            .getElementsByTagName("SummaryOfOverallLatency")[0]
-            .getElementsByTagName("Worst-caseLatency")[0]
+        overall_lat = report.getElementsByTagName("PerformanceEstimates")[
+            0
+        ].getElementsByTagName("SummaryOfOverallLatency")[0]
+        if (
+            len(overall_lat.getElementsByTagName("Average-caseLatency")) > 0
+            and overall_lat.getElementsByTagName("Average-caseLatency")[0]
             .childNodes[0]
             .data
-        )
+            != "undef"
+        ):
+            avg_lat = (
+                overall_lat.getElementsByTagName("Average-caseLatency")[0]
+                .childNodes[0]
+                .data
+            )
+        else:
+            avg_lat = (
+                overall_lat.getElementsByTagName("Worst-caseLatency")[0]
+                .childNodes[0]
+                .data
+            )
         dsp = (
             report.getElementsByTagName("AreaEstimates")[0]
             .getElementsByTagName("Resources")[0]
@@ -56,7 +70,9 @@ for framework in frameworks:
                 break
         rpt = open(f"{path}/csynth.rpt", "r").read()
         ii = max(list(map(int, re.findall(r"II=([0-9]*)", rpt))))
-        results.append((framework, benchmark, f"{latency:.1f}K", ii, dsp, f"{freq:.0f}"))
+        results.append(
+            (framework, benchmark, f"{latency:.1f}K", ii, dsp, f"{freq:.0f}")
+        )
 
 headers = ["Framework", "Benchmark", "Latency (ms)", "II", "DSP", "PnR Freq. (MHz)"]
 table = tabulate(results, headers=headers)

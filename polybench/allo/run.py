@@ -24,7 +24,10 @@ for i, benchmark in enumerate(benchmarks):
     print(f"[{i+1}/{len(benchmarks)}] Start running {benchmark}...")
     os.system(f"cd {benchmark} && vitis_hls -f run.tcl")
     report = minidom.parse(
-        open(f"{benchmark}/{benchmark}.prj/solution1/syn/report/kernel_{benchmark}_csynth.xml", "r")
+        open(
+            f"{benchmark}/{benchmark}.prj/solution1/syn/report/kernel_{benchmark}_csynth.xml",
+            "r",
+        )
     )
     clock = (
         report.getElementsByTagName("UserAssignments")[0]
@@ -32,13 +35,25 @@ for i, benchmark in enumerate(benchmarks):
         .childNodes[0]
         .data
     )
-    avg_lat = (
-        report.getElementsByTagName("PerformanceEstimates")[0]
-        .getElementsByTagName("SummaryOfOverallLatency")[0]
-        .getElementsByTagName("Worst-caseLatency")[0]
+    overall_lat = report.getElementsByTagName("PerformanceEstimates")[
+        0
+    ].getElementsByTagName("SummaryOfOverallLatency")[0]
+    if (
+        len(overall_lat.getElementsByTagName("Average-caseLatency")) > 0
+        and overall_lat.getElementsByTagName("Average-caseLatency")[0]
         .childNodes[0]
         .data
-    )
+        != "undef"
+    ):
+        avg_lat = (
+            overall_lat.getElementsByTagName("Average-caseLatency")[0]
+            .childNodes[0]
+            .data
+        )
+    else:
+        avg_lat = (
+            overall_lat.getElementsByTagName("Worst-caseLatency")[0].childNodes[0].data
+        )
     latency = float(clock) * int(avg_lat) * 1e-6
     results.append((benchmark, latency))
     print(f"{benchmark}: {latency:.4f}ms\n")
@@ -53,5 +68,5 @@ results = dict(results)
 # replace key "jacobi_2d" with "jacobi-2d"
 results["jacobi-2d"] = results.pop("jacobi_2d")
 # save results to file
-with open('results.json', 'w') as f:
+with open("results.json", "w") as f:
     json.dump(results, f, indent=4)
