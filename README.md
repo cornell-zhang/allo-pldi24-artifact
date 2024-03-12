@@ -100,7 +100,7 @@ Below are the scripts to reproduce experiments in Allo paper. Each script will e
 
 We provide scripts for reproducing the results of **Figure 10**, **Table 3**, and **Table 4**, which construct the main conclusion of our paper. For Figure 12, it requires a U280 FPGA to run the experiment. Due to campus security settings, we are unable to grant reviewers access to the machine, and thus, Figure 12 is not part of the artifact evaluation. However, we provide the code and instructions for users with access to FPGA machines. Additionally, the synthesis report is included for reference.
 
-First, we can run the following command to enter the docker image. It will mount the Vitis toolchain and the AE folder to the docker, so please make sure you have already cloned this repository and downloaded the Vitis toolchain. We highly recommend **lanuching a `tmux` terminal before executing the docker image**, as the experiments may take a long time to finish. 
+First, we can run the following command to enter the docker image. It will mount the Vitis toolchain and the AE folder to the docker, so please make sure you have already cloned this repository and downloaded the Vitis toolchain. We highly recommend **lanuching a `tmux` terminal before executing the docker image**, as the experiments may take a long time to finish. Also remember to replace `/your/path/to/vitis-docker-volume/` in the following command with the path to the Vitis toolchain, and you are in the `allo-pldi24-artifact` directory.
 
 ```bash
 docker run -v /your/path/to/vitis-docker-volume/:/tools/xilinx -v $(pwd):/root/allo-pldi24-artifact -it allo-container:latest /bin/bash
@@ -128,7 +128,7 @@ We evaluate the following benchmarks from [PolyBench](https://web.cs.ucla.edu/~p
 * [syrk](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/syrk/syrk.c#L67-L93)
 * [trmm](https://github.com/MatthiasJReisinger/PolyBenchC-4.2.1/blob/3e872547cef7e5c9909422ef1e6af03cf4e56072/linear-algebra/blas/trmm/trmm.c#L69-L94)
 
-Each folder contains the original baseline implementation files and the generated HLS C++ files. You can go to each folder to check the details. For example, `polybench/allo/2mm` is the Allo implementation for the `2mm`` benchmark, and there are three files under this folder:
+Each folder contains the original baseline implementation files and the generated HLS C++ files. You can go to each folder to check the details. For example, `polybench/allo/2mm` is the Allo implementation for the `2mm` benchmark, and there are three files under this folder:
 * `two_mm.py`: The Allo implementation
 * `two_mm.cpp`: The generated HLS C++ file
 * `run.tcl`: The Vitis HLS script to run the synthesis
@@ -196,6 +196,13 @@ We also list the reference code below for counting the number of lines of custom
 | symm | 15 | https://github.com/cornell-zhang/allo-pldi24-artifact/blob/main/polybench/allo/symm/symm.py#L52-L68 |
 | trmm | 12 | https://github.com/cornell-zhang/allo-pldi24-artifact/blob/main/polybench/allo/trmm/trmm.py#L37-L50 |
 
+#### Backend Synthesis (Not for AE)
+If you indeed want to run the placement and routing for these designs, you can run the Allo code in a push-button way, which will automatically invoke the Vitis toolchain for synthesis. For example, running the PnR for the `atax` benchmark:
+```bash
+cd /root/allo-pldi24-artifact/polybench/allo/atax
+python3 atax.py
+```
+
 
 ### Table 4 - CNN (Est. Time: 3 hours)
 Next, we run the experiments for multiple kernels. We leverage the three CNN models, including [MobileNet](https://arxiv.org/abs/1704.04861), [ResNet18](https://arxiv.org/abs/1512.03385), and [VGG16](https://arxiv.org/abs/1409.1556), to evaluate the performance of Allo. The scripts to run the experiments are provided below.
@@ -222,6 +229,7 @@ After running all the neural network models, we can generate the result table by
 cd /root/allo-pldi24-artifact/cnn
 python3 plot.py
 ```
+
 
 ### Figure 12 - LLM (Not for AE)
 As this experiment requires a U280 FPGA for evaluation and takes approximately 24 hours to push the design from high-level synthesis to backend synthesis and generate a bitstream, this experiment is **NOT for AE** purpose. However, we provide a [reference HLS C++ code](llm/), which is generated from Allo, with modifications to fit on the chiplet-based FPGA. Also, we provide the post and route report under the `report` directory. Reviewers can find the following results from [this report](https://github.com/cornell-zhang/allo-pldi24-artifact/blob/main/llm/reports/link/imp/impl_1_full_util_routed.rpt) that matches the right-hand side table of Figure 12.
