@@ -111,6 +111,13 @@ if __name__ == "__main__":
 
     # normalize throughput
     dataset = normalize_throughput(dataset)
+    speedup = {"HeteroCL": [], "Dahlia": [], "PyLog": [], "ScaleHLS": [], "VitisHLS": []}
+    for case in dataset:
+        for framework in speedup:
+            speedup[framework].append(dataset[case]["Allo"] / dataset[case][framework])
+    # maximum speedup
+    for framework in speedup:
+        print(f"{framework}: {max(speedup[framework])}")
 
     # draw plots
     draw_plots(dataset)

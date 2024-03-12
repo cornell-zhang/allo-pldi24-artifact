@@ -166,7 +166,7 @@ python latency_plot.py
 
 The result figure will be generated to: `/root/allo-pldi24-artifact/polybench/plot/polybench.pdf`.
 
-#### End-to-end Generation (Optional)
+#### End-to-end Generation (Not for AE)
 The `polybench` folder contains all the required code to generate the optimized HLS C++ code from each baseline. Please refer to this [link](3rdparty/README.md) to install the required packages, and those optimized C++ code can be generated using the following commands:
 
 | Frameworks | Commands |
@@ -178,17 +178,24 @@ The `polybench` folder contains all the required code to generate the optimized 
 | HeteroCL | `python <heterocl_code>.py` |
 
 ### Table 3 (Est. Time: 10 min)
-We provide the placement and routing (PnR) projects and running logs as part of the AE. To reproduce the PnR results in Table 3, please run the following commands inside the docker container:
+Please run the experiments in Figure 10 first to obtain the necessary report files. For latency, II, DSP usage, the results are obtained from the HLS report file in the above experiments. For frequency, since each design may take more than 2 hours to run placement and routing (PnR), we directly provide the PnR results under the `polybench/allo/pnr` and `polybench/scalehls/pnr` directories. The compilation time is not for the AE, as it highly depends on the CPUs that run this artifact. Moreover, since [ScaleHLS](https://ieeexplore.ieee.org/document/9773203) leverages randomized heuristic search, the compilation time is not deterministic and may vary from case to case.
+
+To generate Table 3, please run the following commands inside the docker container:
 ```bash
-cd /root/allo-pldi24-artifact/polybench/allo/pnr
-python report.py
-cd /root/allo-pldi24-artifact/polybench/scalehls/pnr
-python report.py
+cd /root/allo-pldi24-artifact/polybench
+python3 report.py
 ```
 
-These scripts report the max clock frequency after PnR for each case presented in Table 3.
+We also list the reference code below for counting the number of lines of customization code (LoC) for each benchmark. Empty lines and comments are not counted.
 
-The compilation time is not for the AE, as it highly depends on the CPUs that run this artifact. Moreover, since [ScaleHLS](https://ieeexplore.ieee.org/document/9773203) leverages randomized heuristic search, the compilation time is not deterministic and may vary from case to case.
+| Benchmark | LoC | Reference |
+| --- | --- | --- |
+| atax | 9 | https://github.com/cornell-zhang/allo-pldi24-artifact/blob/main/polybench/allo/atax/atax.py#L41-L53 |
+| correlation | 19 | https://github.com/cornell-zhang/allo-pldi24-artifact/blob/main/polybench/allo/correlation/correlation.py#L114-L136 |
+| jacobi-2d | 17 | https://github.com/cornell-zhang/allo-pldi24-artifact/blob/main/polybench/allo/jacobi_2d/jacobi_2d.py#L53-L71 |
+| symm | 15 | https://github.com/cornell-zhang/allo-pldi24-artifact/blob/main/polybench/allo/symm/symm.py#L52-L68 |
+| trmm | 12 | https://github.com/cornell-zhang/allo-pldi24-artifact/blob/main/polybench/allo/trmm/trmm.py#L37-L50 |
+
 
 ### Table 4 - CNN (Est. Time: 3 hours)
 Next, we run the experiments for multiple kernels. We leverage the three CNN models, including [MobileNet](https://arxiv.org/abs/1704.04861), [ResNet18](https://arxiv.org/abs/1512.03385), and [VGG16](https://arxiv.org/abs/1409.1556), to evaluate the performance of Allo. The scripts to run the experiments are provided below.
@@ -249,6 +256,8 @@ We provide a comprehensive sets of examples under the Allo repository. Please ch
 
 ### Tutorials
 We also provide detailed documentation and tutorials for users who are interested in using Allo for designing other hardware accelerators. Please refer to this [webpage](https://cornell-zhang.github.io/allo) for more information.
+
+We highly recommend the reviewers can go through the [Allo Vivado HLS Backend](https://cornell-zhang.github.io/allo/gallery/tutorial_02_vhls.html) tutorial, which goes through the entire process of implementing the optimizations in Figure 1 (row-wise product GEMM) using Allo.
 
 
 ## More information

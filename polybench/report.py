@@ -70,10 +70,21 @@ for framework in frameworks:
                 break
         rpt = open(f"{path}/csynth.rpt", "r").read()
         ii = max(list(map(int, re.findall(r"II=([0-9]*)", rpt))))
+        if framework == "scalehls":
+            loc = "N/A"
+        else:
+            with open(f"{framework}/{benchmark}/{benchmark}.cpp", "r") as cppfile:
+                loc = 0
+                for line in cppfile:
+                    if line.startswith("//"):
+                        continue
+                    if line.strip() == "":
+                        continue
+                    loc += 1
         results.append(
-            (framework, benchmark, f"{latency:.1f}K", ii, dsp, f"{freq:.0f}")
+            (framework, benchmark, f"{latency:.1f}K", ii, dsp, f"{freq:.0f}", loc)
         )
 
-headers = ["Framework", "Benchmark", "Latency (ms)", "II", "DSP", "PnR Freq. (MHz)"]
+headers = ["Framework", "Benchmark", "Latency (ms)", "II", "DSP", "PnR Freq. (MHz)", "Opt. HLS"]
 table = tabulate(results, headers=headers)
 print(table)
