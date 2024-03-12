@@ -196,6 +196,13 @@ We also list the reference code below for counting the number of lines of custom
 | symm | 15 | https://github.com/cornell-zhang/allo-pldi24-artifact/blob/main/polybench/allo/symm/symm.py#L52-L68 |
 | trmm | 12 | https://github.com/cornell-zhang/allo-pldi24-artifact/blob/main/polybench/allo/trmm/trmm.py#L37-L50 |
 
+#### Backend Synthesis (Not for AE)
+If you indeed want to run the placement and routing for these designs, you can run the Allo code in a push-button way, which will automatically invoke the Vitis toolchain for synthesis. For example, running the PnR for the `atax` benchmark:
+```bash
+cd /root/allo-pldi24-artifact/polybench/allo/atax
+python3 atax.py
+```
+
 
 ### Table 4 - CNN (Est. Time: 3 hours)
 Next, we run the experiments for multiple kernels. We leverage the three CNN models, including [MobileNet](https://arxiv.org/abs/1704.04861), [ResNet18](https://arxiv.org/abs/1512.03385), and [VGG16](https://arxiv.org/abs/1409.1556), to evaluate the performance of Allo. The scripts to run the experiments are provided below.
@@ -222,6 +229,7 @@ After running all the neural network models, we can generate the result table by
 cd /root/allo-pldi24-artifact/cnn
 python3 plot.py
 ```
+
 
 ### Figure 12 - LLM (Not for AE)
 As this experiment requires a U280 FPGA for evaluation and takes approximately 24 hours to push the design from high-level synthesis to backend synthesis and generate a bitstream, this experiment is **NOT for AE** purpose. However, we provide a [reference HLS C++ code](llm/), which is generated from Allo, with modifications to fit on the chiplet-based FPGA. Also, we provide the post and route report under the `report` directory. Reviewers can find the following results from [this report](https://github.com/cornell-zhang/allo-pldi24-artifact/blob/main/llm/reports/link/imp/impl_1_full_util_routed.rpt) that matches the right-hand side table of Figure 12.
