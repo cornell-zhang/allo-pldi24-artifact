@@ -12,6 +12,8 @@ benchmarks = [
     "trmm",
 ]
 results = []
+all_latency = []
+all_dsp = []
 for framework in frameworks:
     for i, benchmark in enumerate(benchmarks):
         if framework == "scalehls":
@@ -55,7 +57,17 @@ for framework in frameworks:
             .childNodes[0]
             .data
         )
+        if framework != "scalehls":
+            dsp_ratio = "N/A"
+        else:
+            dsp_ratio = f"1/{all_dsp[-5] / int(dsp):.1f}x"
+        all_dsp.append(int(dsp))
         latency = int(avg_lat) * 1e-3
+        if framework != "scalehls":
+            speedup = "N/A"
+        else:
+            speedup = f"{latency / all_latency[-5]:.1f}x"
+        all_latency.append(latency)
         logfilename = f"{framework}/pnr/{benchmark}/vitis_hls.log"
         if not os.path.exists(logfilename):
             print(f"Error: {logfilename} does not exist")
@@ -82,7 +94,7 @@ for framework in frameworks:
                         continue
                     loc += 1
         results.append(
-            (framework, benchmark, f"{latency:.1f}K", ii, dsp, f"{freq:.0f}", loc)
+            (framework, benchmark, f"{latency:.1f}K ({speedup})", ii, f"{dsp} ({dsp_ratio})", f"{freq:.0f}", loc)
         )
 
 headers = ["Framework", "Benchmark", "Latency (ms)", "II", "DSP", "PnR Freq. (MHz)", "Opt. HLS"]
