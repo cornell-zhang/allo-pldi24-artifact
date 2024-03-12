@@ -190,6 +190,7 @@ data
 *.out
 *.log
 *.json
+!results.json
 
 .vscode
 *.csv
