@@ -113,7 +113,7 @@ docker run -v /your/path/to/vitis-docker-volume/:/tools/xilinx -v $(pwd):/root/a
 ```
 
 > [!NOTE]
-> If you would like to use your own Vitis installation, please make sure the Vitis mounting destination path in the docker is the same as your system installation path. For example. if your Vitis installation path is `/tools/Xilinx/`, you have to change the docker command to `docker run -v /tools/Xilinx:/tools/Xilinx -v $(pwd):/root/allo-pldi24-artifact -it allo-container:latest /bin/bash`. 
+> If you would like to use your own Vitis installation, please make sure the Vitis mounting destination path in the docker is the same as your system installation path. For example. if your Vitis installation path is `/tools/Xilinx/`, you have to change the docker command to `docker run -v /tools/Xilinx:/tools/Xilinx -v $(pwd):/root/allo-pldi24-artifact -it allo-container:latest /bin/bash`. You also need to source the set up script for Vitis HLS before reproducing the experiment results.
 
 ### Figure 10 - PolyBench (Est. Time: 16 hours)
 As it requires more than 200G disk space to install all the baseline packages, we do not contain all the packages in the docker image, and thus will not perform end-to-end code generation, which also costs lots of time. Instead, we **generate the optimized HLS C++ code from each baseline offline**, and reviewers only need to run the Vitis HLS to obtain the final report. Specifically, the HLS C++ code from [ScaleHLS](https://github.com/hanchenye/scalehls), [HeteroCL](https://github.com/cornell-zhang/heterocl), [Pylog](https://github.com/hst10/pylog), and [Dahlia](https://github.com/cucapra/dahlia) are generated offline.
