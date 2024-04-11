@@ -176,7 +176,7 @@ python latency_plot.py
 The result figure will be generated to: `/root/allo-pldi24-artifact/polybench/plot/polybench.pdf`.
 
 #### End-to-end Generation (Not for AE)
-The `polybench` folder contains all the required code to generate the optimized HLS C++ code from each baseline. Please refer to this [link](3rdparty/README.md) to install the required packages, and those optimized C++ code can be generated using the following commands:
+The `polybench` folder contains all the required code to generate the optimized HLS C++ code from each baseline. Please refer to [`3rdparty/README.md`](3rdparty/README.md) to install the required packages, and those optimized C++ code can be generated using the following commands:
 
 | Frameworks | Commands |
 | --- | --- |
@@ -274,7 +274,7 @@ We provide a comprehensive sets of examples under the Allo repository. Please ch
 ### Tutorials
 We also provide detailed documentation and tutorials for users who are interested in using Allo for designing other hardware accelerators. Please refer to this [webpage](https://cornell-zhang.github.io/allo) for more information.
 
-We highly recommend the reviewers can go through the [Allo Vivado HLS Backend](https://cornell-zhang.github.io/allo/gallery/tutorial_02_vhls.html) tutorial, which goes through the entire process of implementing the optimizations in Figure 1 (row-wise product GEMM) using Allo.
+We highly recommend the reviewers can go through the [Allo Vivado HLS Backend](https://cornell-zhang.github.io/allo/gallery/tutorial_02_vhls.html) tutorial, which goes through the entire process of implementing the optimizations of row-wise product GEMM in the paper.
 
 
 ## More information
