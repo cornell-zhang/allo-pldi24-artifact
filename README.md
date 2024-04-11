@@ -1,8 +1,8 @@
 # Allo Artifact
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10806938.svg)](https://doi.org/10.5281/zenodo.10806938)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10961342.svg)](https://doi.org/10.5281/zenodo.10961342)
 
-This repository contains scripts for setting up environments and reproducing results presented in the PLDI 2024 paper entitled [Allo: A Programming Model for Composable Accelerator Design](). If you wish to access the core implementation, documentation, and tutorials for the Allo language, please refer to the following links. We encourage you to explore these resources if you are interested in using Allo for designing other hardware accelerators that are not presented in our paper.
+This repository contains scripts for setting up environments and reproducing results presented in the PLDI 2024 paper entitled [Allo: A Programming Model for Composable Accelerator Design](https://arxiv.org/abs/2404.04815). If you wish to access the core implementation, documentation, and tutorials for the Allo language, please refer to the following links. We encourage you to explore these resources if you are interested in using Allo for designing other hardware accelerators that are not presented in our paper.
 
 * Allo repository: <https://github.com/cornell-zhang/allo>
 * Allo documentation: <https://cornell-zhang.github.io/allo>
@@ -32,7 +32,7 @@ docker tag alloprj/allo-container:latest allo-container
 
 #### Build from source
 
-If you do not want to use the pre-built docker, we also provide detailed instructions on how to build the baseline systems from scratch. Please refer to this [link](3rdparty/README.md) for more information. **For AE, there's no need to build from source. All tools are provided in the docker container.**
+If you do not want to use the pre-built docker, we also provide detailed instructions on how to build the baseline systems from scratch. Please refer to [`3rdparty/README.md`](3rdparty/README.md) for more information. **For AE, there's no need to build from source. All tools are provided in the docker container.**
 
 ### Vitis Toolchain
 
@@ -118,7 +118,7 @@ docker run -v /your/path/to/vitis-docker-volume/:/tools/xilinx -v $(pwd):/root/a
 ### Figure 10 - PolyBench (Est. Time: 16 hours)
 As it requires more than 200G disk space to install all the baseline packages, we do not contain all the packages in the docker image, and thus will not perform end-to-end code generation, which also costs lots of time. Instead, we **generate the optimized HLS C++ code from each baseline offline**, and reviewers only need to run the Vitis HLS to obtain the final report. Specifically, the HLS C++ code from [ScaleHLS](https://github.com/hanchenye/scalehls), [HeteroCL](https://github.com/cornell-zhang/heterocl), [Pylog](https://github.com/hst10/pylog), and [Dahlia](https://github.com/cucapra/dahlia) are generated offline.
 
-For end-to-end testing (not for AE), we also include the scripts and instructions to generate the optimized HLS C++ code from each baseline. Please refer to this [link](3rdparty/README.md) to install the required packages and generate the optimized HLS C++ code.
+For end-to-end testing (not for AE), we also include the scripts and instructions to generate the optimized HLS C++ code from each baseline. Please refer to [`3rdparty/README.md`](3rdparty/README.md) to install the required packages and generate the optimized HLS C++ code.
 
 #### Experimental Settings
 
@@ -161,7 +161,7 @@ cd ../dahlia && python3 run.py
 cd ../vitis && python3 run.py
 ```
 
-If you want to speed up the above experiments, you can invoke multiple terminals/processes to run the experiments in parallel. Since Vitis HLS only leverages one CPU core to run the synthesis, experiments of different frameworks can be run in parallel without impacting the final results.
+If you want to speed up the above experiments, you can invoke multiple terminals/processes to run the experiments in parallel. Since Vitis HLS only leverages one CPU core to run the synthesis, experiments of different frameworks can be run in parallel without impacting the final results. You can also call `polybench/run.sh` to automatically run all the above commands in one script.
 
 The results will be dumped to each folder. Lastly, we can call the following command to collect the results and generate the final figure.
 
